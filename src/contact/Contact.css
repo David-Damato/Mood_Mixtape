@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Body-Grotesque-Fit-Trial-Bold';
+    src: local('Body-Grotesque-Fit-Trial-Bold'), url('../fonts/Body-Grotesque-Fit-Trial-Bold.ttf.woff') format('woff'),
+    url('../fonts/Body-Grotesque-Fit-Trial-Bold.ttf.svg#Body-Grotesque-Fit-Trial-Bold') format('svg'),
+    url('../fonts/Body-Grotesque-Fit-Trial-Bold.ttf.eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.titre-contact {
+    font-family: 'Body-Grotesque-Fit-Trial-Bold';
+    color: black;
+}
+
