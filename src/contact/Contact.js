@@ -3,7 +3,7 @@ import pictoBisou from "../picto/bisou.png";
 
 export const Contact = () => {
     return (
-        <div className="conteneur-vertical">
+        <div className="conteneur-vertical Contact">
             <div className="conteneur-horizontal photos-contact">
                 <div className="conteneur-vertical photo-aline"></div>
                 <div className="conteneur-vertical photo-violaine"></div>
@@ -11,9 +11,9 @@ export const Contact = () => {
                 <div className="conteneur-vertical photo-david"></div>
                 <div className="conteneur-vertical photo-tom"></div>
             </div>
-            <div className="conteneur-horizontal">
+            <div className="conteneur-horizontal titre-contact">
                 <img className="picto-bisou" src={pictoBisou}/>
-                <div className="titre-contact">contact</div>
+                <div>contact</div>
                 <img className="picto-bisou" src={pictoBisou}/>
             </div>
 

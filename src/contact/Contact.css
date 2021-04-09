@@ -7,21 +7,23 @@
     font-style: normal;
 }
 
-.titre-contact {
+.titre-contact div {
     font-family: 'Body-Grotesque-Fit-Trial-Bold';
     color: black;
+    font-size: 100px;
 }
 
 .conteneur-horizontal {
     display: flex;
     flex-direction: row;
-    gap: 5vw;
-
 }
 
 .conteneur-vertical {
     display: flex;
     flex-direction: column;
+}
+
+.Contact {
     align-items: center;
     width: 100%;
     padding-top: 50px;
@@ -29,10 +31,12 @@
 
 .photos-contact {
     align-items: flex-end;
+    gap: 5vw;
 }
 
-.titre-contact{
-    font-size: 150px;
+.titre-contact {
+    align-items: center;
+    gap: 20px;
 }
 
 .photo-aline {
@@ -73,5 +77,4 @@
 .picto-bisou{
     height: 60px;
     width: 60px;
-    padding-top: 60px;
 }
