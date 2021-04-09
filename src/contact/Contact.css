@@ -12,3 +12,66 @@
     color: black;
 }
 
+.conteneur-horizontal {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+
+}
+
+.conteneur-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.photos-contact {
+    align-items: flex-end;
+}
+
+.titre-contact{
+    font-size: 150px;
+}
+
+.photo-aline {
+    width: 140px;
+    height: 258px;
+    background-color: orange;
+    border-radius: 2px;
+}
+
+.photo-violaine {
+    width: 140px;
+    height: 410px;
+    background-color: dodgerblue;
+    border-radius: 2px;
+}
+
+.photo-pauline {
+    width: 140px;
+    height: 315px;
+    background-color: yellow;
+    border-radius: 2px;
+}
+
+.photo-david {
+    width: 140px;
+    height: 530px;
+    background-color: red;
+    border-radius: 2px;
+}
+
+.photo-tom {
+    width: 140px;
+    height: 415px;
+    background-color: mediumspringgreen;
+    border-radius: 2px;
+}
+
+.picto-bisou{
+    height: 60px;
+    width: 60px;
+    padding-top: 60px;
+}
