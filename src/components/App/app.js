@@ -4,24 +4,23 @@ import Accueil from '../Accueil/accueil';
 import Playlist from '../Playlist/playlist';
 import Contact from '../Contact/contact';
 import Mood from '../Mood/mood';
-import './Header.css';
 import './App.css';
-
+import Navbar from '../Navbar/navbar';
 
 class App extends Component {
     render() {
         return (
             <Router>
-                <header>
+                <Navbar/>
                 <div>
                     <h2>Welcome to React Router Tutorial</h2>
-                    <nav className="navbar">
+                 {/*    <nav className="navbar">
                         <ul ClassName="ul-menu">
                             <li><Link to={'/'} className="nav-link">Accueil</Link></li>
                             <li><Link to={'/playlist'} className="nav-link">Playlist</Link></li>
                             <li><Link to={'/contact'} className="nav-link">Contact</Link></li>
                         </ul>
-                    </nav>
+              </nav>*/}
                    
                     <hr />
                     <Switch>
@@ -31,7 +30,7 @@ class App extends Component {
                         <Route path='/contact' component={Contact} />
                     </Switch>
                 </div>
-                </header>
+               
             </Router>
         );
     }
