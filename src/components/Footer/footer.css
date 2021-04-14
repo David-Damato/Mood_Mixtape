@@ -14,7 +14,7 @@
 .ul-footer li{
     padding:10px 5px 10px 10px;
     color:#ffffff;
-    font-size:0.9em;
+    font-size:1em;
 
 }
 
@@ -25,10 +25,15 @@
 }
 
 .ul-footer li a:hover{
-    font-size:1.1em;
-    font-weight: bolder;
+  
+    color:rgb(7, 7, 7);
     transition: 0.5s;
 }
+
+.emo:hover{
+    font-size:1.2em
+}
+
 
 .img-footer-bisou{
     width:20px;
@@ -54,5 +59,14 @@
     
     }
     
+    .ul-footer li a:hover{
+       
+        color:rgb(7, 7, 7);
+        transition: 0.5s;
+    }
+    
+   .emo:hover{
+       font-size:1.2em
+   }
 
 }
