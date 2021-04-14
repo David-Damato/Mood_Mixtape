@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MoodChoice from "./AccueilMoods";
-import "./AccueilMoods.css"
+import "./AccueilContenu.css"
 
 class Accueil extends Component {
     render() {
