@@ -16,8 +16,8 @@ export default function Questions(){
             <div className="question">Le voisin a fait la fête toute la nuit, vous mettant d'humeur massacrante ?</div>
             <div className="reponse">La playlist <img className="emoticone" src={angry} alt="angry"/> va vous défouler !</div>
             
-            <div className="question">Vos enfants ont fait un gâteau au chocolat et ne vous ont pas laissé de part ?</div>
-            <div className="reponse">La playlist <img className="emoticone" src={sad} alt="sad"/> vous mettra du baume au coeur</div>
+            <div className="question">Vos enfants ont fait un gâteau au chocolat et ne vous ont rien laissé ?</div>
+            <div className="reponse">La playlist <img className="emoticone" src={sad} alt="sad"/> vous mettra du baume au coeur.</div>
             
             <div className="question">Vous êtes amoureux et cherchez une playlist pour votre date de ce soir ?</div>
             <div className="reponse">Ne cherchez plus, la playlist <img className="emoticone" src={inLove} alt="in love"/> sera parfaite !</div>
