@@ -1,5 +1,58 @@
 /*Footer **********************************************************/
 
 .footer-container{
+    background-color: #6097F0;
+}
+.ul-footer{
+    display:flex;
+    list-style-type: none;
+    margin:10px 0 0 0;
+    padding:0;
+    justify-content: center;
+}
+
+.ul-footer li{
+    padding:10px 5px 10px 10px;
+    color:#ffffff;
+    font-size:0.9em;
+
+}
+
+
+.ul-footer li a{
+    text-decoration:none;
+    color:#ffffff;
+}
+
+.ul-footer li a:hover{
+    font-size:1.1em;
+    font-weight: bolder;
+    transition: 0.5s;
+}
+
+.img-footer-bisou{
+    width:20px;
+}
+
+/*règles footer smartphone*****************/
+
+@media screen and (min-width: 200px) and (max-width: 414px){
+
+    .ul-footer{
+        display:flex;
+        list-style-type: none;
+        margin:10px 0 0 0;
+        padding:0;
+        flex-wrap: wrap;
+        justify-content:left;
+    }
+
+    .ul-footer li{
+        padding:10px 0px 5px 10px;
+        color:#ffffff;
+        font-size:0.9em;
+    
+    }
+    
 
 }
