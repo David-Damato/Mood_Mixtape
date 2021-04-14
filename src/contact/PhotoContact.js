@@ -1,6 +1,6 @@
 import {PopupContact} from "./PopupContact";
 import {useState} from "react";
-export const PhotoContact = ({nom, phrase, linkedIn, github, mail, hauteur, couleur}) => {
+export const PhotoContact = ({nom, phrase, linkedIn, github, mail, hauteur, couleur, photo}) => {
 
     const [popUpAffichee, setPopUpAffichee] = useState(false);
 
@@ -13,7 +13,8 @@ export const PhotoContact = ({nom, phrase, linkedIn, github, mail, hauteur, coul
             }}>
             </div>
 
-            {popUpAffichee && <PopupContact setPopUpAffichee={setPopUpAffichee} phrase={phrase} nom={nom} linkedIn={linkedIn} github={github} mail={mail}/>}
+            {popUpAffichee && <PopupContact setPopUpAffichee={setPopUpAffichee} phrase={phrase} nom={nom} linkedIn={linkedIn} github={github} mail={mail} photo={photo}/>}
         </>
     )
 };
+

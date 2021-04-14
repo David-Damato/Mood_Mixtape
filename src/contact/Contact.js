@@ -12,12 +12,13 @@ export const Contact = () => {
                 {equipe.map((contact, index) => (
                     <PhotoContact
                         nom={contact.nom}
-                    phrase={contact.phrase}
-                    github={contact.github}
-                    linkedIn={contact.linkedIn}
-                    mail={contact.mail}
-                    hauteur={contact.hauteur}
-                    couleur={contact.couleur}/>
+                        phrase={contact.phrase}
+                        github={contact.github}
+                        linkedIn={contact.linkedIn}
+                        mail={contact.mail}
+                        hauteur={contact.hauteur}
+                        couleur={contact.couleur}
+                        photo={contact.photo}/>
 
                 ))
                 }
@@ -27,7 +28,6 @@ export const Contact = () => {
                 <div>contact</div>
                 <img className="picto-bisou" src={pictoBisou}/>
             </div>
-
 
 
         </div>
