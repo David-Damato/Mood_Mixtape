@@ -1,3 +1,5 @@
+/* CSS composant MoodChoice */
+
 .moodChoice {
     padding: 20px;
     background-color: #e9c46a;
@@ -18,4 +20,12 @@
 
 .moodPicture {
     height: 200px;
+}
+
+/* CSS composant Questions */
+
+
+
+.emoticone {
+ height: 20px;
 }

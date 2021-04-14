@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MoodChoice from "./AccueilMoods";
+import Questions from "./AccueilQuestions";
 import "./AccueilContenu.css"
 
 class Accueil extends Component {
@@ -7,6 +8,7 @@ class Accueil extends Component {
         return (
             <main className="welcomePage">
                 Accueil !
+                <Questions/>
                 <MoodChoice/>
             </main>
         );
