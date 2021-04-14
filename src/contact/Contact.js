@@ -2,6 +2,7 @@ import "./Contact.css";
 import pictoBisou from "../picto/bisou.png";
 import {PhotoContact} from "./PhotoContact";
 import {equipe} from "./equipe";
+import {PopupContact} from "./PopupContact";
 
 export const Contact = () => {
 
@@ -13,10 +14,11 @@ export const Contact = () => {
                         nom={contact.nom}
                     phrase={contact.phrase}
                     github={contact.github}
-                    linkedIn={contact.github}
+                    linkedIn={contact.linkedIn}
                     mail={contact.mail}
                     hauteur={contact.hauteur}
                     couleur={contact.couleur}/>
+
                 ))
                 }
             </div>
@@ -25,6 +27,8 @@ export const Contact = () => {
                 <div>contact</div>
                 <img className="picto-bisou" src={pictoBisou}/>
             </div>
+
+
 
         </div>
     )

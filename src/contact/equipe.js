@@ -1,11 +1,11 @@
 export const equipe = [
     {
         nom: "Aline DUBOIS",
-        phrase: "",
+        phrase: "La simplicité est la sophistication suprême",
         linkedIn: "https://www.linkedin.com/in/aline-dubois-95a0351aa/",
         github: "https://github.com/alinedubois",
         mail: "juillet.aline@gmail.com",
-        hauteur: 258,
+        hauteur: 280,
         couleur: 'orange'
     },
     {
@@ -14,7 +14,7 @@ export const equipe = [
         linkedIn: "https://www.linkedin.com/in/pauline-labb%C3%A9-360436b7/",
         github: "https://github.com/Palabbe",
         mail: "pauline.labbe7@gmail.com",
-        hauteur: 315,
+        hauteur: 360,
         couleur: 'blue'
     },
     {
@@ -23,7 +23,7 @@ export const equipe = [
         linkedIn: "https://www.linkedin.com/in/violaine-ernotte/",
         github: "https://github.com/vio9",
         mail: "e.violaine@yahoo.fr",
-        hauteur: 140,
+        hauteur: 250,
         couleur: 'yellow'
     },
     {
@@ -41,7 +41,7 @@ export const equipe = [
         linkedIn: "https://www.linkedin.com/in/tom-carpentier-46ab84120/",
         github: "https://github.com/TomWebd",
         mail: "t.carpentier.19@gmail.com",
-        hauteur: 415,
+        hauteur: 420,
         couleur: 'green'
     }
 ]
