@@ -16,7 +16,8 @@ const [menuOpen, setMenuOpen] = useState(false)
     return(
        <div className="menu-container">
            <div className="menu-button" onClick={menuOnClick}>
-                <img src={hamburger} className="burger-img" alt="burger menu"/> 
+           <div></div>
+                {/*<img src={hamburger} className="burger-img" alt="burger menu"/> */}
             </div>
 
             <nav>
@@ -24,7 +25,7 @@ const [menuOpen, setMenuOpen] = useState(false)
                     <li><Link to={'/'} className="nav-link">Accueil</Link></li>
                     <li><Link to={'/playlist'} className="nav-link">Playlist</Link></li>
                     <li><Link to={'/contact'} className="nav-link">Contact</Link></li>
-                    <li><button className="closedBu"></button></li>
+                    
                 </ul>
             </nav>
         </div>
