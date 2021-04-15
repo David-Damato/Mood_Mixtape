@@ -1,11 +1,6 @@
-/*header style **********************************************/
 
 
-.menu-container{
-   
-}
-
-.ul-menu{
+.ul-menu-active{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -24,11 +19,37 @@
 }
 
 
+.ul-menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width:20vw;
+    box-shadow: 1px 1px #888;
+    position:fixed;
+    z-index:200;
+    background-color: #fff;
+    left: -100%;
+   
+   
+}
+
+
+
+.closed-button{
+    animation:slide-closed 0.5 forwards;
+}
+
+
+
+
 .menu-button{
-  
+    width:40px;
     z-index: 99;
 }
 
+.burger-img{
+    width:40px;
+}
 
 .nav-link {
     text-decoration: none;
@@ -38,6 +59,3 @@
     border:1px solid #555;
 }
 
-.burger-img{
-    width:40px;
-}
