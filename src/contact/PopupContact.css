@@ -76,19 +76,27 @@
     color: rgba(0, 0, 0, 0.2);
 }
 
-
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+.bouton-fermer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    margin-top: -34px;
+    margin-right: -34px;
+    cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+.bouton-fermer i {
+    color: white;
+}
+
+.conteneur-bouton-fermer {
+    width: 100%;
+    justify-content: flex-end;
+
 }
 
 .popup-reseaux {

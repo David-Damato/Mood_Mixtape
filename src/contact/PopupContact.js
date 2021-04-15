@@ -2,7 +2,7 @@ import "./PopupContact.css";
 
 export const PopupContact = ({setPopUpAffichee, nom, phrase, linkedIn, github, mail, photo, selecteurCss}) => {
     return (
-        <div className="conteneur-horizontal popup" onClick={() => setPopUpAffichee(false)}>
+        <div className="conteneur-horizontal popup">
 
             <div className="conteneur-horizontal popup-contenu">
 
@@ -12,6 +12,15 @@ export const PopupContact = ({setPopUpAffichee, nom, phrase, linkedIn, github, m
 
 
                 <div className="conteneur-vertical popup-contact">
+
+                    <div className="conteneur-bouton-fermer conteneur-horizontal">
+
+                        <div className="bouton-fermer" onClick={() => setPopUpAffichee(false)}>
+
+                            <i className="fa fa-times"></i>
+
+                        </div>
+                    </div>
 
                     <h1>{nom}</h1>
 
@@ -42,8 +51,9 @@ export const PopupContact = ({setPopUpAffichee, nom, phrase, linkedIn, github, m
 
                     </div>
 
+
                 </div>
-                <span id="bouton-fermeture-formulaire" className="close">×</span>
+
             </div>
 
         </div>
