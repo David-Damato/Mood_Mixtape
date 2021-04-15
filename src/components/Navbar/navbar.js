@@ -1,14 +1,24 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import hamburger from './hamburger.png'
 
 const Navbar = () => {
+const [open, setOpen] = useState(false)
 
-//https://www.youtube.com/watch?v=FATDmvwdNYM 13:20 + setState checker pour le hook open sidebar
+const handleButtonClick = () => {
+if (!open) {
+    setOpen(true)
+} else {
+    setOpen(false)
+}
+}
+ 
+
+
     return(
        <div className="menu-container">
-           <div className="menu-button" onClick={''}>
+           <div className="menu-button" onClick={handleButtonClick }>
                 <img src={hamburger} className="burger-img" alt="burger menu"/> 
             </div>
 

@@ -2,7 +2,7 @@
 
 
 .menu-container{
-    position:relative;
+   
 }
 
 .ul-menu{
@@ -11,17 +11,25 @@
     padding: 0;
     width:20vw;
     box-shadow: 1px 1px #888;
-    position:absolute;
-    top:0;
-    z-index:999;
+    position:fixed;
+    z-index:200;
     background-color: #fff;
-    left: -22vw;
+    left: -100%;
+    animation: slide-open 0.5s forwards;
    
 }
+
+@keyframes slide-open {
+    100% { left: 0};
+}
+
+
 .menu-button{
-    position:relative;
+  
     z-index: 99;
 }
+
+
 .nav-link {
     text-decoration: none;
     color:#555;
