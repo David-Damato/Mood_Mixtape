@@ -101,6 +101,26 @@ a.couleur-pauline:hover {
     color: #264653 !important;
 }
 
+div.couleur-david {
+    background-color: #e76f51;
+}
+
+div.couleur-aline {
+    background-color: #f4a261;
+}
+
+div.couleur-violaine {
+    background-color: #e9c46a;
+}
+
+div.couleur-tom {
+    background-color: #2a9d8f;
+}
+
+div.couleur-pauline {
+    background-color: #264653;
+}
+
 .popup-separateur {
     border-top: 1px solid lightgrey;
     width: 40%;

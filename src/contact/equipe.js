@@ -1,4 +1,8 @@
 import alinePhoto from './photo/aline.jpg';
+import paulinePhoto from './photo/pauline.jpg';
+import violainePhoto from './photo/violaine.jpg';
+import davidPhoto from './photo/david.jpg';
+import tomPhoto from './photo/tom.jpg';
 
 export const equipe = [
 
@@ -10,6 +14,7 @@ export const equipe = [
         mail: "david76230@gmail.com",
         hauteur: 530,
         couleur: "couleur-david",
+        photo: davidPhoto
     },
 
     {
@@ -30,7 +35,8 @@ export const equipe = [
         github: "https://github.com/vio9",
         mail: "e.violaine@yahoo.fr",
         hauteur: 250,
-        couleur: 'couleur-violaine'
+        couleur: 'couleur-violaine',
+        photo: violainePhoto
     },
 
     {
@@ -40,7 +46,8 @@ export const equipe = [
         github: "https://github.com/TomWebd",
         mail: "t.carpentier.19@gmail.com",
         hauteur: 420,
-        couleur: 'couleur-tom'
+        couleur: 'couleur-tom',
+        photo: tomPhoto
     },
 
     {
@@ -50,7 +57,8 @@ export const equipe = [
         github: "https://github.com/Palabbe",
         mail: "pauline.labbe7@gmail.com",
         hauteur: 360,
-        couleur: 'couleur-pauline'
+        couleur: 'couleur-pauline',
+        photo: paulinePhoto
     },
 
 ]

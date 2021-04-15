@@ -8,10 +8,10 @@ export const PhotoContact = ({nom, phrase, linkedIn, github, mail, hauteur, coul
 
     return (
         <>
-            <div className="conteneur-vertical photo" onClick={() => setPopUpAffichee(true)} style={{
+            <div className={`conteneur-vertical photo ${couleur}`} onClick={() => setPopUpAffichee(true)} style={{
                 height: `${hauteur}px`,
-                backgroundColor: couleur
             }}>
+
             </div>
 
             {popUpAffichee && <PopupContact
