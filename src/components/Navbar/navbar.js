@@ -17,7 +17,7 @@ const [menuOpen, setMenuOpen] = useState(false)
        <div className="menu-container">
            <div className="menu-button" onClick={menuOnClick}>
            <div></div>
-                {/*<img src={hamburger} className="burger-img" alt="burger menu"/> */}
+               
             </div>
 
             <nav>

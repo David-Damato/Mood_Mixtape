@@ -14,14 +14,7 @@ class App extends Component {
                 <Navbar/>
                 <div>
                     <h2>Welcome to React Router Tutorial</h2>
-                 {/*    <nav className="navbar">
-                        <ul ClassName="ul-menu">
-                            <li><Link to={'/'} className="nav-link">Accueil</Link></li>
-                            <li><Link to={'/playlist'} className="nav-link">Playlist</Link></li>
-                            <li><Link to={'/contact'} className="nav-link">Contact</Link></li>
-                        </ul>
-              </nav>*/}
-                   
+              
                     <hr />
                     <Switch>
                         <Route exact path='/' component={Accueil} />
