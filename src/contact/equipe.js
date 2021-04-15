@@ -7,14 +7,14 @@ import tomPhoto from './photo/tom.jpg';
 export const equipe = [
 
     {
-        nom: "David D'AMATO",
+        nom: "Violaine ERNOTTE",
         phrase: "",
-        linkedIn: "https://www.linkedin.com/in/david-damato/",
-        github: "https://github.com/David-Damato",
-        mail: "david76230@gmail.com",
+        linkedIn: "https://www.linkedin.com/in/violaine-ernotte/",
+        github: "https://github.com/vio9",
+        mail: "e.violaine@yahoo.fr",
         hauteur: 530,
-        couleur: "couleur-david",
-        photo: davidPhoto
+        selecteurCss: 'violaine',
+        photo: violainePhoto
     },
 
     {
@@ -24,19 +24,19 @@ export const equipe = [
         github: "https://github.com/alinedubois",
         mail: "juillet.aline@gmail.com",
         hauteur: 290,
-        couleur: 'couleur-aline',
+        selecteurCss: 'aline',
         photo: alinePhoto
     },
 
     {
-        nom: "Violaine ERNOTTE",
+        nom: "David D'AMATO",
         phrase: "",
-        linkedIn: "https://www.linkedin.com/in/violaine-ernotte/",
-        github: "https://github.com/vio9",
-        mail: "e.violaine@yahoo.fr",
+        linkedIn: "https://www.linkedin.com/in/david-damato/",
+        github: "https://github.com/David-Damato",
+        mail: "david76230@gmail.com",
         hauteur: 250,
-        couleur: 'couleur-violaine',
-        photo: violainePhoto
+        selecteurCss: "david",
+        photo: davidPhoto
     },
 
     {
@@ -46,7 +46,7 @@ export const equipe = [
         github: "https://github.com/TomWebd",
         mail: "t.carpentier.19@gmail.com",
         hauteur: 420,
-        couleur: 'couleur-tom',
+        selecteurCss: 'tom',
         photo: tomPhoto
     },
 
@@ -57,7 +57,7 @@ export const equipe = [
         github: "https://github.com/Palabbe",
         mail: "pauline.labbe7@gmail.com",
         hauteur: 360,
-        couleur: 'couleur-pauline',
+        selecteurCss: 'pauline',
         photo: paulinePhoto
     },
 

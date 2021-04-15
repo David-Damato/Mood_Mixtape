@@ -1,14 +1,14 @@
 import "./PopupContact.css";
 
-export const PopupContact = ({setPopUpAffichee, nom, phrase, linkedIn, github, mail, photo, couleur}) => {
+export const PopupContact = ({setPopUpAffichee, nom, phrase, linkedIn, github, mail, photo, selecteurCss}) => {
     return (
         <div className="conteneur-horizontal popup" onClick={() => setPopUpAffichee(false)}>
 
-            <div className="conteneur-horizontal popup-contenu" style={{
-                backgroundImage: `url(${photo})`
-            }}>
+            <div className="conteneur-horizontal popup-contenu">
 
-                <div className="photo-popup"></div>
+                <div className={`photo-popup ${selecteurCss}`} style={{
+                    backgroundImage: `url(${photo})`
+                }}></div>
 
 
                 <div className="conteneur-vertical popup-contact">
@@ -23,19 +23,19 @@ export const PopupContact = ({setPopUpAffichee, nom, phrase, linkedIn, github, m
 
                     <div className="conteneur-horizontal popup-reseaux">
 
-                        <a className={couleur}
+                        <a className={selecteurCss}
                            target="_blank"
                            href={github}>
                             <i className="fa fa-github"></i>
                         </a>
 
-                        <a className={couleur}
+                        <a className={selecteurCss}
                            target="_blank"
                            href={linkedIn}>
                             <i className="fa fa-linkedin-square"></i>
                         </a>
 
-                        <a className={couleur}
+                        <a className={selecteurCss}
                            href={`mailto:${mail}`}>
                             <i className="fa fa-at"></i>
                         </a>

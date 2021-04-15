@@ -23,8 +23,35 @@
 
 .photo-popup {
     width: 300px;
+}
+
+.photo-popup.violaine {
+    background-repeat: no-repeat;
+    background-size: 130%;
+    background-position: -30px -80px;
+}
+
+.photo-popup.aline {
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.photo-popup.david {
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photo-popup.tom {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -20px;
+}
+
+.photo-popup.pauline {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -20px;
 }
 
 .blockquote {
@@ -81,43 +108,43 @@
     color: black;
 }
 
-a.couleur-david:hover {
+a.violaine:hover {
     color: #e76f51 !important;
 }
 
-a.couleur-aline:hover {
+a.aline:hover {
     color: #f4a261 !important;
 }
 
-a.couleur-violaine:hover {
+a.david:hover {
     color: #e9c46a !important;
 }
 
-a.couleur-tom:hover {
+a.tom:hover {
     color: #2a9d8f !important;
 }
 
-a.couleur-pauline:hover {
+a.pauline:hover {
     color: #264653 !important;
 }
 
-div.couleur-david {
+div.photo.violaine {
     background-color: #e76f51;
 }
 
-div.couleur-aline {
+div.photo.aline {
     background-color: #f4a261;
 }
 
-div.couleur-violaine {
+div.photo.david {
     background-color: #e9c46a;
 }
 
-div.couleur-tom {
+div.photo.tom {
     background-color: #2a9d8f;
 }
 
-div.couleur-pauline {
+div.photo.pauline {
     background-color: #264653;
 }
 

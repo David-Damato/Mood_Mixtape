@@ -17,7 +17,7 @@ export const Contact = () => {
                         linkedIn={contact.linkedIn}
                         mail={contact.mail}
                         hauteur={contact.hauteur}
-                        couleur={contact.couleur}
+                        selecteurCss={contact.selecteurCss}
                         photo={contact.photo}/>
 
                 ))
