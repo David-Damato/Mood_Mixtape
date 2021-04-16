@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Accueil from '../Accueil/accueil';
 import Playlist from '../Playlist/playlist';
-import Contact from '../Contact/contact';
+import {Contact} from '../Contact/Contact';
 import Mood from '../Mood/mood';
 import './App.css';
 import Navbar from '../Navbar/navbar';
