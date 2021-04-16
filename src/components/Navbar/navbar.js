@@ -15,11 +15,9 @@ const [menuOpen, setMenuOpen] = useState(false)
 
     return(
        <div className="menu-container">
-           <div>
-            <div className="logo-container">
-                <img className="logo" src={logo} alt="logo Mood and Mixtape"/>
-            </div>
-        </div>  
+           
+            
+        
            <div className="menu-button" onClick={menuOnClick}>
            <div></div>
                
@@ -33,6 +31,10 @@ const [menuOpen, setMenuOpen] = useState(false)
                     
                 </ul>
             </nav>
+
+            <div className="logo-container">
+                <img className="logo" src={logo} alt="logo Mood and Mixtape"/>
+            </div>
         </div>
     )
 }
