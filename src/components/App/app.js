@@ -7,14 +7,13 @@ import Mood from '../Mood/mood';
 import './App.css';
 import Navbar from '../Navbar/navbar';
 
+
 class App extends Component {
     render() {
         return (
             <Router>
                 <Navbar/>
                 <div>
-                    <h2>Welcome to React Router Tutorial</h2>
-              
                     <hr />
                     <Switch>
                         <Route exact path='/' component={Accueil} />

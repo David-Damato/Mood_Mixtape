@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
-import hamburger from './hamburger.png'
+import logo from './logo.png'
 
 const Navbar = () => {
 
@@ -15,6 +15,11 @@ const [menuOpen, setMenuOpen] = useState(false)
 
     return(
        <div className="menu-container">
+           <div>
+            <div className="logo-container">
+                <img className="logo" src={logo} alt="logo Mood and Mixtape"/>
+            </div>
+        </div>  
            <div className="menu-button" onClick={menuOnClick}>
            <div></div>
                
