@@ -5,20 +5,15 @@ import Playlist from '../Playlist/playlist';
 import Contact from '../Contact/contact';
 import Mood from '../Mood/mood';
 import './App.css';
+import Navbar from '../Navbar/navbar';
+
 
 class App extends Component {
     render() {
         return (
             <Router>
+                <Navbar/>
                 <div>
-                    <h2>Welcome to React Router Tutorial</h2>
-                    <nav className="navbar">
-                        <ul>
-                            <li><Link to={'/'} className="nav-link">Accueil</Link></li>
-                            <li><Link to={'/playlist'} className="nav-link">Playlist</Link></li>
-                            <li><Link to={'/contact'} className="nav-link">Contact</Link></li>
-                        </ul>
-                    </nav>
                     <hr />
                     <Switch>
                         <Route exact path='/' component={Accueil} />
@@ -27,6 +22,7 @@ class App extends Component {
                         <Route path='/contact' component={Contact} />
                     </Switch>
                 </div>
+               
             </Router>
         );
     }
