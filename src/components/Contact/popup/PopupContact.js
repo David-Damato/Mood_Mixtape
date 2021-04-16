@@ -12,6 +12,7 @@ export const PopupContact = ({setPopUpAffichee, nom, phrase, linkedIn, github, m
                 }}></div>
 
                 <div className="conteneur-vertical popup-contact">
+
                     <BoutonFermer setPopUpAffichee={setPopUpAffichee}/>
 
                     <h1>{nom}</h1>

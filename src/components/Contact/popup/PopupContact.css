@@ -76,6 +76,17 @@
     color: rgba(0, 0, 0, 0.2);
 }
 
+.blockquote:after {
+    position: absolute;
+    font-family: 'FontAwesome';
+    bottom: 20px;
+    right: -8px;
+    content: "\f10d";
+    font-size: 30px;
+    transform: rotate(180deg);
+    color: rgba(0, 0, 0, 0.2);
+}
+
 .bouton-fermer {
     display: flex;
     justify-content: center;
