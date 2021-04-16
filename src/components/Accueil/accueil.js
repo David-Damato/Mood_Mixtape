@@ -7,9 +7,8 @@ class Accueil extends Component {
     render() {
         return (
             <main className="welcomePage">
-                Accueil !
-                <Questions/>
-                <MoodChoice/>
+                <Questions />
+                <MoodChoice />
             </main>
         );
     }
