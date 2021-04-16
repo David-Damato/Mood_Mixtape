@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import MoodChoice from "./AccueilMoods";
-import "./AccueilMoods.css"
+import Questions from "./AccueilQuestions";
+import "./AccueilContenu.css"
 
 class Accueil extends Component {
     render() {
         return (
             <main className="welcomePage">
                 Accueil !
+                <Questions/>
                 <MoodChoice/>
             </main>
         );
