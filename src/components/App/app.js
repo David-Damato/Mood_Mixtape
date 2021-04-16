@@ -14,7 +14,7 @@ class App extends Component {
             <Router>
                 <Navbar/>
                 <div>
-                    <hr />
+                   
                     <Switch>
                         <Route exact path='/' component={Accueil} />
                         <Route path='/mood' component={Mood} />
