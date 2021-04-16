@@ -11,8 +11,8 @@
 }
 
 .moodDiv {
-    background-color: #ec8e22;
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 400px;
     height: 300px;
@@ -20,8 +20,41 @@
     border-radius: 10px;
 }
 
+.moodHappy {
+    background-color: #ec8e22;
+}
+
+.moodAngry {
+    background-color:rgb(255, 217, 0);
+}
+
+.moodSad {
+    background-color: rgb(0, 153, 255);
+}
+
+.moodInLove {
+    background-color: rgb(255, 227, 232);
+}
+
+
 .playlistAngry {
-    width: 100%;
+    margin: 30px;
+    width: auto;
     height: 100vh;
-    background-color: #ec8e22
+    background-color: #ec8e22;
+    border-radius: 10px;
+}
+
+.flechePicture {
+    margin-top: 10px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.angryText {
+    margin-top: 10px;
+}
+
+td {
+    align-items: center;
 }

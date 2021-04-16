@@ -7,7 +7,7 @@ import IMG_happy from "../Accueil//images/happy.png";
 import IMG_angry from "../Accueil//images/angry.png";
 import IMG_sad from "../Accueil//images/sad.png";
 import IMG_inLove from "../Accueil/images/in-love.png";
-import fleche from "./images/fleche.png";
+import fleche from "./images/fleche.jpg";
 
 export default function Playlist() {
     const [error, setError] = useState(null);
@@ -43,34 +43,65 @@ export default function Playlist() {
         return (
             <main>
                 <div className="humeur_play">
-                    <div className="moodDiv">
-                        <a href=""><img className="moodPicture" src={IMG_happy} alt="angry playlist" /></a>
+                    <div className="moodDiv moodHappy">
+                        <a href=""><img className="moodPicture" src={IMG_happy} alt="moodHappy" /></a>
                         <div>
+                            <a href=""><img className="flechePicture" src={fleche} alt="moodAngry" /></a>
                         </div>
-
                     </div>
-                    <div className="moodDiv">
-                        <a href=""><img className="moodPicture" src={IMG_angry} alt="angry playlist" /></a>
 
+                    <div className="moodDiv moodAngry">
+                        <a href=""><img className="moodPicture" src={IMG_angry} alt="moodAngry" /></a>
+                        <div>
+                            <a href=""><img className="flechePicture" src={fleche} alt="moodAngry" /></a>
+                        </div>
                     </div>
-                    <div className="moodDiv">
-                        <a href=""><img className="moodPicture" src={IMG_sad} alt="angry playlist" /></a>
 
+                    <div className="moodDiv moodSad">
+                        <a href=""><img className="moodPicture" src={IMG_sad} alt="moodSad" /></a>
+                        <div>
+                            <a href=""><img className="flechePicture" src={fleche} alt="moodAngry" /></a>
+                        </div>
                     </div>
-                    <div className="moodDiv">
-                        <a href=""><img className="moodPicture" src={IMG_inLove} alt="angry playlist" /></a>
 
+                    <div className="moodDiv moodInLove">
+                        <a href=""><img className="moodPicture" src={IMG_inLove} alt="moodInLove" /></a>
+                        <div>
+                            <a href=""><img className="flechePicture" src={fleche} alt="moodAngry" /></a>
+                        </div>
                     </div>
 
                 </div>
                 <div className="playlistAngry">
-                    {/*                     {playlistAngry.map(track =>
-                        <div>
-                            {track.title}
-                        </div>
-                    )} */}
+                    <table>
+                        <thead>
+                            <tr>
+                                <h2>PlayList Angry</h2>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <td>
+                                <h3>Titre</h3>
+                                {playlistAngry.map(track =>
+                                    <div className="angryText">{track.title}</div>
+                                )}
+                            </td>
+                            <td>
+                                <h3>Artiste</h3>
+                                {playlistAngry.map(track =>
+                                    <div className="angryText">{track.artist.name}</div>
+                                )}
+                            </td>
+                            <td>
+                                <h3>Album</h3>
+                                {playlistAngry.map(track =>
+                                    <div className="angryText">{track.album.title}</div>
+                                )}
+                            </td>
+                        </tbody>
+                    </table>
                 </div>
-            </main>
+            </main >
 
         );
     }
