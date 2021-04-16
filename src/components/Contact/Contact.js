@@ -1,8 +1,7 @@
 import "./Contact.css";
-import pictoBisou from "../picto/bisou.png";
+import pictoBisou from "../../picto/bisou.png";
 import {PhotoContact} from "./PhotoContact";
 import {equipe} from "./equipe";
-import {PopupContact} from "./PopupContact";
 
 export const Contact = () => {
 
@@ -24,9 +23,9 @@ export const Contact = () => {
                 }
             </div>
             <div className="conteneur-horizontal titre-contact">
-                <img className="picto-bisou" src={pictoBisou}/>
+                <img className="picto-bisou" src={pictoBisou} alt="bisou"/>
                 <div>contact</div>
-                <img className="picto-bisou" src={pictoBisou}/>
+                <img className="picto-bisou" src={pictoBisou} alt="bisou"/>
             </div>
 
 

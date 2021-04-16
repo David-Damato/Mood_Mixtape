@@ -1,4 +1,5 @@
 import "./PopupContact.css";
+import {BoutonFermer} from "./BoutonFermer";
 
 export const PopupContact = ({setPopUpAffichee, nom, phrase, linkedIn, github, mail, photo, selecteurCss}) => {
     return (
@@ -10,17 +11,8 @@ export const PopupContact = ({setPopUpAffichee, nom, phrase, linkedIn, github, m
                     backgroundImage: `url(${photo})`
                 }}></div>
 
-
                 <div className="conteneur-vertical popup-contact">
-
-                    <div className="conteneur-bouton-fermer conteneur-horizontal">
-
-                        <div className="bouton-fermer" onClick={() => setPopUpAffichee(false)}>
-
-                            <i className="fa fa-times"></i>
-
-                        </div>
-                    </div>
+                    <BoutonFermer setPopUpAffichee={setPopUpAffichee}/>
 
                     <h1>{nom}</h1>
 
@@ -31,8 +23,8 @@ export const PopupContact = ({setPopUpAffichee, nom, phrase, linkedIn, github, m
                     <div className="popup-separateur"></div>
 
                     <div className="conteneur-horizontal popup-reseaux">
-
                         <a className={selecteurCss}
+                           rel="noreferrer"
                            target="_blank"
                            href={github}>
                             <i className="fa fa-github"></i>
@@ -40,6 +32,7 @@ export const PopupContact = ({setPopUpAffichee, nom, phrase, linkedIn, github, m
 
                         <a className={selecteurCss}
                            target="_blank"
+                           rel="noreferrer"
                            href={linkedIn}>
                             <i className="fa fa-linkedin-square"></i>
                         </a>
@@ -48,14 +41,10 @@ export const PopupContact = ({setPopUpAffichee, nom, phrase, linkedIn, github, m
                            href={`mailto:${mail}`}>
                             <i className="fa fa-at"></i>
                         </a>
-
                     </div>
 
-
                 </div>
-
             </div>
-
         </div>
 
     )

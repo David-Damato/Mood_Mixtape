@@ -1,4 +1,4 @@
-import {PopupContact} from "./PopupContact";
+import {PopupContact} from "./popup/PopupContact";
 import {useState} from "react";
 
 export const PhotoContact = ({nom, phrase, linkedIn, github, mail, hauteur, selecteurCss, photo}) => {
