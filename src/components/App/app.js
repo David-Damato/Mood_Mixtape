@@ -12,9 +12,8 @@ class App extends Component {
     render() {
         return (
             <Router>
-                <Navbar/>
+                <Navbar />
                 <div>
-                    <hr />
                     <Switch>
                         <Route exact path='/' component={Accueil} />
                         <Route path='/mood' component={Mood} />
@@ -22,7 +21,7 @@ class App extends Component {
                         <Route path='/contact' component={PageContacts} />
                     </Switch>
                 </div>
-               
+
             </Router>
         );
     }
