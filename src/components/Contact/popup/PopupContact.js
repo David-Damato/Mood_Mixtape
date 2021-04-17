@@ -9,7 +9,6 @@ export const PopupContact = ({setPopUpAffichee, nom, phrase, auteur, linkedIn, g
         <div className="conteneur-horizontal popup">
 
             <div className="conteneur-horizontal popup-contenu">
-
                 <Photo
                     selecteurCss={selecteurCss}
                     src={photo}
@@ -17,7 +16,6 @@ export const PopupContact = ({setPopUpAffichee, nom, phrase, auteur, linkedIn, g
                 />
 
                 <div className="conteneur-vertical popup-contact">
-
                     <BoutonFermer setPopUpAffichee={setPopUpAffichee}/>
 
                     <h1>{nom}</h1>
@@ -31,7 +29,6 @@ export const PopupContact = ({setPopUpAffichee, nom, phrase, auteur, linkedIn, g
                         <IconeLien selecteurCss={selecteurCss} href={linkedIn} icone="linkedin-square" nouvelOnglet={true}/>
                         <IconeLien selecteurCss={selecteurCss} href={`mailto:${mail}`} icone="at" nouvelOnglet={false}/>
                     </div>
-
                 </div>
             </div>
         </div>
