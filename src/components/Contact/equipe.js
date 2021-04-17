@@ -8,7 +8,8 @@ export const equipe = [
 
     {
         nom: "Violaine ERNOTTE",
-        phrase: "",
+        phrase: "La fanfare c'est la vie !",
+        auteur: "Violaine Ernotte",
         linkedIn: "https://www.linkedin.com/in/violaine-ernotte/",
         github: "https://github.com/vio9",
         mail: "e.violaine@yahoo.fr",
@@ -20,6 +21,7 @@ export const equipe = [
     {
         nom: "Aline DUBOIS",
         phrase: "La simplicité est la sophistication suprême",
+        auteur: "Léonard de Vinci",
         linkedIn: "https://www.linkedin.com/in/aline-dubois-95a0351aa/",
         github: "https://github.com/alinedubois",
         mail: "juillet.aline@gmail.com",
@@ -31,6 +33,7 @@ export const equipe = [
     {
         nom: "David D'AMATO",
         phrase: "",
+
         linkedIn: "https://www.linkedin.com/in/david-damato/",
         github: "https://github.com/David-Damato",
         mail: "david76230@gmail.com",
@@ -52,7 +55,8 @@ export const equipe = [
 
     {
         nom: "Pauline LABBE",
-        phrase: "",
+        phrase: "La plus grande erreur que vous puissiez faire, dans la vie, c'est d'avoir peur de faire des erreurs",
+        auteur: "John Fitzgerald Kennedy",
         linkedIn: "https://www.linkedin.com/in/pauline-labb%C3%A9-360436b7/",
         github: "https://github.com/Palabbe",
         mail: "pauline.labbe7@gmail.com",

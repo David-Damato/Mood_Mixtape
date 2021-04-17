@@ -1,15 +1,19 @@
 import "./PopupContact.css";
 import {BoutonFermer} from "./BoutonFermer";
+import {Photo} from "../Photo";
+import {Citation} from "./Citation";
 
-export const PopupContact = ({setPopUpAffichee, nom, phrase, linkedIn, github, mail, photo, selecteurCss}) => {
+export const PopupContact = ({setPopUpAffichee, nom, phrase, auteur, linkedIn, github, mail, photo, selecteurCss}) => {
     return (
         <div className="conteneur-horizontal popup">
 
             <div className="conteneur-horizontal popup-contenu">
 
-                <div className={`photo-popup ${selecteurCss}`} style={{
-                    backgroundImage: `url(${photo})`
-                }}></div>
+                <Photo
+                    selecteurCss={selecteurCss}
+                    src={photo}
+                    type={"popup"}
+                />
 
                 <div className="conteneur-vertical popup-contact">
 
@@ -17,9 +21,7 @@ export const PopupContact = ({setPopUpAffichee, nom, phrase, linkedIn, github, m
 
                     <h1>{nom}</h1>
 
-                    <blockquote className="blockquote">
-                        <p className="citation">{phrase}</p>
-                    </blockquote>
+                    <Citation phrase={phrase} auteur={auteur}/>
 
                     <div className="popup-separateur"></div>
 

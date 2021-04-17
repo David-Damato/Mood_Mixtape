@@ -54,39 +54,6 @@
     background-position: -20px;
 }
 
-.blockquote {
-    padding: 16px 0 24px;
-    position: relative;
-    margin-top: 12px;
-    margin-bottom: 100px;
-}
-
-.blockquote p {
-    text-align: center;
-    font-style: italic;
-}
-
-.blockquote:before {
-    position: absolute;
-    font-family: 'FontAwesome';
-    top: 12px;
-    left: -10px;
-    content: "\f10d";
-    font-size: 30px;
-    color: rgba(0, 0, 0, 0.2);
-}
-
-.blockquote:after {
-    position: absolute;
-    font-family: 'FontAwesome';
-    bottom: 20px;
-    right: -8px;
-    content: "\f10d";
-    font-size: 30px;
-    transform: rotate(180deg);
-    color: rgba(0, 0, 0, 0.2);
-}
-
 .bouton-fermer {
     display: flex;
     justify-content: center;
@@ -170,4 +137,5 @@ div.photo.pauline {
 .popup-separateur {
     border-top: 1px solid lightgrey;
     width: 40%;
+    margin-top: 80px;
 }
