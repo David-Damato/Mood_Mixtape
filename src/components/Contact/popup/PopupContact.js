@@ -2,6 +2,7 @@ import "./PopupContact.css";
 import {BoutonFermer} from "./BoutonFermer";
 import {Photo} from "../Photo";
 import {Citation} from "./Citation";
+import {IconeLien} from "./IconeLien";
 
 export const PopupContact = ({setPopUpAffichee, nom, phrase, auteur, linkedIn, github, mail, photo, selecteurCss}) => {
     return (
@@ -26,24 +27,9 @@ export const PopupContact = ({setPopUpAffichee, nom, phrase, auteur, linkedIn, g
                     <div className="popup-separateur"></div>
 
                     <div className="conteneur-horizontal popup-reseaux">
-                        <a className={selecteurCss}
-                           rel="noreferrer"
-                           target="_blank"
-                           href={github}>
-                            <i className="fa fa-github"></i>
-                        </a>
-
-                        <a className={selecteurCss}
-                           target="_blank"
-                           rel="noreferrer"
-                           href={linkedIn}>
-                            <i className="fa fa-linkedin-square"></i>
-                        </a>
-
-                        <a className={selecteurCss}
-                           href={`mailto:${mail}`}>
-                            <i className="fa fa-at"></i>
-                        </a>
+                        <IconeLien selecteurCss={selecteurCss} href={github} icone="github" nouvelOnglet={true}/>
+                        <IconeLien selecteurCss={selecteurCss} href={linkedIn} icone="linkedin-square" nouvelOnglet={true}/>
+                        <IconeLien selecteurCss={selecteurCss} href={`mailto:${mail}`} icone="at" nouvelOnglet={false}/>
                     </div>
 
                 </div>
