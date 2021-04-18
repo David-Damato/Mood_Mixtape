@@ -1,16 +1,15 @@
 import {PopupContact} from "./popup/PopupContact";
 import {useState} from "react";
 
-export const Contact = ({nom, phrase, auteur, linkedIn, github, mail, hauteur, selecteurCss, photo}) => {
+export const Contact = ({nom, phrase, auteur, linkedIn, github, mail, selecteurCss, photoPopup, photoColorisee}) => {
 
     const [popUpAffichee, setPopUpAffichee] = useState(false);
 
 
     return (
         <>
-            <div className={`conteneur-vertical photo ${selecteurCss}`} onClick={() => setPopUpAffichee(true)} style={{
-                height: `${hauteur}px`,
-            }}>
+            <div className={`conteneur-vertical photo ${selecteurCss}`} onClick={() => setPopUpAffichee(true)}>
+                <img src={photoColorisee} alt={nom}/>
 
             </div>
 
@@ -21,7 +20,7 @@ export const Contact = ({nom, phrase, auteur, linkedIn, github, mail, hauteur, s
                 linkedIn={linkedIn}
                 github={github}
                 mail={mail}
-                photo={photo}
+                photo={photoPopup}
                 selecteurCss={selecteurCss}
                 auteur={auteur}
             />}

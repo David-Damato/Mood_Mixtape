@@ -18,7 +18,9 @@ export const PageContacts = () => {
                         mail={contact.mail}
                         hauteur={contact.hauteur}
                         selecteurCss={contact.selecteurCss}
-                        photo={contact.photo}/>
+                        photoPopup={contact.photoPopup}
+                        photoColorisee={contact.photoColorisee}/>
+
 
                 ))
                 }

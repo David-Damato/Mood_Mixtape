@@ -23,7 +23,6 @@
 
 .photos-contact {
     align-items: flex-end;
-    gap: 5vw;
 }
 
 .titre-contact {
@@ -34,14 +33,12 @@
 
 .photo {
     width: 140px;
-    /*height: 258px;*/
-    /*background-color: orange;*/
     border-radius: 2px;
     transition: 0.5s ease-in-out;
 }
 
 .photo:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .picto-bisou{
