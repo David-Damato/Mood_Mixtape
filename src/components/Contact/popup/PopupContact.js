@@ -27,7 +27,7 @@ export const PopupContact = ({setPopUpAffichee, nom, phrase, auteur, linkedIn, g
                     <div className="conteneur-horizontal popup-reseaux">
                         <IconeLien selecteurCss={selecteurCss} href={github} icone="github" nouvelOnglet={true}/>
                         <IconeLien selecteurCss={selecteurCss} href={linkedIn} icone="linkedin-square" nouvelOnglet={true}/>
-                        <IconeLien selecteurCss={selecteurCss} href={`mailto:${mail}`} icone="at" nouvelOnglet={false}/>
+                        <IconeLien selecteurCss={selecteurCss} href={`mailto:${mail}`} icone="envelope" nouvelOnglet={false}/>
                     </div>
                 </div>
             </div>

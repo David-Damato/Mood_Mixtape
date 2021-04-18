@@ -95,43 +95,23 @@
 }
 
 a.violaine:hover {
-    color: #e76f51 !important;
+    color: #c63458 !important;
 }
 
 a.aline:hover {
-    color: #f4a261 !important;
+    color: #f88517 !important;
 }
 
 a.david:hover {
-    color: #e9c46a !important;
+    color: #dfb11d !important;
 }
 
 a.tom:hover {
-    color: #2a9d8f !important;
+    color: #15a280 !important;
 }
 
 a.pauline:hover {
-    color: #264653 !important;
-}
-
-div.photo.violaine {
-    background-color: #e76f51;
-}
-
-div.photo.aline {
-    background-color: #f4a261;
-}
-
-div.photo.david {
-    background-color: #e9c46a;
-}
-
-div.photo.tom {
-    background-color: #2a9d8f;
-}
-
-div.photo.pauline {
-    background-color: #264653;
+    color: #1269d0 !important;
 }
 
 .popup-separateur {
