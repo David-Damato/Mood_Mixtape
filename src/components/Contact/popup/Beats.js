@@ -1,15 +1,15 @@
 import "./Beats.css";
 
-export const Beats = ({titre}) =>{
+export const Beats = ({titre, selecteurCss}) =>{
     return (
         <div className="conteneur-horizontal beats-conteneur">
-            <div className="beats">
+            <div className={`beats ${selecteurCss}`}>
                 <a>
                     <div></div>
                     <div></div>
                 </a>
             </div>
-            <div className="beats-title">{titre}</div>
+            <div className={`beats-title ${selecteurCss}`}>{titre}</div>
         </div>
     )
 }
