@@ -16,11 +16,11 @@ export const PopupContact = ({setPopUpAffichee, nom, phrase, auteur, linkedIn, g
                 />
 
                 <div className="conteneur-vertical popup-contact">
-                    <BoutonFermer setPopUpAffichee={setPopUpAffichee}/>
+                    <BoutonFermer setPopUpAffichee={setPopUpAffichee} selecteurCss={selecteurCss}/>
 
                     <h1>{nom}</h1>
 
-                    <Citation phrase={phrase} auteur={auteur}/>
+                    <Citation phrase={phrase} auteur={auteur} selecteurCss={selecteurCss}/>
 
                     <div className="popup-separateur"></div>
 

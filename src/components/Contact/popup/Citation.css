@@ -33,7 +33,6 @@
     color: rgba(0, 0, 0, 0.2);
 }
 
-
 .Citation{
     display: flex;
     flex-direction: column;
@@ -44,4 +43,24 @@
 .auteur{
     font-style: italic;
     margin-top: -20px;
+}
+
+.auteur.aline{
+    color: #f88517;
+}
+
+.auteur.david{
+    color: #dfb11d;
+}
+
+.auteur.pauline{
+    color: #1269d0;
+}
+
+.auteur.tom{
+    color: #15a280;
+}
+
+.auteur.violaine{
+    color: #c63458;
 }

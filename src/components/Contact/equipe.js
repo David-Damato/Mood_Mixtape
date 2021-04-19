@@ -19,7 +19,6 @@ export const equipe = [
         linkedIn: "https://www.linkedin.com/in/aline-dubois-95a0351aa/",
         github: "https://github.com/alinedubois",
         mail: "juillet.aline@gmail.com",
-        hauteur: 290,
         selecteurCss: 'aline',
         photoPopup: alinePhotoPopup,
         photoColorisee: alinePhotoColorisee
@@ -32,7 +31,6 @@ export const equipe = [
         linkedIn: "https://www.linkedin.com/in/david-damato/",
         github: "https://github.com/David-Damato",
         mail: "david76230@gmail.com",
-        hauteur: 250,
         selecteurCss: "david",
         photoPopup: davidPhotoPopup,
         photoColorisee: davidPhotoColorisee
@@ -45,7 +43,6 @@ export const equipe = [
         linkedIn: "https://www.linkedin.com/in/pauline-labb%C3%A9-360436b7/",
         github: "https://github.com/Palabbe",
         mail: "pauline.labbe7@gmail.com",
-        hauteur: 360,
         selecteurCss: 'pauline',
         photoPopup: paulinePhotoPopup,
         photoColorisee: paulinePhotoColorisee
@@ -57,7 +54,6 @@ export const equipe = [
         linkedIn: "https://www.linkedin.com/in/tom-carpentier-46ab84120/",
         github: "https://github.com/TomWebd",
         mail: "t.carpentier.19@gmail.com",
-        hauteur: 420,
         selecteurCss: 'tom',
         photoPopup: tomPhotoPopup,
         photoColorisee: tomPhotoColorisee
@@ -70,7 +66,6 @@ export const equipe = [
         linkedIn: "https://www.linkedin.com/in/violaine-ernotte/",
         github: "https://github.com/vio9",
         mail: "e.violaine@yahoo.fr",
-        hauteur: 530,
         selecteurCss: 'violaine',
         photoPopup: violainePhotoPopup,
         photoColorisee: violainePhotoColorisee
