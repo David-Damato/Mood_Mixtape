@@ -3,6 +3,7 @@ import {BoutonFermer} from "./BoutonFermer";
 import {Photo} from "../Photo";
 import {Citation} from "./Citation";
 import {IconeLien} from "./IconeLien";
+import {Beats} from "./Beats";
 
 export const PopupContact = ({setPopUpAffichee, nom, phrase, auteur, linkedIn, github, mail, photo, selecteurCss}) => {
     return (
@@ -18,7 +19,7 @@ export const PopupContact = ({setPopUpAffichee, nom, phrase, auteur, linkedIn, g
                 <div className="conteneur-vertical popup-contact">
                     <BoutonFermer setPopUpAffichee={setPopUpAffichee} selecteurCss={selecteurCss}/>
 
-                    <h1>{nom}</h1>
+                    <Beats titre={nom}/>
 
                     <Citation phrase={phrase} auteur={auteur} selecteurCss={selecteurCss}/>
 
