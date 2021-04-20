@@ -4,12 +4,17 @@ import {Photo} from "../Photo";
 import {Citation} from "./Citation";
 import {IconeLien} from "./IconeLien";
 import {Beats} from "./Beats";
+import {useState} from "react";
 
 export const PopupContact = ({setPopUpAffichee, nom, phrase, auteur, linkedIn, github, mail, photo, selecteurCss}) => {
+
+    const [doitFermerLaPopup, setDoitFermerLaPopup] = useState(false);
+
+
     return (
         <div className="conteneur-horizontal popup">
 
-            <div className="conteneur-horizontal popup-contenu">
+            <div className={`conteneur-horizontal popup-contenu animate__animated ${doitFermerLaPopup === false ? "animate__jackInTheBox" : "animate__hinge" }`}>
                 <Photo
                     selecteurCss={selecteurCss}
                     src={photo}
@@ -17,7 +22,7 @@ export const PopupContact = ({setPopUpAffichee, nom, phrase, auteur, linkedIn, g
                 />
 
                 <div className="conteneur-vertical popup-contact">
-                    <BoutonFermer setPopUpAffichee={setPopUpAffichee} selecteurCss={selecteurCss}/>
+                    <BoutonFermer setDoitFermerLaPopup={setDoitFermerLaPopup} setPopUpAffichee={setPopUpAffichee} selecteurCss={selecteurCss}/>
 
                     <Beats titre={nom} selecteurCss={selecteurCss}/>
 
