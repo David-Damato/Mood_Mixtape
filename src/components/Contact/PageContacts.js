@@ -27,7 +27,7 @@ export const PageContacts = () => {
             </div>
             <div className="conteneur-horizontal titre-contact">
                 <img className="picto-bisou" src={pictoBisou} alt="bisou"/>
-                <div>contact</div>
+                <div>l'équipe à votre écoute</div>
                 <img className="picto-bisou" src={pictoBisou} alt="bisou"/>
             </div>
 
