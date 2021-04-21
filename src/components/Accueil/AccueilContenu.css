@@ -17,6 +17,7 @@
     width: 550px;
     border-radius: 10px;
     color:white;
+    animation: bounceInLeft 3s;
 }
 
 .reponse {
@@ -27,7 +28,10 @@
     width: 550px;
     border-radius: 10px;
     color: white;
+    animation: bounceInLeft 3s;
 }
+
+
 
 .moodMixtape {
     font-weight: bolder;
@@ -61,7 +65,18 @@
     height: 150px;
 }
 
-.moodPicture:hover {
-  transform: scale(1.1);
+.happy:hover {
+ animation: bounce 0.7s;
 }
 
+.angry:hover {
+    animation: headShake 0.7s;
+}
+
+.sad:hover {
+    animation: jello 0.7s;
+}
+
+.inlove:hover {
+    animation:heartBeat 0.7s;
+}
