@@ -1,7 +1,13 @@
+
+
+
 /*Footer **********************************************************/
 
 .footer-container{
     background-color: #6097F0;
+    position:fixed;
+    bottom:0;
+    width:100%;
 }
 .ul-footer{
     display:flex;
@@ -9,6 +15,7 @@
     margin:10px 0 0 0;
     padding:0;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .ul-footer li{
