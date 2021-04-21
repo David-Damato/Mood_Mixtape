@@ -51,40 +51,6 @@
 .photo-popup.pauline {
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: -20px;
-}
-
-.blockquote {
-    padding: 16px 0 24px;
-    position: relative;
-    margin-top: 12px;
-    margin-bottom: 100px;
-}
-
-.blockquote p {
-    text-align: center;
-    font-style: italic;
-}
-
-.blockquote:before {
-    position: absolute;
-    font-family: 'FontAwesome';
-    top: 12px;
-    left: -10px;
-    content: "\f10d";
-    font-size: 30px;
-    color: rgba(0, 0, 0, 0.2);
-}
-
-.blockquote:after {
-    position: absolute;
-    font-family: 'FontAwesome';
-    bottom: 20px;
-    right: -8px;
-    content: "\f10d";
-    font-size: 30px;
-    transform: rotate(180deg);
-    color: rgba(0, 0, 0, 0.2);
 }
 
 .bouton-fermer {
@@ -128,46 +94,27 @@
 }
 
 a.violaine:hover {
-    color: #e76f51 !important;
+    color: #c63458 !important;
 }
 
 a.aline:hover {
-    color: #f4a261 !important;
+    color: #f88517 !important;
 }
 
 a.david:hover {
-    color: #e9c46a !important;
+    color: #dfb11d !important;
 }
 
 a.tom:hover {
-    color: #2a9d8f !important;
+    color: #15a280 !important;
 }
 
 a.pauline:hover {
-    color: #264653 !important;
-}
-
-div.photo.violaine {
-    background-color: #e76f51;
-}
-
-div.photo.aline {
-    background-color: #f4a261;
-}
-
-div.photo.david {
-    background-color: #e9c46a;
-}
-
-div.photo.tom {
-    background-color: #2a9d8f;
-}
-
-div.photo.pauline {
-    background-color: #264653;
+    color: #1269d0 !important;
 }
 
 .popup-separateur {
     border-top: 1px solid lightgrey;
     width: 40%;
+    margin-top: 80px;
 }

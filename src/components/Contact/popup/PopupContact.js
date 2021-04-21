@@ -1,49 +1,40 @@
 import "./PopupContact.css";
 import {BoutonFermer} from "./BoutonFermer";
+import {Photo} from "../Photo";
+import {Citation} from "./Citation";
+import {IconeLien} from "./IconeLien";
+import {Beats} from "./Beats";
+import {useState} from "react";
 
-export const PopupContact = ({setPopUpAffichee, nom, phrase, linkedIn, github, mail, photo, selecteurCss}) => {
+export const PopupContact = ({setPopUpAffichee, nom, phrase, auteur, linkedIn, github, mail, photo, selecteurCss}) => {
+
+    const [doitFermerLaPopup, setDoitFermerLaPopup] = useState(false);
+
+
     return (
         <div className="conteneur-horizontal popup">
 
-            <div className="conteneur-horizontal popup-contenu">
-
-                <div className={`photo-popup ${selecteurCss}`} style={{
-                    backgroundImage: `url(${photo})`
-                }}></div>
+            <div className={`conteneur-horizontal popup-contenu animate__animated ${doitFermerLaPopup === false ? "animate__jackInTheBox" : "animate__hinge" }`}>
+                <Photo
+                    selecteurCss={selecteurCss}
+                    src={photo}
+                    type={"popup"}
+                />
 
                 <div className="conteneur-vertical popup-contact">
+                    <BoutonFermer setDoitFermerLaPopup={setDoitFermerLaPopup} setPopUpAffichee={setPopUpAffichee} selecteurCss={selecteurCss}/>
 
-                    <BoutonFermer setPopUpAffichee={setPopUpAffichee}/>
+                    <Beats titre={nom} selecteurCss={selecteurCss}/>
 
-                    <h1>{nom}</h1>
-
-                    <blockquote className="blockquote">
-                        <p className="citation">{phrase}</p>
-                    </blockquote>
+                    <Citation phrase={phrase} auteur={auteur} selecteurCss={selecteurCss}/>
 
                     <div className="popup-separateur"></div>
 
                     <div className="conteneur-horizontal popup-reseaux">
-                        <a className={selecteurCss}
-                           rel="noreferrer"
-                           target="_blank"
-                           href={github}>
-                            <i className="fa fa-github"></i>
-                        </a>
-
-                        <a className={selecteurCss}
-                           target="_blank"
-                           rel="noreferrer"
-                           href={linkedIn}>
-                            <i className="fa fa-linkedin-square"></i>
-                        </a>
-
-                        <a className={selecteurCss}
-                           href={`mailto:${mail}`}>
-                            <i className="fa fa-at"></i>
-                        </a>
+                        <IconeLien selecteurCss={selecteurCss} href={github} icone="github" nouvelOnglet={true}/>
+                        <IconeLien selecteurCss={selecteurCss} href={linkedIn} icone="linkedin-square" nouvelOnglet={true}/>
+                        <IconeLien selecteurCss={selecteurCss} href={`mailto:${mail}`} icone="envelope" nouvelOnglet={false}/>
                     </div>
-
                 </div>
             </div>
         </div>

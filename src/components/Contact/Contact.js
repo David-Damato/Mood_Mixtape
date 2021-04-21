@@ -1,34 +1,30 @@
-import "./Contact.css";
-import pictoBisou from "../../picto/bisou.png";
-import {PhotoContact} from "./PhotoContact";
-import {equipe} from "./equipe";
+import {PopupContact} from "./popup/PopupContact";
+import {useState} from "react";
 
-export const Contact = () => {
+export const Contact = ({nom, phrase, auteur, linkedIn, github, mail, selecteurCss, photoPopup, photoColorisee}) => {
+
+    const [popUpAffichee, setPopUpAffichee] = useState(false);
+
 
     return (
-        <div className="conteneur-vertical Contact">
-            <div className="conteneur-horizontal photos-contact">
-                {equipe.map((contact, index) => (
-                    <PhotoContact
-                        nom={contact.nom}
-                        phrase={contact.phrase}
-                        github={contact.github}
-                        linkedIn={contact.linkedIn}
-                        mail={contact.mail}
-                        hauteur={contact.hauteur}
-                        selecteurCss={contact.selecteurCss}
-                        photo={contact.photo}/>
+        <>
+            <div className={`conteneur-vertical photo ${selecteurCss}`} onClick={() => setPopUpAffichee(true)}>
+                <img src={photoColorisee} alt={nom}/>
 
-                ))
-                }
-            </div>
-            <div className="conteneur-horizontal titre-contact">
-                <img className="picto-bisou" src={pictoBisou} alt="bisou"/>
-                <div>contact</div>
-                <img className="picto-bisou" src={pictoBisou} alt="bisou"/>
             </div>
 
-
-        </div>
+            {popUpAffichee && <PopupContact
+                setPopUpAffichee={setPopUpAffichee}
+                phrase={phrase}
+                nom={nom}
+                linkedIn={linkedIn}
+                github={github}
+                mail={mail}
+                photo={photoPopup}
+                selecteurCss={selecteurCss}
+                auteur={auteur}
+            />}
+        </>
     )
 };
+
