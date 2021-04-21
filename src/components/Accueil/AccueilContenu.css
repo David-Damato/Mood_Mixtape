@@ -3,7 +3,6 @@
 .questionsEncadre {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;  
-  /*  padding: 1%; */
     margin-top: 3%;  
     margin-right: 5%;
     margin-left: 5%;
@@ -26,13 +25,7 @@
 
 
 .reponse-hidden {
-    background-color: white;
-    padding: 1%;
-    margin: 1%;
-    margin-left: 53%;
-    width: 550px;
-    border-radius: 10px;
-    color: white;
+    display: none;
 }
 
 .reponse-appears {
@@ -92,4 +85,85 @@
 
 .inlove:hover {
     animation:heartBeat 0.7s;
+}
+
+/* CSS responsive page accueil */
+
+@media screen and (max-width: 700px) {
+    
+    .questionsEncadre {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+
+    .question {
+        margin-left: 0%;
+        width: 300px;
+        font-size: 13px;
+        padding: 3%;
+    }
+
+    .reponse-appears {
+        margin-left: 0%;
+        width: 300px;
+        font-size: 13px;
+        padding: 3%;
+    }
+
+    .reponse-hidden {
+        margin-left: 0%;
+        width: 300px;
+        padding: 3%;
+    }
+
+    .moodLinks {
+        display: flex;
+        flex-wrap: wrap;
+    } 
+
+    .moodChoice h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 13px;
+    } 
+    
+    .moodPicture {
+        margin-top: 5%;
+    }
+}
+
+@media screen and (min-width:730px) and (max-width: 835px) {
+    
+    .questionsEncadre {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;  
+        margin-top: 3%;  
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    .question {
+        padding: 1%;
+        margin: 1%; 
+        margin-left: 5%;
+        width: 350px;
+        font-size: 14px;
+        border-radius: 10px;
+        color:white;
+        animation: bounceInLeft 2s;
+    }
+
+    .reponse-appears {
+        background-color: #264653;
+        padding: 1%;
+        margin: 1%;
+        margin-left: 53%;
+        width: 350px;
+        font-size: 14px;
+        border-radius: 10px;
+        color: white;
+        animation: bounceInLeft 2s;
+    }
+
 }
