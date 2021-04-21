@@ -54,10 +54,14 @@
 .moodLinks {
     display: flex;
     justify-content: space-around;
-    padding: 50px;
+    padding: 3%;
 } 
 
 .moodPicture {
     height: 150px;
+}
+
+.moodPicture:hover {
+  transform: scale(1.1);
 }
 
