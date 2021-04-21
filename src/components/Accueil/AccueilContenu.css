@@ -89,7 +89,7 @@
 
 /* CSS responsive page accueil */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 690px) {
     
     .questionsEncadre {
     display: flex;
@@ -133,7 +133,7 @@
     }
 }
 
-@media screen and (min-width:730px) and (max-width: 835px) {
+@media screen and (min-width:691px) and (max-width: 1200px) {
     
     .questionsEncadre {
         font-family: 'Montserrat', sans-serif;
@@ -164,6 +164,15 @@
         border-radius: 10px;
         color: white;
         animation: bounceInLeft 2s;
+    }
+
+    .moodLinks {
+        display: flex;
+        flex-wrap: wrap;
+    } 
+
+    .moodPicture {
+        margin-top: 5%;
     }
 
 }
