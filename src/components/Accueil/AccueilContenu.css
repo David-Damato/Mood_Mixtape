@@ -3,8 +3,8 @@
 .questionsEncadre {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;  
-    padding: 5%;
-    margin-top: 5%; 
+  /*  padding: 1%; */
+    margin-top: 3%;  
     margin-right: 5%;
     margin-left: 5%;
 }
@@ -12,7 +12,7 @@
 .question {
     background-color:#264653;
     padding: 1%;
-    margin: 1%;
+    margin: 1%; 
     margin-left: 5%;
     width: 550px;
     border-radius: 10px;
@@ -22,10 +22,17 @@
 
 .question:hover {
     transform: scale(1.1);
-}
+} 
+
 
 .reponse-hidden {
-    display: none;
+    background-color: white;
+    padding: 1%;
+    margin: 1%;
+    margin-left: 53%;
+    width: 550px;
+    border-radius: 10px;
+    color: white;
 }
 
 .reponse-appears {
