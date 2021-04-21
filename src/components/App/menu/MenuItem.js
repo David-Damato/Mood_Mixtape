@@ -1,9 +1,9 @@
 import {Link} from "react-router-dom";
 
 
-export const MenuItem = ({lien, texte}) => {
+export const MenuItem = ({lien, texte, fermerMenu}) => {
 
     return (
-        <li><Link to={lien}>{texte}</Link></li>
+        <li onClick={fermerMenu}><Link to={lien}>{texte}</Link></li>
     )
 };
