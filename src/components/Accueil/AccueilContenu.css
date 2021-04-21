@@ -3,17 +3,17 @@
 .questionsEncadre {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;  
-    padding: 20px;
-    margin: 20px;
-    margin-right: 100px;
-    margin-left: 100px;
+    padding: 5%;
+    margin: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .question {
     background-color:#264653;
-    padding: 20px;
-    margin: 10px;
-    margin-left: 80px;
+    padding: 1%;
+    margin: 1%;
+    margin-left: 5%;
     width: 550px;
     border-radius: 10px;
     color:white;
@@ -21,9 +21,9 @@
 
 .reponse {
     background-color: #264653;
-    padding: 20px;
-    margin: 10px;
-    margin-left: 740px;
+    padding: 1%;
+    margin: 1%;
+    margin-left: 53%;
     width: 550px;
     border-radius: 10px;
     color: white;
@@ -37,11 +37,11 @@
 
 
 .moodChoice {
-    padding: 20px;
-    margin: 20px;
+    padding: 3%;
+    margin: 5%;
     background-color: #e9c46a;
-    margin-right: 100px;
-    margin-left: 100px;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .moodChoice h1 {
