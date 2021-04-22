@@ -3,6 +3,7 @@
     font-weight: bolder;
     color: black;
     font-size: 100px;
+    text-align: center;
 }
 
 .conteneur-horizontal {
@@ -49,5 +50,31 @@
     width: 60px;
 }
 
+@media screen and (max-width: 1440px){
+    .picto-bisou {
+        display: none;
+    }
+}
 
+@media screen and (max-width: 1024px) {
+    .Contact {
+        flex-direction: column-reverse;
+        text-align: center;
+        }
+    .titre-contact div{
+        font-size: 6rem;
+    }
+    .titre-contact{
+        padding-top: 0;
+    }
+}
 
+@media screen and (max-width: 768px){
+    .titre-contact div{
+        font-size: 4rem;}
+}
+
+@media screen and (max-width: 320px){
+    .titre-contact div{
+        font-size: 2rem;}
+}

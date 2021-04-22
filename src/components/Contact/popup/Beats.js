@@ -2,7 +2,7 @@ import "./Beats.css";
 
 export const Beats = ({titre, selecteurCss}) =>{
     return (
-        <div className="conteneur-horizontal beats-conteneur">
+        <div className={`conteneur-horizontal beats-conteneur ${selecteurCss}`}>
             <div className={`beats ${selecteurCss}`}>
                 <a>
                     <div></div>
