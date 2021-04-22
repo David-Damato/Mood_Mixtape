@@ -3,30 +3,40 @@
 .questionsEncadre {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;  
-    padding: 20px;
-    margin: 20px;
-    margin-right: 100px;
-    margin-left: 100px;
+    margin-top: 3%;  
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .question {
     background-color:#264653;
-    padding: 20px;
-    margin: 10px;
-    margin-left: 80px;
+    padding: 1%;
+    margin: 1%; 
+    margin-left: 5%;
     width: 550px;
     border-radius: 10px;
     color:white;
+    animation: bounceInLeft 2s;
 }
 
-.reponse {
+.question:hover {
+    transform: scale(1.1);
+} 
+
+
+.reponse-hidden {
+    display: none;
+}
+
+.reponse-appears {
     background-color: #264653;
-    padding: 20px;
-    margin: 10px;
-    margin-left: 740px;
+    padding: 1%;
+    margin: 1%;
+    margin-left: 53%;
     width: 550px;
     border-radius: 10px;
     color: white;
+    animation: bounceInLeft 2s;
 }
 
 .moodMixtape {
@@ -37,11 +47,11 @@
 
 
 .moodChoice {
-    padding: 20px;
-    margin: 20px;
+    padding: 3%;
+    margin: 5%; 
     background-color: #e9c46a;
-    margin-right: 100px;
-    margin-left: 100px;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .moodChoice h1 {
@@ -54,10 +64,122 @@
 .moodLinks {
     display: flex;
     justify-content: space-around;
-    padding: 50px;
+    padding: 3%;
 } 
 
 .moodPicture {
     height: 150px;
 }
 
+.happy:hover {
+ animation: bounce 0.7s;
+}
+
+.angry:hover {
+    animation: headShake 0.7s;
+}
+
+.sad:hover {
+    animation: jello 0.7s;
+}
+
+.inlove:hover {
+    animation:heartBeat 0.7s;
+}
+
+/* CSS responsive page accueil */
+
+
+@media screen and (max-width: 690px) {
+    
+    .questionsEncadre {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .question {
+        margin-left: 0%;
+        width: 300px;
+        font-size: 13px;
+        padding: 3%;
+    }
+
+    .reponse-appears {
+        margin-left: 0%;
+        width: 300px;
+        font-size: 13px;
+        padding: 3%;
+    }
+
+    .reponse-hidden {
+        margin-left: 0%;
+        width: 300px;
+        padding: 3%;
+    }
+
+    .moodLinks {
+        display: flex;
+        flex-wrap: wrap;
+    } 
+
+    .moodChoice h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 13px;
+    } 
+    
+    .moodChoice {
+        margin-bottom: 200px;
+    } 
+
+    .moodPicture {
+        margin-top: 5%;
+    }
+}
+
+@media screen and (min-width:691px) and (max-width: 1023px) {
+    
+    .question {
+        width: 350px;
+        font-size: 14px;
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+
+    .reponse-appears {
+        width: 350px;
+        font-size: 14px;
+        margin-top: 2%;
+        margin-left: 45%;
+    }
+
+    .moodLinks {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 5%;
+    } 
+
+    .moodChoice {
+        margin-bottom: 160px;
+    }
+
+    .moodPicture {
+        margin-top: 5%;
+    }
+
+}
+
+@media screen and (min-width:1024px) and (max-width: 1400px) {
+    
+    .question {
+        width: 400px;
+        font-size: 16px;
+    }
+
+    .reponse-appears {
+        width: 400px;
+        font-size: 16px;
+    }
+
+} 

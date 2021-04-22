@@ -9,10 +9,10 @@ export default function MoodChoice(){
         <div className="moodChoice">
             <h1>Comment vous sentez-vous aujourd'hui ?</h1>
             <div className="moodLinks">
-                <a href=""><img className = "moodPicture" src={happy} alt="happy playlist"/></a>
-                <a href=""><img className = "moodPicture" src={angry} alt="angry playlist"/></a>
-                <a href=""><img className = "moodPicture" src={sad} alt="sad playlist"/></a>
-                <a href=""><img className = "moodPicture" src={inLove} alt="in love playlist"/></a>
+                <a href=""><img className = "moodPicture happy" src={happy} alt="happy playlist"/></a>
+                <a href=""><img className = "moodPicture angry" src={angry} alt="angry playlist"/></a>
+                <a href=""><img className = "moodPicture sad" src={sad} alt="sad playlist"/></a>
+                <a href=""><img className = "moodPicture inlove" src={inLove} alt="in love playlist"/></a>
             </div>
         </div>
     )
