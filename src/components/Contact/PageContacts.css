@@ -1,0 +1,49 @@
+.titre-contact div {
+    font-family: 'Spartan', sans-serif;
+    font-weight: bolder;
+    color: black;
+    font-size: 100px;
+}
+
+.conteneur-horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+.conteneur-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.Contact {
+    align-items: center;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.photos-contact {
+    align-items: flex-end;
+}
+
+.titre-contact {
+    align-items: center;
+    gap: 20px;
+    padding-top: 25px;
+}
+
+
+.photo {
+    width: 280px;
+    border-radius: 2px;
+    transition: 0.5s ease-in-out;
+}
+
+.photo:hover{
+    transform: scale(1.1);
+}
+
+.picto-bisou{
+    height: 60px;
+    width: 60px;
+}
+
