@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Accueil from '../Accueil/accueil';
 import Playlist from '../Playlist/playlist';
@@ -24,7 +24,7 @@ class App extends Component {
 
             </Router>
         );
-    }
+   }
 }
 
 export default App;
