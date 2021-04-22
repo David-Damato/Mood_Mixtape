@@ -10,6 +10,7 @@ export const PageContacts = () => {
             <div className="conteneur-horizontal photos-contact">
                 {equipe.map((contact, index) => (
                     <Contact
+                        key={`contact-${index}`}
                         nom={contact.nom}
                         phrase={contact.phrase}
                         auteur={contact.auteur}
