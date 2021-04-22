@@ -23,10 +23,19 @@
     transform: scale(1.1);
 } 
 
+/*.reponse-hidden {
+    background-color: white;
+    padding: 1%;
+    margin: 1%; 
+    margin-left: 5%;
+    width: 550px;
+    border-radius: 10px;
+    color:white;
+} */
 
 .reponse-hidden {
     display: none;
-}
+} 
 
 .reponse-appears {
     background-color: #264653;
@@ -52,6 +61,7 @@
     background-color: #e9c46a;
     margin-right: 5%;
     margin-left: 5%;
+    margin-bottom: 100px;
 }
 
 .moodChoice h1 {
