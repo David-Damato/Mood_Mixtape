@@ -89,12 +89,13 @@
 
 /* CSS responsive page accueil */
 
+
 @media screen and (max-width: 690px) {
     
     .questionsEncadre {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .question {
@@ -128,51 +129,57 @@
         font-size: 13px;
     } 
     
-    .moodPicture {
-        margin-top: 5%;
-    }
-}
-
-@media screen and (min-width:691px) and (max-width: 1200px) {
-    
-    .questionsEncadre {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 500;  
-        margin-top: 3%;  
-        margin-right: 5%;
-        margin-left: 5%;
-    }
-
-    .question {
-        padding: 1%;
-        margin: 1%; 
-        margin-left: 5%;
-        width: 350px;
-        font-size: 14px;
-        border-radius: 10px;
-        color:white;
-        animation: bounceInLeft 2s;
-    }
-
-    .reponse-appears {
-        background-color: #264653;
-        padding: 1%;
-        margin: 1%;
-        margin-left: 53%;
-        width: 350px;
-        font-size: 14px;
-        border-radius: 10px;
-        color: white;
-        animation: bounceInLeft 2s;
-    }
-
-    .moodLinks {
-        display: flex;
-        flex-wrap: wrap;
+    .moodChoice {
+        margin-bottom: 200px;
     } 
 
     .moodPicture {
         margin-top: 5%;
     }
+}
+
+@media screen and (min-width:691px) and (max-width: 1023px) {
+    
+    .question {
+        width: 350px;
+        font-size: 14px;
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+
+    .reponse-appears {
+        width: 350px;
+        font-size: 14px;
+        margin-top: 2%;
+        margin-left: 45%;
+    }
+
+    .moodLinks {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 5%;
+    } 
+
+    .moodChoice {
+        margin-bottom: 160px;
+    }
+
+    .moodPicture {
+        margin-top: 5%;
+    }
 
 }
+
+@media screen and (min-width:1024px) and (max-width: 1400px) {
+    
+    .question {
+        width: 400px;
+        font-size: 16px;
+    }
+
+    .reponse-appears {
+        width: 400px;
+        font-size: 16px;
+    }
+
+} 
