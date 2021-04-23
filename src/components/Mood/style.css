@@ -9,13 +9,36 @@
 }
 
 .playlist-name {
-    padding: 2rem;
+    padding: 1.5rem;
     border: solid 2px grey;
     border-radius: 20px;
 }
 
+.container {
+    margin-right: 10rem;
+    margin-left: 10rem;
+    border: solid #F4A261 2px;
+    background-color: #f4a3617a;
+}
+
 .playlist {
     background-color: salmon;
-    width: 600px;
-    height: 300px;
+    width: 800px;
+    height: 600px;
+    float: middle;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    margin: 20px;
+    width: 80px;
+    height: 30px;
+    background-color: #2A9D8F;
+    color: white;
+    border: solid white 1px;
+    border-radius: 10%;
 }

@@ -1,8 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import "./style.css";
 
-class MoodIcon extends Component {
-    render() {
+export default function MoodIcon () {
+
+    const [playlist, setPlaylist] = useState([]);
+
+    useEffect(() => {
+        fetch("https://cors-anywhere.herokuapp.com/https://https://api.deezer.com/playlist/8951314702")
+            .then((res) => res.json())
+            .then((result) => {
+                setPlaylist(result.tracks.data);
+            },
+            )
+    }, [])
         return (
             <>
                 <div class="container">
@@ -12,13 +22,27 @@ class MoodIcon extends Component {
                     <div class="playlist-name">
                         Playlist Happy
                     </div>
-                    <div class="playlist">
-
+                    <div class="player">
+                        {/* <div class="cover">
+                             <img>{playlist[0].cover_big} </img></img>
+                            <img></img>
+                            <img></img>
+                        </div> */}
+                        <div class="infos">
+                            <p>Titre : {/*{playlist[0].title}*/}</p>
+                            <p>Artiste : {/*{playlist[0].artist.name}*/}</p>
+                            <p>Année : {/*{playlist[0].title}*/}</p>
+                            <p>Genre : {/*{playlist[0].title}*/}</p>
+                        </div>
+                        <div class="player">
+                        </div>
+                        <div class="buttons">
+                            <button class="btn">Précédent</button>
+                            <button class="btn">Random</button>
+                            <button class="btn">Suivant</button>
+                        </div>
                     </div>
                 </div>
             </>
-        );
-    }
+        )
 }
-
-export default MoodIcon;
