@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import MoodIcon from "./MoodIcon.jsx"
+import MoodHappy from "./MoodHappy.jsx"
 class Mood extends Component {
     render() {
         return (
             <main className="moodPage">
-                <MoodIcon></MoodIcon>
+                <MoodHappy></MoodHappy>
             </main>
         );
     }

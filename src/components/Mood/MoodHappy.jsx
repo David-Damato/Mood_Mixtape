@@ -1,7 +1,7 @@
 import React, { Component, useState, useEffect } from 'react';
 import "./style.css";
 
-export default function MoodIcon () {
+export default function MoodHappy () {
 
     const [playlist, setPlaylist] = useState([]);
 

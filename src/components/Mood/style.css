@@ -8,16 +8,26 @@
     width: 200px;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
 .playlist-name {
-    padding: 1.5rem;
+    padding: 1rem;
+    margin-top: 1rem;
     border: solid 2px grey;
     border-radius: 20px;
 }
 
-.container {
-    margin-right: 10rem;
-    margin-left: 10rem;
-    border: solid #F4A261 2px;
+.player {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 700px;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    border: solid #F4A261 1px;
     background-color: #f4a3617a;
 }
 
