@@ -1,4 +1,6 @@
 
+/* Mood div */
+
 .humeur_play {
     display: flex !important;
   align-items: flex-start !important;
@@ -36,23 +38,15 @@
     background-color: rgb(255, 227, 232);
 }
 
-
-.playlistHappy {
-    margin: 30px;
-    margin-bottom: 100px;
-    padding-bottom: 20px;
-    width: auto;
-    background-color: #ff8f26;
-    border-radius: 10px;
-    text-align: center;
-}
-
 .flechePicture {
     margin-top: 10px;
     height: 40px;
     border-radius: 5px;
 }
 
+/*  */
+
+/* Playlist Général */
 
 table {
 display: flex !important;
@@ -70,13 +64,9 @@ display: flex !important;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    animation: pulse 2s;
 }
-.buttonHappy {
-    background-color: #ff5e00;
-}
-.buttonHappy:hover {
-    background-color: #fc9a62;
-}
+
 .tdPlaylist {
     text-align: center;
     border-radius: 5px;
@@ -86,13 +76,7 @@ display: flex !important;
 .trPlaylist {
     padding: 50px;
 }
-.tdHappy {
-    border: outset #ff5e00;
-    background-color: #fdaf4a;
-}
-.tdHappy:hover {
-    border: outset #fc9a62;
-}
+
 .theadPlaylist {
     min-width: 400px;
     text-align: center;
@@ -102,11 +86,100 @@ display: flex !important;
     margin: 10px;
     width: 100%;
 }
-#imageAlbum {
-    background-color: #ff5e00;
+
+.espaceTr {
+    height: 10px;
+}
+
+/*  */
+
+
+/* PLaylist Happy */
+.playlistHappy {
+    margin: 30px;
+    margin-bottom: 100px;
+    padding-bottom: 20px;
+    width: auto;
+    background-color: #ff8f26;
+    border-radius: 10px;
+    text-align: center;
+    animation: bounceInDown 2s;
+}
+
+.playlistHappy-hidden {
+    display: none;
+}
+
+.buttonHappy {
+    background-color: #ff5100;
+}
+.buttonHappy:hover {
+    background-color: #fc9a62;
+}
+
+.tdHappy {
+    border: outset #ff3c00;
+    background-color: rgba(255, 255, 255, 0.767);
+    color: #ff3c00;
+}
+
+#detailHappy {
+    
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 10px;
     color: white;
     min-height: 650px;
 }
+
+.detailHappy {
+    background-color: #ff5e00;
+}
+
+/*  */
+
+
+/* PLaylist Angry */
+.playlistAngry {
+    margin: 30px;
+    margin-bottom: 100px;
+    padding-bottom: 20px;
+    width: auto;
+    background-color: #ffcc26;
+    border-radius: 10px;
+    text-align: center;
+    animation: bounceInDown 2s;
+    
+}
+
+.playlistAngry-hidden {
+    display: none;
+}
+
+.buttonAngry {
+    background-color: #ff9900;
+}
+.buttonAngry:hover {
+    background-color: #ffc400;
+}
+
+.tdAngry {
+    background-color: rgba(255, 255, 255, 0.767);
+    color: #ff9900;
+    border: outset #ff9900;
+}
+
+#detailAngry {
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    color: white;
+    min-height: 650px;
+}
+
+.detailAngry {
+    background-color: #ff9900;
+}
+
+/*  */
