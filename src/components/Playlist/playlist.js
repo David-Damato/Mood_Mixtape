@@ -7,6 +7,7 @@ import IMG_happy from "../Accueil//images/happy.png";
 import IMG_angry from "../Accueil//images/angry.png";
 import IMG_sad from "../Accueil//images/sad.png";
 import IMG_inLove from "../Accueil/images/in-love.png";
+import IMG_bonus from "../Accueil/images/bonus.png";
 import fleche from "./images/fleche.jpg";
 import Display from "./animations/display"
 
@@ -17,9 +18,11 @@ export default function Playlist() {
     const [playlistSad, setplaylistSad] = useState([]);
     const [playlistHappy, setplaylistHappy] = useState([]);
     const [playlistInLove, setplaylistInLove] = useState([]);
+    const [playlistBonus, setPlaylistBonus] = useState([]);
 
     const [divHappyAppears, setDivHappyAppears] = useState(true);
     const [divAngryAppears, setDivAngryAppears] = useState(false);
+    const [divBonusAppears, setDivBonusAppears] = useState(false);
 
 
     useEffect(() => {
@@ -56,6 +59,20 @@ export default function Playlist() {
             )
     }, [])
 
+    //playlist Bonus
+    useEffect(() => {
+        fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/playlist/8986040282")
+            .then((res) => res.json())
+            .then((result) => {
+                    setIsLoaded(true);
+                    setPlaylistBonus(result.tracks.data);
+                },
+                (error) => {
+                    setIsLoaded(true);
+                    setError(error);
+                }
+            )
+    }, [])
 
 
     if (error) {
@@ -94,7 +111,16 @@ export default function Playlist() {
                         </div>
                     </div>
 
+                    <div className="moodDiv moodBonus">
+                        <img className="moodPicture" src={IMG_bonus} alt="moodBonus" />
+                        <div>
+                            <img className="flechePicture" src={fleche} alt="moodBonus" />
+                        </div>
+                    </div>
+
                 </div>
+
+
                 <div className={divHappyAppears ? "playlistHappy" : "playlistHappy-hidden"}>
                     <table>
                         <thead className="theadPlaylist">
@@ -185,6 +211,53 @@ export default function Playlist() {
                                     <tr className="espaceTr"></tr>
                                 </>
                             )}
+                        </tbody>
+                    </table>
+                </div>
+
+                <div className={divBonusAppears ? "playlistBonus" : "playlistBonus-hidden"}>
+                    <table>
+                        <thead className="theadPlaylist">
+                        <h2>Playlist Bonus</h2>
+                        <div id="detailBonus" className="detailBonus">
+                        </div>
+                        </thead>
+                        <tbody className="tbodyPlaylist">
+                        <tr>
+                            <th><h3>Titre</h3></th>
+                            <th><h3>Artiste</h3></th>
+                            <th><h3>Album</h3></th>
+                            <th><h3>Détails</h3></th>
+                        </tr>
+                        {playlistBonus.map(track =>
+                            <>
+                                <tr className="trPlaylist">
+                                    <td className="tdPlaylist tdBonus">
+                                        {track.title}
+                                    </td>
+                                    <td className="tdPlaylist tdBonus">
+                                        {track.artist.name}
+                                    </td>
+                                    <td className="tdPlaylist tdBonus">
+                                        {track.album.title}
+                                    </td>
+                                    <td className="">
+                                        <button className="buttonDetail buttonBonus" key={track} onClick={() => document.getElementById("detailBonus").innerHTML = `
+                                        <img className="" style="border-radius: 10px" src='${track.album.cover_medium}' alt='Image_Album'>
+                                        <h3>Extrait:</h3>
+                                        <audio controls name="media"><source src="${track.preview}"></audio>
+                                        <h3>Titre:</h3>
+                                        ${track.title}
+                                        <h3>Artiste:</h3>
+                                        ${track.artist.name}
+                                        <h3>Album:</h3>
+                                        ${track.album.title}
+                                        `}>Afficher</button>
+                                    </td>
+                                </tr>
+                                <tr className="espaceTr"></tr>
+                            </>
+                        )}
                         </tbody>
                     </table>
                 </div>

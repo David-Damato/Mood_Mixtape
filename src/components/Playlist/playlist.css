@@ -38,6 +38,38 @@
     background-color: rgb(255, 227, 232);
 }
 
+.moodBonus {
+
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 1800% 1800%;
+
+    -webkit-animation: rainbow 18s ease infinite;
+    -z-animation: rainbow 18s ease infinite;
+    -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;
+}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
 .flechePicture {
     margin-top: 10px;
     height: 40px;
@@ -183,3 +215,45 @@ display: flex !important;
 }
 
 /*  */
+
+/*playlist Bonus*/
+.playlistBonus {
+    margin: 30px;
+    margin-bottom: 100px;
+    padding-bottom: 20px;
+    width: auto;
+    background-color: #ff8f26;
+    border-radius: 10px;
+    text-align: center;
+    animation: bounceInDown 2s;
+}
+
+.playlistBonus-hidden {
+    display: none;
+}
+
+.buttonBonus {
+    background-color: #ff5100;
+}
+.buttonBonus:hover {
+    background-color: #fc9a62;
+}
+
+.tdBonus {
+    border: outset #ff3c00;
+    background-color: rgba(255, 255, 255, 0.767);
+    color: #ff3c00;
+}
+
+#detailBonus {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    color: white;
+    min-height: 650px;
+}
+
+.detailBonus {
+    background-color: #ff5e00;
+}
+/*   */
