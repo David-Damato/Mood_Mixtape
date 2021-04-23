@@ -28,7 +28,7 @@ export const PopupContact = ({setPopUpAffichee, nom, phrase, auteur, linkedIn, g
 
                     <Citation phrase={phrase} auteur={auteur} selecteurCss={selecteurCss}/>
 
-                    <div className="popup-separateur"></div>
+                    <div className={`popup-separateur ${selecteurCss}`}></div>
 
                     <div className="conteneur-horizontal popup-reseaux">
                         <IconeLien selecteurCss={selecteurCss} href={github} icone="github" nouvelOnglet={true}/>

@@ -1,14 +1,13 @@
 
-
-
 /*Footer **********************************************************/
 
 .footer-container{
-    background-color: #6097F0;
+    background-color: #374c5d;
     position:fixed;
     bottom:0;
     width:100%;
 }
+
 .ul-footer{
     display:flex;
     list-style-type: none;
@@ -46,9 +45,73 @@
     width:20px;
 }
 
+/*regles pour tablettes ***************/
+
+@media screen and (min-width: 415px) and (max-width: 801px){
+   
+    
+        .footer-container{
+            background-color: #26465300;
+            position:fixed;
+            bottom:0;
+            width:100%;
+        }
+    
+    
+        .ul-footer{
+            display:flex;
+            list-style-type: none;
+            margin:10px 0 0 0;
+            padding:0;
+            flex-wrap: wrap;
+            justify-content:center;
+            background-color:#264653;
+            height:48px;
+        }
+    
+        .ul-footer li{
+            padding:10px 0px 5px 10px;
+            color:#ffffff;
+            font-size:0.9em;
+            text-align: center;
+        
+        }
+        
+        .ul-footer li a:hover{
+           
+            color:rgb(7, 7, 7);
+            transition: 0.5s;
+        }
+        
+       .emo:hover{
+           font-size:1.2em
+       }
+    
+    }
+
+
+
+
+
+
+
+
 /*règles footer smartphone*****************/
 
 @media screen and (min-width: 200px) and (max-width: 414px){
+.desappear{
+    display:none;
+    }
+
+    .footer-container{
+        background-color: #26465300;
+        position:fixed;
+        bottom:0;
+        width:100%;
+    }
+
+
+
 
     .ul-footer{
         display:flex;
@@ -57,12 +120,14 @@
         padding:0;
         flex-wrap: wrap;
         justify-content:left;
+        background-color:#264653;
     }
 
     .ul-footer li{
         padding:10px 0px 5px 10px;
         color:#ffffff;
         font-size:0.9em;
+        text-align: center;
     
     }
     

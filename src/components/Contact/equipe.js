@@ -26,8 +26,8 @@ export const equipe = [
 
     {
         nom: "David D'AMATO",
-        phrase: "",
-
+        phrase: "Veni, vidi, vici",
+        auteur : "Jules César",
         linkedIn: "https://www.linkedin.com/in/david-damato/",
         github: "https://github.com/David-Damato",
         mail: "david76230@gmail.com",
@@ -50,7 +50,8 @@ export const equipe = [
 
     {
         nom: "Tom CARPENTIER",
-        phrase: "",
+        phrase: "La connaissance parle, mais la sagesse écoute.",
+        auteur : "Jimi Hendrix",
         linkedIn: "https://www.linkedin.com/in/tom-carpentier-46ab84120/",
         github: "https://github.com/TomWebd",
         mail: "t.carpentier.19@gmail.com",

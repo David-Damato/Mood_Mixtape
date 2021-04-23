@@ -10,6 +10,11 @@ import Footer from "../Footer/footer";
 
 class App extends Component {
     render() {
+
+
+
+
+
         return (
             <Router>
                 <div className="pure-container" data-effect="pure-effect-slide">
@@ -30,7 +35,7 @@ class App extends Component {
                 </div>
             </Router>
         );
-    }
+   }
 }
 
 export default App;
