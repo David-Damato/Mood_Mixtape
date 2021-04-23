@@ -3,6 +3,7 @@
     font-weight: bolder;
     color: black;
     font-size: 100px;
+    text-align: center;
 }
 
 .conteneur-horizontal {
@@ -23,6 +24,8 @@
 
 .photos-contact {
     align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .titre-contact {
@@ -38,12 +41,40 @@
     transition: 0.5s ease-in-out;
 }
 
-.photo:hover{
+.photo:hover {
     transform: scale(1.1);
 }
 
-.picto-bisou{
+.picto-bisou {
     height: 60px;
     width: 60px;
 }
 
+@media screen and (max-width: 1440px){
+    .picto-bisou {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .Contact {
+        flex-direction: column-reverse;
+        text-align: center;
+        }
+    .titre-contact div{
+        font-size: 6rem;
+    }
+    .titre-contact{
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .titre-contact div{
+        font-size: 4rem;}
+}
+
+@media screen and (max-width: 320px){
+    .titre-contact div{
+        font-size: 2rem;}
+}

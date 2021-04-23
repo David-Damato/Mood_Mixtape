@@ -9,6 +9,7 @@
 div.beats-conteneur {
     margin-top: 40px;
 }
+
 div.beats {
     position: relative;
 }
@@ -16,7 +17,6 @@ div.beats {
 div.beats-title {
     font-family: 'Spartan', sans-serif;
     text-transform: uppercase;
-    white-space: nowrap;
     font-weight: 800;
     text-align: center;
     font-size: 2.5em;
@@ -36,6 +36,7 @@ div.beats a {
     -o-transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
     transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
 }
+
 div.beats a:before,
 div.beats a:after,
 div.beats a div {
@@ -46,27 +47,34 @@ div.beats a div {
     right: 80%;
     width: 0;
 }
+
 div.beats a:before {
     top: 0;
 }
+
 div.beats a > div:first-of-type {
     top: 10px;
 }
+
 div.beats a > div:last-of-type {
     top: 20px;
 }
+
 div.beats a:after {
     top: 30px;
 }
+
 div.beats a {
     padding-left: 50px;
 }
+
 div.beats a:before {
     -webkit-animation: bar1 0.8s infinite;
     -moz-animation: bar1 0.8s infinite;
     -ms-animation: bar1 0.8s infinite;
     animation: bar1 0.8s infinite;
 }
+
 @-moz-keyframes bar1 {
     0% {
         width: 10px;
@@ -93,6 +101,7 @@ div.beats a:before {
         width: 10px;
     }
 }
+
 @-webkit-keyframes bar1 {
     0% {
         width: 10px;
@@ -119,6 +128,7 @@ div.beats a:before {
         width: 10px;
     }
 }
+
 @keyframes bar1 {
     0% {
         width: 10px;
@@ -145,12 +155,14 @@ div.beats a:before {
         width: 10px;
     }
 }
+
 div.beats a > div:last-of-type {
     -webkit-animation: bar2 0.8s infinite;
     -moz-animation: bar2 0.8s infinite;
     -ms-animation: bar2 0.8s infinite;
     animation: bar2 0.8s infinite;
 }
+
 @-moz-keyframes bar2 {
     0% {
         width: 50px;
@@ -177,6 +189,7 @@ div.beats a > div:last-of-type {
         width: 50px;
     }
 }
+
 @-webkit-keyframes bar2 {
     0% {
         width: 50px;
@@ -203,6 +216,7 @@ div.beats a > div:last-of-type {
         width: 50px;
     }
 }
+
 @keyframes bar2 {
     0% {
         width: 50px;
@@ -229,12 +243,14 @@ div.beats a > div:last-of-type {
         width: 50px;
     }
 }
+
 div.beats a > div:first-of-type {
     -webkit-animation: bar3 0.8s infinite;
     -moz-animation: bar3 0.8s infinite;
     -ms-animation: bar3 0.8s infinite;
     animation: bar3 0.8s infinite;
 }
+
 @-moz-keyframes bar3 {
     0% {
         width: 0;
@@ -261,6 +277,7 @@ div.beats a > div:first-of-type {
         width: 30px;
     }
 }
+
 @-webkit-keyframes bar3 {
     0% {
         width: 0;
@@ -287,6 +304,7 @@ div.beats a > div:first-of-type {
         width: 30px;
     }
 }
+
 @keyframes bar3 {
     0% {
         width: 0;
@@ -313,12 +331,14 @@ div.beats a > div:first-of-type {
         width: 30px;
     }
 }
+
 div.beats a:after {
     -webkit-animation: bar4 0.8s infinite;
     -moz-animation: bar4 0.8s infinite;
     -ms-animation: bar4 0.8s infinite;
     animation: bar4 0.8s infinite;
 }
+
 @-moz-keyframes bar4 {
     0% {
         width: 10px;
@@ -345,6 +365,7 @@ div.beats a:after {
         width: 10px;
     }
 }
+
 @-webkit-keyframes bar4 {
     0% {
         width: 10px;
@@ -371,6 +392,7 @@ div.beats a:after {
         width: 10px;
     }
 }
+
 @keyframes bar4 {
     0% {
         width: 10px;
@@ -400,31 +422,31 @@ div.beats a:after {
 
 .beats.aline a div,
 .beats.aline a:before,
-.beats.aline a:after{
+.beats.aline a:after {
     background-color: #f88517 !important;
 }
 
 .beats.david a div,
 .beats.david a:before,
-.beats.david a:after{
+.beats.david a:after {
     background-color: #dfb11d !important;
 }
 
 .beats.pauline a div,
 .beats.pauline a:before,
-.beats.pauline a:after{
+.beats.pauline a:after {
     background-color: #1269d0 !important;
 }
 
 .beats.tom a div,
 .beats.tom a:before,
-.beats.tom a:after{
+.beats.tom a:after {
     background-color: #15a280 !important;
 }
 
 .beats.violaine a div,
 .beats.violaine a:before,
-.beats.violaine a:after{
+.beats.violaine a:after {
     background-color: #c63458 !important;
 }
 
@@ -446,4 +468,24 @@ div.beats a:after {
 
 .beats-title.violaine {
     color: #c63458;
+}
+
+@media screen and (max-width: 600px) {
+    .beats {
+        display: none;
+    }
+
+    .beats-title {
+        margin-right: 0 !important;
+    }
+
+}
+
+@media screen and (max-width: 330px) {
+    .beats-title.tom {
+        font-size: 1.6rem;
+    }
+    .beats-conteneur.pauline {
+        margin-top: 20px !important;
+    }
 }
