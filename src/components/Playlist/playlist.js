@@ -114,7 +114,7 @@ export default function Playlist() {
                     <div className="moodDiv moodBonus">
                         <img className="moodPicture" src={IMG_bonus} alt="moodBonus" />
                         <div>
-                            <img className="flechePicture" src={fleche} alt="moodBonus" />
+                            <img onClick={() => setDivBonusAppears((prevState) => !prevState)} className="flechePicture" src={fleche} alt="moodBonus" />
                         </div>
                     </div>
 
