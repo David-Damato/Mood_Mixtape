@@ -9,17 +9,14 @@ export const DetailPlaylist = ({type, playlist}) => {
     }, [playlist]);
 
     return (
-        <div className={`playlist playlist-${type.toLowerCase()}`}>
+        <div className={`conteneur-horizontal playlist playlist-${type.toLowerCase()}`}>
+            <div className="conteneur-vertical playlist-player">
+                <div className="titre-playlist">Playlist {type}</div>
+                {chanson && <Player
+                    track={chanson}
+                    type={type}/>}
+            </div>
             <table>
-                <thead className="theadPlaylist">
-                <tr>
-                    {chanson && <Player
-                        track={chanson}
-                        type={type}/>}
-                    <th className="titre-playlist">Playlist {type}</th>
-                </tr>
-
-                </thead>
                 <tbody className="tbodyPlaylist">
                 <tr>
                     <th><h3>Titre</h3></th>
@@ -27,6 +24,7 @@ export const DetailPlaylist = ({type, playlist}) => {
                     <th><h3>Album</h3></th>
                     <th><h3>Détails</h3></th>
                 </tr>
+
                 {playlist.map((track, index) =>
                     <tr key={`track-${index}`} className="trPlaylist">
                         <td className={`tdPlaylist td${type}`}>
