@@ -10,6 +10,7 @@ import IMG_inLove from "../Accueil/images/in-love.png";
 import IMG_bonus from "../Accueil/images/bonus.png";
 import fleche from "./images/fleche.jpg";
 import Display from "./animations/display"
+import fetchJsonp from "fetch-jsonp";
 
 export default function Playlist() {
     const [error, setError] = useState(null);
@@ -26,7 +27,7 @@ export default function Playlist() {
 
 
     useEffect(() => {
-        fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/playlist/8951248402")
+        fetchJsonp("https://api.deezer.com/playlist/8951248402?output=jsonp")
             .then((res) => res.json())
             .then((result) => {
                 setIsLoaded(true);
@@ -43,7 +44,7 @@ export default function Playlist() {
     }, [])
 
     useEffect(() => {
-        fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/playlist/8951314702")
+        fetchJsonp("https://api.deezer.com/playlist/8951314702?output=jsonp")
             .then((res) => res.json())
             .then((result) => {
                 setIsLoaded(true);
@@ -61,7 +62,7 @@ export default function Playlist() {
 
     //playlist Bonus
     useEffect(() => {
-        fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/playlist/8986040282")
+        fetchJsonp("https://api.deezer.com/playlist/8986040282?output=jsonp")
             .then((res) => res.json())
             .then((result) => {
                     setIsLoaded(true);
