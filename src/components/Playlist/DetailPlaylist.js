@@ -1,6 +1,24 @@
 import "./DetailPlaylist.css";
+import {useEffect} from "react";
 
 export const DetailPlaylist = ({type, playlist}) => {
+    const afficherDetailChanson = (track) => {
+        document.getElementById("detail"+type).innerHTML = `
+                                        <img style="border-radius: 10px" src='${track.album.cover_medium}' alt='Image_Album'>
+                                        <h3>Extrait:</h3>
+                                        <audio controls name="media"><source src="${track.preview}"></audio>
+                                        <h3>Titre:</h3>
+                                        ${track.title}
+                                        <h3>Artiste:</h3>
+                                        ${track.artist.name}
+                                        <h3>Album:</h3>
+                                        ${track.album.title}`
+    }
+
+    useEffect(() => {
+        afficherDetailChanson(playlist[0]);
+    }, [])
+
     return (
         <div className={`playlist playlist-${type.toLowerCase()}`}>
             <table>
@@ -30,17 +48,7 @@ export const DetailPlaylist = ({type, playlist}) => {
                             </td>
                             <td className="">
                                 <button className={`buttonDetail button${type}`} key={track}
-                                        onClick={() => document.getElementById("detail"+type).innerHTML = `
-                                        <img style="border-radius: 10px" src='${track.album.cover_medium}' alt='Image_Album'>
-                                        <h3>Extrait:</h3>
-                                        <audio controls name="media"><source src="${track.preview}"></audio>
-                                        <h3>Titre:</h3>
-                                        ${track.title}
-                                        <h3>Artiste:</h3>
-                                        ${track.artist.name}
-                                        <h3>Album:</h3>
-                                        ${track.album.title}
-                                        `}>Afficher
+                                        onClick={() => afficherDetailChanson(track)}>Afficher
                                 </button>
                             </td>
                         </tr>
