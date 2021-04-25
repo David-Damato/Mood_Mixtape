@@ -41,7 +41,7 @@
 .moodBonus {
 
     background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-    background-size: 1800% 1800%;
+    background-size: 500% 500%;
 
     -webkit-animation: rainbow 18s ease infinite;
     -z-animation: rainbow 18s ease infinite;
@@ -222,7 +222,7 @@ display: flex !important;
     margin-bottom: 100px;
     padding-bottom: 20px;
     width: auto;
-    background-color: #ff8f26;
+    background-color: rgba(139, 255, 38, 0.5);
     border-radius: 10px;
     text-align: center;
     animation: bounceInDown 2s;
@@ -233,16 +233,16 @@ display: flex !important;
 }
 
 .buttonBonus {
-    background-color: #ff5100;
+    background-color: #15a280;
 }
 .buttonBonus:hover {
-    background-color: #fc9a62;
+    background-color: rgba(21, 162, 128, 0.43);
 }
 
 .tdBonus {
-    border: outset #ff3c00;
+    border: outset #15a280;
     background-color: rgba(255, 255, 255, 0.767);
-    color: #ff3c00;
+    color: #15a280;
 }
 
 #detailBonus {
@@ -254,6 +254,6 @@ display: flex !important;
 }
 
 .detailBonus {
-    background-color: #ff5e00;
+    background-color: #15a280;
 }
 /*   */
