@@ -2,16 +2,17 @@ import "./DetailPlaylist.css";
 import {useEffect, useState} from "react";
 import {Player} from "./Player";
 
-export const DetailPlaylist = ({type, playlist}) => {
+export const DetailPlaylist = ({type, playlist, playlistSelectionnee}) => {
     const [chanson, setChanson] = useState(null);
     useEffect(() => {
         setChanson(playlist[0]);
     }, [playlist]);
 
     return (
-        <div className={`conteneur-horizontal playlist-detail playlist-${type.toLowerCase()}`}>
+        <div className={`conteneur-horizontal ${type===playlistSelectionnee ? "playlist-active" : "playlist-inactive"} playlist-detail playlist-${type.toLowerCase()}`}>
             <div className="conteneur-vertical playlist-player">
                 <div className="titre-playlist">Playlist {type}</div>
+                <img className="moodPicture" src={`/images/moods/${type}.png`} alt={`mood${type}`}/>
                 {chanson && <Player
                     track={chanson}
                     type={type}/>}

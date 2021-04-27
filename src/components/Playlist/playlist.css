@@ -11,9 +11,9 @@
 }
 
 
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 414px){
     .humeur_play {
-        justify-content: center;
+        display: none;
     }
 }
 

@@ -186,6 +186,17 @@ table {
     padding-bottom: 30px;
 }
 
+.playlist-active {
+    display: flex;
+}
+
+.playlist-inactive {
+    display: none !important;
+}
+
+.playlist-player .moodPicture {
+    display: none;
+}
 
 @media screen and (max-width: 320px){
     .playlist-detail {
@@ -208,6 +219,16 @@ table {
     .playlist-player {
         padding-right: 0;
         padding-left: 0;
+        padding-bottom: 0;
+        align-items: center;
+    }
+
+    .playlist-player .moodPicture {
+        display: block !important;
+        height: 50px;
+        width: 50px;
+        margin-bottom: 10px;
+        margin-top: -10px;
     }
 
     .th-album, .th-artiste, .td-album, .td-artiste, .th-detail, .td-button  {
@@ -219,8 +240,12 @@ table {
         padding-bottom: 15px;
     }
 
-
+    .playlist-inactive {
+        display: flex !important;
+    }
 }
+
+
 
 @media screen and (max-width: 834px){
     .playlist-detail {

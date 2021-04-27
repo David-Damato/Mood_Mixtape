@@ -105,17 +105,20 @@ export default function Playlist() {
 
                 </div>
 
-                {playlistSelectionnee==="Happy" && <DetailPlaylist
+                <DetailPlaylist
                 type={"Happy"}
-                playlist={playlistHappy}/>}
+                playlistSelectionnee={playlistSelectionnee}
+                playlist={playlistHappy}/>
 
-                {playlistSelectionnee==="Angry" && <DetailPlaylist
+                <DetailPlaylist
                     type={"Angry"}
-                    playlist={playlistAngry}/>}
+                    playlistSelectionnee={playlistSelectionnee}
+                    playlist={playlistAngry}/>
 
-                {playlistSelectionnee==="Bonus" && <DetailPlaylist
+                <DetailPlaylist
                     type={"Bonus"}
-                    playlist={playlistBonus}/>}
+                    playlistSelectionnee={playlistSelectionnee}
+                    playlist={playlistBonus}/>
 
             </main>
 
