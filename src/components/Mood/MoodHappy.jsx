@@ -1,12 +1,13 @@
 import React, { Component, useState, useEffect } from 'react';
 import "./style.css";
+import fetchJsonp from "fetch-jsonp";
 
 export default function MoodHappy () {
 
     const [playlist, setPlaylist] = useState([]);
 
     useEffect(() => {
-        fetch("https://cors-anywhere.herokuapp.com/https://https://api.deezer.com/playlist/8951314702")
+        fetchJsonp("https://api.deezer.com/playlist/8951314702?output=jsonp")
             .then((res) => res.json())
             .then((result) => {
                 setPlaylist(result.tracks.data);
@@ -23,16 +24,16 @@ export default function MoodHappy () {
                         Playlist Happy
                     </div>
                     <div class="player">
-                        {/* <div class="cover">
-                             <img>{playlist[0].cover_big} </img></img>
+                         <div class="cover">
+                             <img>{playlist[0].cover_big}</img>
                             <img></img>
                             <img></img>
-                        </div> */}
+                        </div>
                         <div class="infos">
-                            <p>Titre : {/*{playlist[0].title}*/}</p>
-                            <p>Artiste : {/*{playlist[0].artist.name}*/}</p>
-                            <p>Année : {/*{playlist[0].title}*/}</p>
-                            <p>Genre : {/*{playlist[0].title}*/}</p>
+                            <p>Titre : {playlist[0].title}</p>
+                            <p>Artiste : {playlist[0].artist.name}</p>
+                            <p>Année : {playlist[0].title}</p>
+                            <p>Genre : {playlist[0].title}</p>
                         </div>
                         <div class="player">
                         </div>
