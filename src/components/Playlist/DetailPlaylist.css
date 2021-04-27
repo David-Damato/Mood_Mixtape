@@ -104,12 +104,14 @@ table {
 
 .tdSad{
     background-color: #ffffffc2;
-    border: outset #057897;
+    border:outset #26a3c5;
     color: #284ea4;
+    padding-left: 8px;
 }
 
 .buttonSad{
-    background-color: #00baeb;
+    background-color: #0093eb;
+    cursor:pointer;
 }
 
 .buttonSad:hover{
