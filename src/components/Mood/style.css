@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    width: 200px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.playlist-name {
+    padding: 1rem;
+    margin-top: 1rem;
+    border: solid 2px grey;
+    border-radius: 20px;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 700px;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    border: solid #F4A261 1px;
+    background-color: #f4a3617a;
+}
+
+.playlist {
+    background-color: salmon;
+    width: 800px;
+    height: 600px;
+    float: middle;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    margin: 20px;
+    width: 80px;
+    height: 30px;
+    background-color: #2A9D8F;
+    color: white;
+    border: solid white 1px;
+    border-radius: 10%;
+}
