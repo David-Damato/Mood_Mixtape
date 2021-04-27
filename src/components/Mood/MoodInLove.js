@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import fetchJsonp from "fetch-jsonp";
 import MoodEnTete from "./MoodEnTete";
 import MoodPlayer from "./MoodPlayer";
-
+import "./style.css";
 
 export default function MoodInLove () {
     const [error, setError] = useState(null);
@@ -32,12 +32,14 @@ export default function MoodInLove () {
     } else {
     
     return (
-        <main>
+        <main className="container">
         <MoodEnTete
         type={"InLove"}
         />
+        {playlistInLove.map((playlist) => (
         <MoodPlayer
-        track={playlistInLove}/>
+        track={playlist} />
+        ))}
         </main>
     )
 }}

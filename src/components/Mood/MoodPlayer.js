@@ -3,17 +3,13 @@ import "./style.css";
 
 export default function MoodPlayer ({track}) {
         return (
-        <div>
+        <div class="player">
             <div class="cover">
-                <img>{track.title}</img> 
+            <img className="icon" src={track.album.cover_medium} alt='Image_Album'/> 
             </div>
             <div class="infos">
                 <p>Titre : {track.title}</p>
-             {/*   <p>Artiste : {track.artist.name}</p> */}
-                <p>Année : {track.title}</p>
-                <p>Genre : {track.title}</p>
-            </div>
-            <div class="player">
+                <p>Artiste : {track.artist.name}</p> 
             </div>
             <div class="buttons">
                 <button class="btn">Précédent</button>
