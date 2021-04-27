@@ -9,7 +9,7 @@ export const DetailPlaylist = ({type, playlist}) => {
     }, [playlist]);
 
     return (
-        <div className={`conteneur-horizontal playlist playlist-${type.toLowerCase()}`}>
+        <div className={`conteneur-horizontal playlist-detail playlist-${type.toLowerCase()}`}>
             <div className="conteneur-vertical playlist-player">
                 <div className="titre-playlist">Playlist {type}</div>
                 {chanson && <Player
