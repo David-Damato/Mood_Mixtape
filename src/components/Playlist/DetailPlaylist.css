@@ -28,6 +28,7 @@ table {
 
 .trPlaylist {
     padding: 50px;
+    cursor: pointer;
 }
 
 .theadPlaylist {
@@ -183,4 +184,54 @@ table {
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 30px;
+}
+
+
+@media screen and (max-width: 320px){
+    .playlist-detail {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .tbodyPlaylist {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 414px){
+    .playlist-detail {
+        justify-content: center;
+        flex-wrap: wrap;
+        background : none !important;
+    }
+
+    .playlist-player {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .th-album, .th-artiste, .td-album, .td-artiste, .th-detail, .td-button  {
+        display: none;
+    }
+
+    .td-titre {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+
+}
+
+@media screen and (max-width: 834px){
+    .playlist-detail {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 1440px){
+    .playlist-detail {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }

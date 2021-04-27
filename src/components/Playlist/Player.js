@@ -12,7 +12,7 @@ export const Player = ({track, type}) => {
 
             <img className="couverture-album" src={track.album.cover_medium} alt='Image_Album'/>
             <h3>Extrait:</h3>
-            {audioPlayerAffiche && <audio controls>
+            {audioPlayerAffiche && <audio className="lecteur-playlist" controls>
                 <source src={track.preview}/>
             </audio>}
             <h3>Titre:</h3>

@@ -20,24 +20,24 @@ export const DetailPlaylist = ({type, playlist}) => {
                 <tbody className="tbodyPlaylist">
                 <tr>
                     <th><h3>Titre</h3></th>
-                    <th><h3>Artiste</h3></th>
-                    <th><h3>Album</h3></th>
-                    <th><h3>Détails</h3></th>
+                    <th className="th-artiste"><h3>Artiste</h3></th>
+                    <th className="th-album"><h3>Album</h3></th>
+                    <th className="th-detail" ><h3>Détails</h3></th>
                 </tr>
 
                 {playlist.map((track, index) =>
-                    <tr key={`track-${index}`} className="trPlaylist">
-                        <td className={`tdPlaylist td${type}`}>
+                    <tr key={`track-${index}`} className="trPlaylist" onClick={() => setChanson(track)}>
+                        <td className={`tdPlaylist td-titre td${type}`}>
                             {track.title}
                         </td>
-                        <td className={`tdPlaylist td${type}`}>
+                        <td className={`tdPlaylist td-artiste td${type}`}>
                             {track.artist.name}
                         </td>
-                        <td className={`tdPlaylist td${type}`}>
+                        <td className={`tdPlaylist td-album td${type}`}>
                             {track.album.title}
                         </td>
-                        <td className="">
-                            <button className={`buttonDetail button${type}`} key={track}
+                        <td className="td-button">
+                            <button className={`buttonDetail  button${type}`} key={track}
                                     onClick={() => setChanson(track)}>Afficher
                             </button>
                         </td>

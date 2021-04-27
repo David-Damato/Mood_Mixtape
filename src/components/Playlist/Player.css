@@ -5,3 +5,9 @@
 .padding-20 {
     padding: 20px;
 }
+
+@media screen and (max-width: 414px){
+    .lecteur-playlist {
+        width: 250px;
+    }
+}
