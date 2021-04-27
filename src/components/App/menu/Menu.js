@@ -11,7 +11,7 @@ export const Menu = () => {
     return (
         <>
             <input
-                onClick={()=> {
+                onChange={()=> {
                     setEstOuvert(estOuvert=== true ? false : true);
                 }}
                 checked={estOuvert}
