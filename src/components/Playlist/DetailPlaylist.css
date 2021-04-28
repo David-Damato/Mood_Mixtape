@@ -97,6 +97,45 @@ table {
 
 /*  */
 
+/* Playlist Sad */ 
+
+.playlist.playlist-sad{
+     background-image: linear-gradient(to bottom, #0099ff, #2473d2, #284ea4, #232c78, #170c4e);
+}
+
+.tdSad{
+    background-color: #ffffffc2;
+    border:outset #26a3c5;
+    color: #284ea4;
+    padding-left: 8px;
+}
+
+.buttonSad{
+    background-color: #0093eb;
+    cursor:pointer;
+}
+
+.buttonSad:hover{
+    background-color:#1c55dd;
+    transition: all 0.5s ease-out;
+}
+
+
+
+.detailSad{
+    background-color: #313a7ca1;
+   
+}
+
+#detailSad{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    color: white;
+    min-height: 650px;
+}
+
+
 
 /* PLaylist Angry */
 .playlist-detail.playlist-angry {
