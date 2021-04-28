@@ -11,6 +11,7 @@ export default function MoodPlayer ({track}) {
                 <div>
                 <p><em>Titre :</em> {track.title}</p>
                 <p><em>Artiste :</em> {track.artist.name}</p>
+                <p><em>Album :</em> {track.album.title}</p>
                 </div>
                 <audio controls className="moodAudio"><source src={track.preview}/></audio>
                 
