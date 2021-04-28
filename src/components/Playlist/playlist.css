@@ -8,7 +8,7 @@
     padding-left: 30px;
     padding-right: 30px;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 800px){
     .humeur_play {
         display: none;
     }

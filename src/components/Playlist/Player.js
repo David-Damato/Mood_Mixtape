@@ -8,7 +8,7 @@ export const Player = ({track, type}) => {
         setTimeout(() => setAudioPlayerAffiche(true), 500);
     }, [track]);
     return (
-        <div id={`detail${type}`} className={`padding-20 detail${type} detail-chanson-conteneur`}>
+        <div id={`detail${type}`} className={`detail${type} detail-chanson-conteneur`}>
             <div className="couverture-et-player">
                 <img className="couverture-album" src={track.album.cover_medium} alt='Image_Album'/>
                 <h3>Extrait:</h3>
