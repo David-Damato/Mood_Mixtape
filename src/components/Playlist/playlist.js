@@ -49,6 +49,26 @@ export default function Playlist() {
             )
     }, [])
 
+
+    //playlist Sad
+
+    useEffect(() => {
+        fetchJsonp(" https://api.deezer.com/playlist/8951438662?output=jsonp")
+        .then((res) => res.json())
+        .then((result) => {
+            setIsLoaded(true);
+            setplaylistSad(result.tracks.data);
+        },
+        (error) => {
+            setIsLoaded(true);
+            setError(error);
+        }
+        )
+    }, [])
+
+
+    
+
     //playlist Bonus
     useEffect(() => {
         fetchJsonp("https://api.deezer.com/playlist/8986040282?output=jsonp")
@@ -112,6 +132,10 @@ export default function Playlist() {
                 {playlistSelectionnee==="Angry" && <DetailPlaylist
                     type={"Angry"}
                     playlist={playlistAngry}/>}
+
+                {playlistSelectionnee==="Sad" && <DetailPlaylist
+                type={"Sad"}
+                playlist={playlistSad}/>}    
 
                 {playlistSelectionnee==="Bonus" && <DetailPlaylist
                     type={"Bonus"}
