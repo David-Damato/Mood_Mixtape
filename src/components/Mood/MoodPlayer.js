@@ -1,20 +1,24 @@
 import React from "react";
-import "./style.css";
+import "./Mood.css";
 
 export default function MoodPlayer ({track}) {
         return (
-        <div class="player">
-            <div class="cover">
-            <img className="icon" src={track.album.cover_medium} alt='Image_Album'/> 
+        <div className="moodPlayer">
+            <div className="moodCover">
+            <img src={track.album.cover_medium} alt='Image_Album'/>
             </div>
-            <div class="infos">
-                <p>Titre : {track.title}</p>
-                <p>Artiste : {track.artist.name}</p> 
+            <div className="moodDescription">
+                <div>
+                <p><em>Titre :</em> {track.title}</p>
+                <p><em>Artiste :</em> {track.artist.name}</p>
+                </div>
+                <audio controls className="moodAudio"><source src={track.preview}/></audio>
+                
             </div>
-            <div class="buttons">
-                <button class="btn">Précédent</button>
-                <button class="btn">Random</button>
-                <button class="btn">Suivant</button>
+            <div className="moodButtons">
+                <button className="buttons">Précédent</button>
+                <button className="buttons">Random</button>
+                <button className="buttons">Suivant</button>
             </div>
         </div>
     )
