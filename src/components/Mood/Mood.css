@@ -29,7 +29,7 @@
 /* CSS composant MoodPlayer */
 
 .moodPlayer {
-    width: 600px;
+    width: 800px;
     padding: 5%;
     background-color: rgb(255, 227, 232);
     border-radius: 10px;
@@ -40,12 +40,24 @@
     justify-content: center;
 }
 
-.moodDescription {
+.moodAudioDescription {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.moodAudioContainer {
+    display: flex;
+    justify-content: center;
+    margin: 4%;
+}
+
+.moodDescriptionContainer {
   font-family: 'Montserrat', sans-serif;
-  margin: 5%;
+  margin-bottom: 5%;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  width: 500px;
 }
 
 .moodButtons {
@@ -66,11 +78,12 @@
     font-size: 15px;
 }
 
+.buttons:hover {
+    transform: scale(1.1);
+} 
+
 em {
     font-weight: 600;
     font-style: normal;
 }
 
-.moodAudio {
-    margin: 4%;
-}

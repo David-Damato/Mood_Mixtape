@@ -7,21 +7,21 @@ export default function MoodInLove () {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [playlistInLove, setPlaylistInLove] = useState([]);
-    
+    const [index, setIndex] = useState(0);
+
     useEffect(() => {
         fetchJsonp("https://api.deezer.com/playlist/8951468122?output=jsonp")
             .then((res) => res.json())
             .then((result) => {
                     setIsLoaded(true);
-                    console.log("consolelog result",result.tracks.data[0].album.cover_medium)
-                    setPlaylistInLove(result.tracks.data[0]);
+                    setPlaylistInLove(result.tracks.data[index]);
                 },
                 (error) => {
                     setIsLoaded(true);
                     setError(error);
                 }
             )
-    }, [])
+    }, [index])
 
 
     if (error) {
@@ -29,15 +29,18 @@ export default function MoodInLove () {
     } else if (!isLoaded) {
         return <div>Chargement...</div>;
     } else {
-    console.log(playlistInLove)
-    return (
+        return (
         <main className="container">
+        
         <MoodEnTete
         type={"InLove"}
         />
-     
+        
         <MoodPlayer
+        index={index}
+        setIndex={setIndex}
         playlist={playlistInLove}/>
+        
         </main>
     )
 }}
