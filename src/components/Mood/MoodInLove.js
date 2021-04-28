@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import fetchJsonp from "fetch-jsonp";
 import MoodEnTete from "./MoodEnTete";
 import MoodPlayer from "./MoodPlayer";
-import "./style.css";
 
 export default function MoodInLove () {
     const [error, setError] = useState(null);
@@ -14,8 +13,8 @@ export default function MoodInLove () {
             .then((res) => res.json())
             .then((result) => {
                     setIsLoaded(true);
-                    console.log(result)
-                    setPlaylistInLove(result.tracks.data);
+                    console.log("consolelog result",result.tracks.data[0].album.cover_medium)
+                    setPlaylistInLove(result.tracks.data[0]);
                 },
                 (error) => {
                     setIsLoaded(true);
@@ -30,16 +29,15 @@ export default function MoodInLove () {
     } else if (!isLoaded) {
         return <div>Chargement...</div>;
     } else {
-    
+    console.log(playlistInLove)
     return (
         <main className="container">
         <MoodEnTete
         type={"InLove"}
         />
-        {playlistInLove.map((playlist) => (
+     
         <MoodPlayer
-        track={playlist} />
-        ))}
+        playlist={playlistInLove}/>
         </main>
     )
 }}
