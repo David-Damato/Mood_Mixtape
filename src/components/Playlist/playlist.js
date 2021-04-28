@@ -54,19 +54,17 @@ export default function Playlist() {
 
     useEffect(() => {
         fetchJsonp(" https://api.deezer.com/playlist/8951438662?output=jsonp")
-        .then((res) => res.json())
-        .then((result) => {
-            setIsLoaded(true);
-            setplaylistSad(result.tracks.data);
-        },
-        (error) => {
-            setIsLoaded(true);
-            setError(error);
-        }
-        )
+            .then((res) => res.json())
+            .then((result) => {
+                    setIsLoaded(true);
+                    setplaylistSad(result.tracks.data);
+                },
+                (error) => {
+                    setIsLoaded(true);
+                    setError(error);
+                }
+            )
     }, [])
-
-
 
 
     //playlist Bonus
@@ -126,23 +124,23 @@ export default function Playlist() {
                 </div>
 
                 <DetailPlaylist
-                type={"Happy"}
-                className={playlistSelectionnee==="Happy" ? "playlist-active" : "playlist-inactive"}
-                playlist={playlistHappy}/>
+                    type={"Happy"}
+                    className={playlistSelectionnee === "Happy" ? "playlist-active" : "playlist-inactive"}
+                    playlist={playlistHappy}/>
 
                 <DetailPlaylist
                     type={"Angry"}
-                    className={playlistSelectionnee==="Angry" ? "playlist-active" : "playlist-inactive"}
+                    className={playlistSelectionnee === "Angry" ? "playlist-active" : "playlist-inactive"}
                     playlist={playlistAngry}/>
 
                 <DetailPlaylist
-                className={playlistSelectionnee==="Sad" ? "playlist-active" : "playlist-inactive"}
-                type={"Sad"}
-                playlist={playlistSad}/>}
+                    className={playlistSelectionnee === "Sad" ? "playlist-active" : "playlist-inactive"}
+                    type={"Sad"}
+                    playlist={playlistSad}/>
 
                 <DetailPlaylist
                     type={"Bonus"}
-                    className={playlistSelectionnee==="Bonus" ? "playlist-active" : "playlist-inactive"}
+                    className={playlistSelectionnee === "Bonus" ? "playlist-active" : "playlist-inactive"}
                     playlist={playlistBonus}/>
 
             </main>

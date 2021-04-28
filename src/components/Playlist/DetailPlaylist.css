@@ -88,7 +88,6 @@ table {
     padding-bottom: 20px;
     border-radius: 10px;
     color: white;
-    min-height: 650px;
 }
 
 .detailHappy {
@@ -132,7 +131,6 @@ table {
     padding-bottom: 20px;
     border-radius: 10px;
     color: white;
-    min-height: 650px;
 }
 
 
@@ -166,7 +164,6 @@ table {
     padding-bottom: 20px;
     border-radius: 10px;
     color: white;
-    min-height: 650px;
 }
 
 .detailAngry {
@@ -203,7 +200,6 @@ table {
     padding-bottom: 20px;
     border-radius: 10px;
     color: white;
-    min-height: 650px;
 }
 
 .detailBonus {
@@ -237,22 +233,99 @@ table {
     display: none;
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 1440px){
     .playlist-detail {
         justify-content: center;
         flex-wrap: wrap;
     }
-    .tbodyPlaylist {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
 }
 
-@media screen and (max-width: 414px){
+@media screen and (max-width: 768px){
     .playlist-detail {
         justify-content: center;
         flex-wrap: wrap;
         background : none !important;
+    }
+
+    .playlist-player {
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 0;
+        align-items: center;
+    }
+
+    .playlist-player .moodPicture {
+        display: block !important;
+        height: 80px;
+        width: 80px;
+        margin-bottom: 10px;
+        margin-top: -10px;
+    }
+
+    .th-album, .th-artiste, .td-album, .td-artiste, .th-detail, .td-button  {
+        display: none;
+    }
+
+    .td-titre {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        min-width: 690px;
+    }
+
+    .playlist-inactive {
+        display: flex !important;
+    }
+
+}
+
+@media screen and (min-width: 415px)and (max-width: 560px){
+    .playlist-detail {
+        justify-content: center;
+        flex-wrap: wrap;
+        background : none !important;
+    }
+
+    .playlist-player {
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 0;
+        align-items: center;
+    }
+
+    .playlist-player .moodPicture {
+        display: block !important;
+        height: 70px;
+        width: 70px;
+        margin-bottom: 10px;
+        margin-top: -10px;
+    }
+
+    .th-album, .th-artiste, .td-album, .td-artiste, .th-detail, .td-button  {
+        display: none;
+    }
+
+    .td-titre {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        min-width: 490px;
+    }
+
+    .playlist-inactive {
+        display: flex !important;
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 414px){
+    .playlist-detail {
+        justify-content: center;
+        flex-wrap: wrap;
+        background : none !important;
+    }
+
+    .tbodyPlaylist {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .playlist-player {
@@ -277,6 +350,7 @@ table {
     .td-titre {
         padding-top: 15px;
         padding-bottom: 15px;
+        min-width: 300px;
     }
 
     .playlist-inactive {
@@ -286,16 +360,9 @@ table {
 
 
 
-@media screen and (max-width: 834px){
-    .playlist-detail {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
 
-@media screen and (max-width: 1440px){
-    .playlist-detail {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
+
+
+
+
+
