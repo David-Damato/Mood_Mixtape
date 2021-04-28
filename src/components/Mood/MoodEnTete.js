@@ -1,16 +1,14 @@
 import React from "react";
-import "./style.css";
+import "./Mood.css";
 
 
 export default function MoodEnTete ({type}) {
              return(    
-             <div>  
-                  <div>
-                  <img className="moodPicture" src={`/images/moods/${type}.png`} alt={`mood ${type}`}/>
-                    </div>
-                    <div class="playlist-name">
+             <div className="moodEnTete">  
+                <img className="moodImg" src={`/images/moods/${type}.png`} alt={`mood ${type}`}/>
+                <h1 class="moodName">
                        {`Playlist ${type}`}
-                    </div> 
+                </h1> 
             </div>
         )
 }
