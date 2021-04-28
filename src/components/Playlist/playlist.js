@@ -107,17 +107,17 @@ export default function Playlist() {
 
                 <DetailPlaylist
                 type={"Happy"}
-                playlistSelectionnee={playlistSelectionnee}
+                className={playlistSelectionnee==="Happy" ? "playlist-active" : "playlist-inactive"}
                 playlist={playlistHappy}/>
 
                 <DetailPlaylist
                     type={"Angry"}
-                    playlistSelectionnee={playlistSelectionnee}
+                    className={playlistSelectionnee==="Angry" ? "playlist-active" : "playlist-inactive"}
                     playlist={playlistAngry}/>
 
                 <DetailPlaylist
                     type={"Bonus"}
-                    playlistSelectionnee={playlistSelectionnee}
+                    className={playlistSelectionnee==="Bonus" ? "playlist-active" : "playlist-inactive"}
                     playlist={playlistBonus}/>
 
             </main>
