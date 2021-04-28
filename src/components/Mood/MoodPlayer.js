@@ -16,14 +16,12 @@ export default function MoodPlayer ({playlist, index, setIndex}) {
                 <p><em>Titre :</em> {playlist.title}</p>
             { playlist.artist ? <p><em>Artiste :</em> {playlist.artist.name}</p> : <p>Loading</p> }
             { playlist.album ?  <p><em>Album :</em> {playlist.album.title}</p> : <p>Loading</p> }
-                </div>
-                
-                
+                </div> 
             </div>
             <div className="moodButtons">
-                <button type="button" className="buttons" onClick={() => setIndex(index - 1)}>Précédent</button>
+                <button type="button" className="buttons" onClick={() => index > 0 && setIndex(index - 1)}>Précédent</button>
                 <button type="button" className="buttons">Random</button>
-                <button type="button" className="buttons" onClick={() => setIndex(index + 1)}>Suivant</button>
+                <button type="button" className="buttons" onClick={() => index < 14 && setIndex(index + 1)}>Suivant</button>
             </div>
         </div>
     )

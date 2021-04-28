@@ -39,7 +39,8 @@ export default function MoodInLove () {
         <MoodPlayer
         index={index}
         setIndex={setIndex}
-        playlist={playlistInLove}/>
+        playlist={playlistInLove}
+        />
         
         </main>
     )
