@@ -8,12 +8,15 @@ export default function MoodPlayer ({track}) {
             <img src={track.album.cover_medium} alt='Image_Album'/>
             </div>
             <div className="moodDescription">
+                
+                <audio controls className="moodAudio"><source src={track.preview}/></audio>
+                
                 <div>
                 <p><em>Titre :</em> {track.title}</p>
                 <p><em>Artiste :</em> {track.artist.name}</p>
                 <p><em>Album :</em> {track.album.title}</p>
                 </div>
-                <audio controls className="moodAudio"><source src={track.preview}/></audio>
+                
                 
             </div>
             <div className="moodButtons">

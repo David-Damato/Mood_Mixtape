@@ -23,6 +23,7 @@
     width: 800px;
     padding: 5%;
     background-color: rgb(255, 227, 232);
+    border-radius: 10px;
 }
 
 .moodCover {
@@ -61,5 +62,5 @@ em {
 }
 
 .moodAudio {
-    margin-top: 4%;
+    margin: 4%;
 }
