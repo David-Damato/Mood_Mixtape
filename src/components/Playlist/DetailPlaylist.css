@@ -56,11 +56,12 @@ table {
     border-bottom-left-radius: 10px;
     text-align: center;
     animation: fadeInRight 0.5s;
+    height:100%;
 }
 
 /* PLaylist Happy */
 .playlist.playlist-happy {
-    background-color: #ff8f26;
+    background-image: linear-gradient(to bottom, #FF8F27, #FB3301);
 }
 
 .playlistHappy-hidden {
@@ -72,7 +73,9 @@ table {
 }
 
 .buttonHappy:hover {
-    background-color: #fc9a62;
+    background-color: #ff8b1e;
+    cursor:pointer;
+    transition: all 0.5s ease-out;
 }
 
 .tdHappy {
@@ -138,7 +141,8 @@ table {
 
 /* PLaylist Angry */
 .playlist.playlist-angry {
-    background-color: rgb(255, 217, 0);
+    
+    background-image:linear-gradient(to top, #FF9900, #FFD900);
 }
 
 .playlistAngry-hidden {
@@ -151,6 +155,8 @@ table {
 
 .buttonAngry:hover {
     background-color: #ffc400;
+    cursor:pointer;
+    transition: all 0.5s ease-out;
 }
 
 .tdAngry {
@@ -176,7 +182,7 @@ table {
 
 /*playlist Bonus*/
 .playlist.playlist-bonus {
-    background-color: rgba(139, 255, 38, 0.5);
+    background: linear-gradient(to bottom,  #C6FF92, #1de47d, #16A280, #247be8 );
 }
 
 .playlistBonus-hidden {
@@ -188,7 +194,9 @@ table {
 }
 
 .buttonBonus:hover {
-    background-color: rgba(21, 162, 128, 0.43);
+    background-color:#0befc5;
+    cursor:pointer;
+    transition: all 0.5s ease-out;
 }
 
 .tdBonus {
