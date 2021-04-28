@@ -127,25 +127,23 @@ export default function Playlist() {
 
                 {playlistSelectionnee==="Happy" && <DetailPlaylist
                 type={"Happy"}
-                playlist={playlistHappy}
-                playlistSelectionnee={playlistSelectionnee}/>}
+                className={playlistSelectionnee === "Happy" ? "playlist-active" : "playlist-inactive"}
+                    playlist={playlistHappy}/>}
 
                 {playlistSelectionnee==="Angry" && <DetailPlaylist
                     type={"Angry"}
-                    playlist={playlistAngry}
-                    playlistSelectionnee={playlistSelectionnee}/>}
+                    className={playlistSelectionnee === "Angry" ? "playlist-active" : "playlist-inactive"}
+                    playlist={playlistAngry}/>}
 
                 {playlistSelectionnee==="Sad" && <DetailPlaylist
                 type={"Sad"}
-                playlist={playlistSad}
-                playlistSelectionnee={playlistSelectionnee}    
-                />}    
+                className={playlistSelectionnee === "Sad" ? "playlist-active" : "playlist-inactive"}
+                    playlist={playlistSad}/>}    
 
                 {playlistSelectionnee==="Bonus" && <DetailPlaylist
                     type={"Bonus"}
-                    playlist={playlistBonus}
-                    playlistSelectionnee={playlistSelectionnee}
-                    />}
+                    className={playlistSelectionnee === "Bonus" ? "playlist-active" : "playlist-inactive"}
+                    playlist={playlistBonus}/>}
 
             </main>
 

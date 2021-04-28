@@ -82,7 +82,15 @@ table {
     border: outset #ff3c00;
     background-color: rgba(255, 255, 255, 0.767);
     color: #ff3c00;
+    border-radius: 10px;
 }
+
+.tdHappy:hover{
+    background-color:rgba(255, 255, 255, 0.616);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
 
 #detailHappy {
 
@@ -110,7 +118,15 @@ table {
     border:outset #26a3c5;
     color: #284ea4;
     padding-left: 8px;
+    border-radius: 10px;
 }
+
+.tdSad:hover{
+    background-color:rgba(255, 255, 255, 0.616);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
 
 .buttonSad{
     background-color: #0093eb;
@@ -142,7 +158,7 @@ table {
 /* PLaylist Angry */
 .playlist.playlist-angry {
     
-    background-image:linear-gradient(to top, #FF9900, #FFD900);
+    background-image:linear-gradient(to top, #ff9900, #FFD900);
 }
 
 .playlistAngry-hidden {
@@ -163,6 +179,13 @@ table {
     background-color: rgba(255, 255, 255, 0.767);
     color: #ff9900;
     border: outset #ff9900;
+    border-radius: 10px;
+}
+
+.tdAngry:hover{
+    background-color:rgba(255, 255, 255, 0.616);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
 }
 
 #detailAngry {
@@ -181,6 +204,7 @@ table {
 /*  */
 
 /*playlist Bonus*/
+
 .playlist.playlist-bonus {
     background: linear-gradient(to bottom,  #C6FF92, #1de47d, #16A280, #247be8 );
 }
@@ -191,6 +215,7 @@ table {
 
 .buttonBonus {
     background-color: #15a280;
+    
 }
 
 .buttonBonus:hover {
@@ -200,9 +225,16 @@ table {
 }
 
 .tdBonus {
-    border: outset #15a280;
+    border: outset #19caa1;
     background-color: rgba(255, 255, 255, 0.767);
     color: #15a280;
+    border-radius: 10px;
+}
+
+.tdBonus:hover{
+    background-color:rgba(255, 255, 255, 0.568);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
 }
 
 #detailBonus {
@@ -215,6 +247,7 @@ table {
 
 .detailBonus {
     background-color: #15a280;
+    border: outset #19caa1;
 }
 
 /*   */
