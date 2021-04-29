@@ -11,7 +11,7 @@
 .ul-footer{
     display:flex;
     list-style-type: none;
-    margin:10px 0 0 0;
+    margin:1px 0 0 0;
     padding:0;
     justify-content: center;
     flex-wrap: wrap;
@@ -47,7 +47,7 @@
 
 /*regles pour tablettes ***************/
 
-@media screen and (min-width: 415px) and (max-width: 801px){
+@media screen and (min-width: 415px) and (max-width: 1000px){
    
     
         .footer-container{

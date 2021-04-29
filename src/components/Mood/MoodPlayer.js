@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Mood.css";
 
 export default function MoodPlayer ({playlist, index, setIndex}) {
-    
+    const [audioPlayerAffiche, setAudioPlayerAffiche] = useState(false);
+    useEffect(() => {
+        setAudioPlayerAffiche(false);
+        setTimeout(() => setAudioPlayerAffiche(true), 500);
+    }, [playlist.preview]);
+
+
     return (
         <div className="moodPlayer">
             <div className="moodCover">
@@ -10,7 +16,9 @@ export default function MoodPlayer ({playlist, index, setIndex}) {
             </div>
             <div className="moodAudioDescription">
                 <div className="moodAudioContainer">
-                <audio controls className="moodAudio"><source src={playlist.preview}/></audio>
+                {audioPlayerAffiche && <audio className="lecteur-playlist" controls>
+                    <source src={playlist.preview}/>
+                </audio>}
                 </div>
                 <div className="moodDescriptionContainer">
                 <p><em>Titre :</em> {playlist.title}</p>
