@@ -66,6 +66,21 @@ export default function Playlist() {
             )
     }, [])
 
+    //playlist InLove
+
+    useEffect(() => {
+        fetchJsonp("https://api.deezer.com/playlist/8951468122?output=jsonp")
+            .then((res) => res.json())
+            .then((result) => {
+                    setIsLoaded(true);
+                    setplaylistInLove(result.tracks.data);
+                },
+                (error) => {
+                    setIsLoaded(true);
+                    setError(error);
+                }
+            )
+    }, [])
 
     //playlist Bonus
     useEffect(() => {
