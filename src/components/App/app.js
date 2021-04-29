@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Accueil from '../Accueil/accueil';
 import Playlist from '../Playlist/playlist';
 import {PageContacts} from '../Contact/PageContacts';
+
 import {Menu} from "./menu/Menu";
 import {Logo} from "./logo/Logo";
 import Footer from "../Footer/footer";
