@@ -43,8 +43,7 @@ useEffect(() => {
                 <MoodPlayerSad
                     index={index}
                     setIndex={setIndex}
-                    playlist={playlistSad}
-                    backgroundColor="blue" 
+                    playlist={playlistSad} 
                     />
                     
                     </main>
