@@ -1,5 +1,4 @@
-import React, { Component, useState, useEffect } from 'react';
-import "./style.css";
+import React, { useState, useEffect } from 'react';
 import fetchJsonp from "fetch-jsonp";
 
 export default function MoodHappy () {
