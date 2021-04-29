@@ -65,7 +65,7 @@
 }
 
 /* PLaylist Happy */
-.playlist.playlist-happy {
+.playlist-detail.playlist-happy {
     background-image: linear-gradient(to bottom, #FF8F27, #FB3301);
 }
 
@@ -113,7 +113,7 @@
 
 /* Playlist Sad */ 
 
-.playlist.playlist-sad{
+.playlist-detail.playlist-sad{
      background-image: linear-gradient(to bottom, #0099ff, #2473d2, #284ea4, #232c78, #170c4e);
 }
 
@@ -159,7 +159,7 @@
 
 
 /* PLaylist Angry */
-.playlist.playlist-angry {
+.playlist-detail.playlist-angry {
     
     background-image:linear-gradient(to top, #ff9900, #FFD900);
 }
@@ -207,7 +207,7 @@
 
 /*playlist Bonus*/
 
-.playlist.playlist-bonus {
+.playlist-detail.playlist-bonus {
     background: linear-gradient(to bottom,  #C6FF92, #1de47d, #16A280, #247be8 );
 
 }
