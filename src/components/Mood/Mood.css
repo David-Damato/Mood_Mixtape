@@ -91,7 +91,7 @@ em {
 /* CSS composant MoodPlayer Sad */
 
 .moodPlayerSad {
-    width: 800px;
+    width: 60%;
     padding: 5%;
     background-color : #0181dd;
     border-radius: 10px;
@@ -113,4 +113,30 @@ em {
     border: none;
     font-weight: 500;
     font-size: 15px;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 768px)  {
+
+    .moodPlayerSad {
+        width: 70%;
+        padding: 5%;
+        background-color : #0181dd;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 400px)  {
+
+    .moodPlayerSad {
+        width: 80%;
+        padding: 5%;
+        background-color : #0181dd;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
 }
