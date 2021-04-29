@@ -50,6 +50,7 @@
     border-bottom-left-radius: 10px;
     text-align: center;
     animation: fadeInRight 0.5s;
+    height:100%;
 }
 
 .playlist-detail div table {
@@ -64,8 +65,8 @@
 }
 
 /* PLaylist Happy */
-.playlist-detail.playlist-happy {
-    background-color: #ff8f26;
+.playlist.playlist-happy {
+    background-image: linear-gradient(to bottom, #FF8F27, #FB3301);
 }
 
 .playlistHappy-hidden {
@@ -77,14 +78,24 @@
 }
 
 .buttonHappy:hover {
-    background-color: #fc9a62;
+    background-color: #ff8b1e;
+    cursor:pointer;
+    transition: all 0.5s ease-out;
 }
 
 .tdHappy {
     border: outset #ff3c00;
     background-color: rgba(255, 255, 255, 0.767);
     color: #ff3c00;
+    border-radius: 10px;
 }
+
+.tdHappy:hover{
+    background-color:rgba(255, 255, 255, 0.616);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
 
 #detailHappy {
 
@@ -111,7 +122,15 @@
     border:outset #26a3c5;
     color: #284ea4;
     padding-left: 8px;
+    border-radius: 10px;
 }
+
+.tdSad:hover{
+    background-color:rgba(255, 255, 255, 0.616);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
 
 .buttonSad{
     background-color: #0093eb;
@@ -140,8 +159,9 @@
 
 
 /* PLaylist Angry */
-.playlist-detail.playlist-angry {
-    background-color: rgb(255, 217, 0);
+.playlist.playlist-angry {
+    
+    background-image:linear-gradient(to top, #ff9900, #FFD900);
 }
 
 .playlistAngry-hidden {
@@ -154,12 +174,21 @@
 
 .buttonAngry:hover {
     background-color: #ffc400;
+    cursor:pointer;
+    transition: all 0.5s ease-out;
 }
 
 .tdAngry {
     background-color: rgba(255, 255, 255, 0.767);
     color: #ff9900;
     border: outset #ff9900;
+    border-radius: 10px;
+}
+
+.tdAngry:hover{
+    background-color:rgba(255, 255, 255, 0.616);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
 }
 
 #detailAngry {
@@ -177,8 +206,10 @@
 /*  */
 
 /*playlist Bonus*/
-.playlist-detail.playlist-bonus {
-    background-color: rgba(139, 255, 38, 0.5);
+
+.playlist.playlist-bonus {
+    background: linear-gradient(to bottom,  #C6FF92, #1de47d, #16A280, #247be8 );
+
 }
 
 .playlistBonus-hidden {
@@ -187,16 +218,26 @@
 
 .buttonBonus {
     background-color: #15a280;
+    
 }
 
 .buttonBonus:hover {
-    background-color: rgba(21, 162, 128, 0.43);
+    background-color:#0befc5;
+    cursor:pointer;
+    transition: all 0.5s ease-out;
 }
 
 .tdBonus {
-    border: outset #15a280;
+    border: outset #19caa1;
     background-color: rgba(255, 255, 255, 0.767);
     color: #15a280;
+    border-radius: 10px;
+}
+
+.tdBonus:hover{
+    background-color:rgba(255, 255, 255, 0.568);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
 }
 
 #detailBonus {
@@ -208,6 +249,7 @@
 
 .detailBonus {
     background-color: #15a280;
+    border: outset #19caa1;
 }
 
 /*   */

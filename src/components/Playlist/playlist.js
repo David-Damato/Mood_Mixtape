@@ -123,25 +123,31 @@ export default function Playlist() {
 
                 </div>
 
-                <DetailPlaylist
-                    type={"Happy"}
-                    className={playlistSelectionnee === "Happy" ? "playlist-active" : "playlist-inactive"}
-                    playlist={playlistHappy}/>
+                {playlistSelectionnee==="Happy" && <DetailPlaylist
+                type={"Happy"}
+                className={playlistSelectionnee === "Happy" ? "playlist-active" : "playlist-inactive"}
+                    playlist={playlistHappy}/>}
 
-                <DetailPlaylist
+          
+                {playlistSelectionnee==="Angry" && <DetailPlaylist    
                     type={"Angry"}
                     className={playlistSelectionnee === "Angry" ? "playlist-active" : "playlist-inactive"}
-                    playlist={playlistAngry}/>
+                    playlist={playlistAngry}/>}
 
-                <DetailPlaylist
-                    className={playlistSelectionnee === "Sad" ? "playlist-active" : "playlist-inactive"}
-                    type={"Sad"}
-                    playlist={playlistSad}/>
-
-                <DetailPlaylist
+                {playlistSelectionnee==="Sad" && <DetailPlaylist
+                type={"Sad"}
+                className={playlistSelectionnee === "Sad" ? "playlist-active" : "playlist-inactive"}
+                    playlist={playlistSad}/>}
+          
+                 {playlistSelectionnee==="InLove" && <DetailPlaylist
+                    type={"InLove"}
+                    className={playlistSelectionnee === "InLove" ? "playlist-active" : "playlist-inactive"}
+                    playlist={playlistInLove}/>}
+ 
+                {playlistSelectionnee==="Bonus" && <DetailPlaylist
                     type={"Bonus"}
                     className={playlistSelectionnee === "Bonus" ? "playlist-active" : "playlist-inactive"}
-                    playlist={playlistBonus}/>
+                    playlist={playlistBonus}/>}
 
             </main>
 
