@@ -3,10 +3,12 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Accueil from '../Accueil/accueil';
 import Playlist from '../Playlist/playlist';
 import {PageContacts} from '../Contact/PageContacts';
-import Mood from '../Mood/mood';
+//import Mood from '../Mood/mood';
 import {Menu} from "./menu/Menu";
 import {Logo} from "./logo/Logo";
 import Footer from "../Footer/footer";
+import MoodInLove from '../Mood/MoodInLove';
+import MoodSad from '../Mood/MoodSad';
 
 class App extends Component {
     render() {
@@ -24,7 +26,8 @@ class App extends Component {
                             <Logo/>
                             <Switch>
                                 <Route exact path='/' component={Accueil}/>
-                                <Route path='/mood' component={Mood}/>
+                                <Route path='/MoodInLove' component={MoodInLove}/>
+                                <Route path='/MoodSad' component={MoodSad}/>
                                 <Route path='/playlist' component={Playlist}/>
                                 <Route path='/contact' component={PageContacts}/>
                             </Switch>
