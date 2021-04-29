@@ -1,11 +1,5 @@
 /* Playlist Général */
 
-table {
-    display: flex !important;
-    align-items: flex-start !important;
-    /*  border-collapse: collapse */
-}
-
 .buttonDetail {
 
     border: none;
@@ -27,7 +21,7 @@ table {
 }
 
 .trPlaylist {
-    padding: 50px;
+    cursor: pointer;
 }
 
 .theadPlaylist {
@@ -47,16 +41,27 @@ table {
 
 /*  */
 
-.playlist {
+.playlist-detail {
+    display: flex;
     margin-bottom: 80px;
     margin-left: 30px;
     margin-right: 30px;
-    width: auto;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     text-align: center;
     animation: fadeInRight 0.5s;
     height:100%;
+}
+
+.playlist-detail div table {
+    width: 100%;
+}
+
+.liste-chansons {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 }
 
 /* PLaylist Happy */
@@ -98,7 +103,6 @@ table {
     padding-bottom: 20px;
     border-radius: 10px;
     color: white;
-    min-height: 650px;
 }
 
 .detailHappy {
@@ -150,7 +154,6 @@ table {
     padding-bottom: 20px;
     border-radius: 10px;
     color: white;
-    min-height: 650px;
 }
 
 
@@ -194,7 +197,6 @@ table {
     padding-bottom: 20px;
     border-radius: 10px;
     color: white;
-    min-height: 650px;
 }
 
 .detailAngry {
@@ -207,6 +209,7 @@ table {
 
 .playlist.playlist-bonus {
     background: linear-gradient(to bottom,  #C6FF92, #1de47d, #16A280, #247be8 );
+
 }
 
 .playlistBonus-hidden {
@@ -242,7 +245,6 @@ table {
     padding-bottom: 20px;
     border-radius: 10px;
     color: white;
-    min-height: 650px;
 }
 
 .detailBonus {
@@ -264,3 +266,159 @@ table {
     padding-right: 30px;
     padding-bottom: 30px;
 }
+
+.playlist-active {
+    display: flex;
+}
+
+.playlist-inactive {
+    display: none !important;
+}
+
+.playlist-player .moodPicture {
+    display: none;
+}
+
+@media screen and (max-width: 1440px){
+    .playlist-detail {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .liste-chansons {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .liste-chansons {
+        padding-left: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .playlist-detail {
+        justify-content: center;
+        flex-wrap: wrap;
+        background : none !important;
+    }
+
+    .playlist-player {
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 0;
+        align-items: center;
+    }
+
+    .playlist-player .moodPicture {
+        display: block !important;
+        height: 80px;
+        width: 80px;
+        margin-bottom: 10px;
+        margin-top: -10px;
+    }
+
+    .th-album, .th-artiste, .td-album, .td-artiste, .th-detail, .td-button  {
+        display: none;
+    }
+
+    .td-titre {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        min-width: 550px;
+    }
+
+    .playlist-inactive {
+        display: flex !important;
+    }
+
+}
+
+@media screen and (min-width: 441px) and (max-width: 560px){
+    .playlist-detail {
+        justify-content: center;
+        flex-wrap: wrap;
+        background : none !important;
+    }
+
+    .playlist-player {
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 0;
+        align-items: center;
+    }
+
+    .playlist-player .moodPicture {
+        display: block !important;
+        height: 70px;
+        width: 70px;
+        margin-bottom: 10px;
+        margin-top: -10px;
+    }
+
+    .th-album, .th-artiste, .td-album, .td-artiste, .th-detail, .td-button  {
+        display: none;
+    }
+
+    .td-titre {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        min-width: 440px;
+    }
+
+    .playlist-inactive {
+        display: flex !important;
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 440px){
+    .playlist-detail {
+        justify-content: center;
+        flex-wrap: wrap;
+        background : none !important;
+    }
+
+    .tbodyPlaylist {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .playlist-player {
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 0;
+        align-items: center;
+    }
+
+    .playlist-player .moodPicture {
+        display: block !important;
+        height: 50px;
+        width: 50px;
+        margin-bottom: 10px;
+        margin-top: -10px;
+    }
+
+    .th-album, .th-artiste, .td-album, .td-artiste, .th-detail, .td-button  {
+        display: none;
+    }
+
+    .td-titre {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        min-width: 300px;
+    }
+
+    .playlist-inactive {
+        display: flex !important;
+    }
+}
+
+
+
+
+
+
+
+
+
