@@ -14,10 +14,13 @@ const Footer = () => {
                     <li className="desappear"><a href="https://deezer.page.link/5W94rtMFBAo1rpaBA" className="emo">😢</a></li> 
                     <li className="desappear"><a href="https://deezer.page.link/cB3gTjba8q2TL1Ak8" className="emo">😍</a></li>
                     <li className="desappear"><a href="#" className="emo" >😎</a></li>
+                    <li>|</li>
                     <li className="desappear"><a href="https://github.com/David-Damato/Mood_Mixtape" target="_blank">Projet Github</a></li>
-                     <li className="desappear"><a href={'/contact'}>Contact</a></li>
-                     <li className="desappear"><a href="#"><img className="img-footer-bisou" src={bisou} alt="emoji bisou"></img></a></li>
-                    <li>Made with <strong>Love</strong> by : Tom Aline, Pauline, David, Violaine</li>
+                    <li>|</li>
+                    <li className="desappear"><a href={'/contact'}>Contact</a></li>
+                    <li>|</li>
+                    <li className="desappear"><a href="#"><img className="img-footer-bisou" src={bisou} alt="emoji bisou"></img></a></li>
+                    <li>Made with <strong>Love</strong> by : Aline, Pauline, David, Violaine et Tom</li>
                 </ul>
             </div>
         </footer>
