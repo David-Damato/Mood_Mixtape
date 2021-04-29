@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import fetchJsonp from "fetch-jsonp";
 import MoodEnTete from "./MoodEnTete";
-import MoodPlayer from "./MoodPlayer";
+import MoodPlayerSad from "./MoodPlayerSad";
 
 export default function MoodSad() {
 
@@ -40,10 +40,11 @@ useEffect(() => {
                     type={"Sad"}/>
 
 
-                <MoodPlayer
+                <MoodPlayerSad
                     index={index}
                     setIndex={setIndex}
                     playlist={playlistSad}
+                    backgroundColor="blue" 
                     />
                     
                     </main>

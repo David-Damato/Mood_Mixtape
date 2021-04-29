@@ -26,7 +26,7 @@
 
 }
 
-/* CSS composant MoodPlayer */
+/* CSS composant MoodPlayer love */
 
 .moodPlayer {
     width: 800px;
@@ -87,3 +87,30 @@ em {
     font-style: normal;
 }
 
+
+/* CSS composant MoodPlayer Sad */
+
+.moodPlayerSad {
+    width: 800px;
+    padding: 5%;
+    background-color : #0181dd;
+    border-radius: 10px;
+}
+
+.moodButtonsSad {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonsSad {
+    background-color: #170e51;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    border-radius: 10px;
+    padding: 1%;
+    margin: 2%;
+    width: 100px;
+    border: none;
+    font-weight: 500;
+    font-size: 15px;
+}

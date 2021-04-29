@@ -6,7 +6,7 @@ export default function MoodChoice(){
             <h1>Comment vous sentez-vous aujourd'hui ?</h1>
             <div className="moodLinks">
                 <Link to="#"><img className = "moodPicture happy" src="/images/moods/Happy.png"
-             alt="happy playlist"/></Link>
+                alt="happy playlist"/></Link>
 
                 <Link to="#"><img className = "moodPicture angry" src="/images/moods/Angry.png"
                 alt="angry playlist"/></Link>
