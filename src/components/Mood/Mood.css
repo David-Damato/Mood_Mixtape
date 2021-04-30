@@ -144,6 +144,16 @@ em {
     background-image : linear-gradient(to top, #ff9900, #FFD900);
 }
 
+/* CSS composant Happy */
+
+.buttonsHappy {
+    background-color: #ff3c00;
+}
+
+.moodPlayerHappy {
+    background-image : linear-gradient(to bottom, #FF8F27, #fa5c34);
+}
+
 /* responsive */
 
 @media only screen and (max-width: 800px)  {

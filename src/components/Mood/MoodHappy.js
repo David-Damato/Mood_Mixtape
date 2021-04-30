@@ -40,6 +40,7 @@ export default function MoodHappy () {
         index={index}
         setIndex={setIndex}
         playlist={playlistHappy}
+        mood="Happy"
         />
         
         </main>
