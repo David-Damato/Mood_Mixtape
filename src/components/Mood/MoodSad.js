@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import fetchJsonp from "fetch-jsonp";
 import MoodEnTete from "./MoodEnTete";
-import MoodPlayerSad from "./MoodPlayerSad";
+import MoodPlayer from "./MoodPlayer";
 
 export default function MoodSad() {
 
@@ -11,21 +11,21 @@ export default function MoodSad() {
     const [index, setIndex] = useState(0);
 
 
-useEffect(() => {
-    fetchJsonp("https://api.deezer.com/playlist/8951438662?output=jsonp")
-    .then((res) => res.json())
-    .then((result) => {
-        setIsLoaded(true);
-        setPlaylistSad(result.tracks.data[index]);
-    },
-        (error) => {
-            setIsLoaded(true);
-            setError(error);
-    }
+    useEffect(() => {
+        fetchJsonp("https://api.deezer.com/playlist/8951438662?output=jsonp")
+            .then((res) => res.json())
+            .then((result) => {
+                setIsLoaded(true);
+                setPlaylistSad(result.tracks.data[index]);
+            },
+                (error) => {
+                    setIsLoaded(true);
+                    setError(error);
+                }
 
-    )
+            )
 
-}, [index])
+    }, [index])
 
 
     if (error) {
@@ -33,20 +33,21 @@ useEffect(() => {
     } else if (!isLoaded) {
         return <div>Chargement...</div>;
     } else {
-            return (
-                <main className="container">
+        return (
+            <main className="container">
 
-                    <MoodEnTete
-                    type={"Sad"}/>
+                <MoodEnTete
+                    type={"Sad"} />
 
 
-                <MoodPlayerSad
+                <MoodPlayer
                     index={index}
                     setIndex={setIndex}
-                    playlist={playlistSad} 
-                    />
-                    
-                    </main>
+                    playlist={playlistSad}
+                    mood="Sad"
+                />
+
+            </main>
 
 
 
