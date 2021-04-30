@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MoodHappy from "./MoodHappy.jsx"
+import MoodHappy from "./MoodHappy"
 import MoodInLove from "./MoodInLove"
 
 
