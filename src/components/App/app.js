@@ -10,6 +10,7 @@ import Footer from "../Footer/footer";
 import MoodInLove from '../Mood/MoodInLove';
 import MoodSad from '../Mood/MoodSad';
 import MoodAngry from '../Mood/MoodAngry';
+import MoodHappy from '../Mood/MoodHappy';
 
 class App extends Component {
     render() {
@@ -27,6 +28,7 @@ class App extends Component {
                             <Logo />
                             <Switch>
                                 <Route exact path='/' component={Accueil} />
+                                <Route path='/MoodHappy' component={MoodHappy} />
                                 <Route path='/MoodAngry' component={MoodAngry} />
                                 <Route path='/MoodInLove' component={MoodInLove} />
                                 <Route path='/MoodSad' component={MoodSad} />
