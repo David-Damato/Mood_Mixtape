@@ -127,12 +127,14 @@ em {
 /* CSS composant InLove */
 
 .buttonsInLove {
-    background-color:#e55d68;
+    background-color:#e45c69;
 }
 
 .moodPlayerInLove {
-    background-image : linear-gradient(to bottom,  rgb(255, 227, 232), #cc8389, #ce6b73, #df838b );
+    background-image: linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%);
 }
+
+
 
 /* CSS composant Angry */
 
