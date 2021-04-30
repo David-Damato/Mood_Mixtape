@@ -87,28 +87,29 @@
     animation:heartBeat 0.7s;
 }
 
-.boutonBonusContainer {
+.buttonBonusContainer {
     display: flex;
     justify-content: center;
 }
 
-.boutonBonus {
+.buttonBonusAccueil {
     display: block;
     font-family: 'Montserrat', sans-serif;
     color: #e9c46a;
     border-radius: 10px;
     padding: 2%;
     margin: 2%;
-    width: 300px;
+    width: 110%;
     border: none;
     font-weight: 500;
     font-size: 15px;
     cursor: pointer;
     background-color: #e9c46a;
+    position: relative;
 }
 
-.boutonBonus:hover {
-    background: linear-gradient(to bottom,  #C6FF92, #1de47d, #16A280, #247be8 );
+.buttonBonusAccueil:hover {
+    background-color: black;
     color: white;
     animation: tada 0.7s;
 
