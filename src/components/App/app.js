@@ -1,14 +1,15 @@
-import React, {Component} from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Accueil from '../Accueil/accueil';
 import Playlist from '../Playlist/playlist';
-import {PageContacts} from '../Contact/PageContacts';
+import { PageContacts } from '../Contact/PageContacts';
 
-import {Menu} from "./menu/Menu";
-import {Logo} from "./logo/Logo";
+import { Menu } from "./menu/Menu";
+import { Logo } from "./logo/Logo";
 import Footer from "../Footer/footer";
 import MoodInLove from '../Mood/MoodInLove';
 import MoodSad from '../Mood/MoodSad';
+import MoodAngry from '../Mood/MoodAngry';
 
 class App extends Component {
     render() {
@@ -20,25 +21,26 @@ class App extends Component {
         return (
             <Router>
                 <div className="pure-container" data-effect="pure-effect-slide">
-                    <Menu/>
+                    <Menu />
                     <div className="pure-pusher-container">
                         <div className="pure-pusher">
-                            <Logo/>
+                            <Logo />
                             <Switch>
-                                <Route exact path='/' component={Accueil}/>
-                                <Route path='/MoodInLove' component={MoodInLove}/>
-                                <Route path='/MoodSad' component={MoodSad}/>
-                                <Route path='/playlist' component={Playlist}/>
-                                <Route path='/contact' component={PageContacts}/>
+                                <Route exact path='/' component={Accueil} />
+                                <Route path='/MoodAngry' component={MoodAngry} />
+                                <Route path='/MoodInLove' component={MoodInLove} />
+                                <Route path='/MoodSad' component={MoodSad} />
+                                <Route path='/playlist' component={Playlist} />
+                                <Route path='/contact' component={PageContacts} />
                             </Switch>
-                            <Footer/>
+                            <Footer />
                         </div>
                     </div>
                     <label className="pure-overlay" htmlFor="pure-toggle-left" data-overlay="left"></label>
                 </div>
             </Router>
         );
-   }
+    }
 }
 
 export default App;
