@@ -1,0 +1,14 @@
+.player-principal {
+    background-color: #808297;
+    width: 700px;
+    height: 465px;
+}
+
+.cover-random {
+   justify-content: center;
+
+}
+
+.album-picture-cover {
+    margin-top: -45px;
+}
