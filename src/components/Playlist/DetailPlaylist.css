@@ -203,7 +203,52 @@
     background-color: #ff9900;
 }
 
-/*  */
+/*playlist InLove*/
+
+.playlist-detail.playlist-inlove {
+    background: linear-gradient(to bottom,  rgb(255, 227, 232), #cc8389, #ce6b73, #df838b );
+
+}
+
+.playlistInLove-hidden {
+    display: none;
+}
+
+.buttonInLove {
+    background-color: #ff4151;
+    
+}
+
+.buttonInLove:hover {
+    background-color:#f19aa1;
+    cursor:pointer;
+    transition: all 0.5s ease-out;
+}
+
+.tdInLove {
+    border: outset #f19aa1;
+    background-color: rgba(255, 255, 255, 0.767);
+    color: #e55d68;
+    border-radius: 10px;
+}
+
+.tdInLove:hover{
+    background-color:rgba(255, 255, 255, 0.568);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+#detailInLove {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.detailInLove {
+    background-color: #ff4151;
+}
+
 
 /*playlist Bonus*/
 
@@ -251,6 +296,7 @@
     background-color: #15a280;
     border: outset #19caa1;
 }
+
 
 /*   */
 

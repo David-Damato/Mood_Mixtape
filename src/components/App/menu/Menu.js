@@ -34,7 +34,7 @@ export const Menu = () => {
                                 fermerMenu={fermerMenu}/>
                             <MenuItem
                                 lien={'/playlist'}
-                                texte={"Playlist"}
+                                texte={"Playlists"}
                                 icone={"music"}
                                 fermerMenu={fermerMenu}/>
                             <MenuItem
