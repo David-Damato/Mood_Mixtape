@@ -20,6 +20,9 @@ export default function MoodChoice() {
                     alt="in love playlist" /></Link>
 
             </div>
+            <div className="boutonBonusContainer">
+            <Link to="/MoodBonus"><button className="boutonBonus">Il y a une surprise par ici !</button></Link>
+            </div>
         </div>
     )
 };
