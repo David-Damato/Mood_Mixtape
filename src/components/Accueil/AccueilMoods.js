@@ -26,10 +26,10 @@ export default function MoodChoice() {
             <Link to="/MoodBonus">
                 <button className="buttonBonusAccueil">Il y a une surprise par ici ! (っ▀¯▀)つ
                 <Sparkle
-                color={'white'}
+                color={'#e9c46a'}
                 // The number of sparkles to render. A large number could slow
                 // down the page.
-                count={20}
+                count={7}
                 
                 // The minimum and maximum diameter of sparkles, in pixels.
                 minSize={8}
