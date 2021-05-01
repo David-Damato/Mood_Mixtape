@@ -6,8 +6,9 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
     const [audioPlayerAffiche, setAudioPlayerAffiche] = useState(false);
     const [isPlaying, setIsPlaying] = useState(true);
     const [isMuted, setIsMuted] = useState(false);
+    const [previousEffect, setPreviousEffect] = useState(false);
+    const [nextEffect, setNextEffect] = useState(false);
     let audioPlayer;
-
 
     useEffect(() => {
         setAudioPlayerAffiche(false);
@@ -18,7 +19,7 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
         if (audioPlayerAffiche === true) {
             audioPlayer = document.querySelector("#audio-player")
         }
-    }, [audioPlayerAffiche, isPlaying, isMuted, index]);
+    }, [audioPlayerAffiche, isPlaying, isMuted, index, previousEffect, nextEffect]);
 
     const skipToPreviousTrack = () => {
         if (index > 0) {
@@ -26,6 +27,9 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
         } else {
             setIndex(14);
         }
+        setPreviousEffect(true);
+        setTimeout (() => setPreviousEffect (false), 2000);
+        setNextEffect(false);
         setIsPlaying(true);
     }
 
@@ -44,6 +48,9 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
         } else {
             setIndex(0);
         }
+        setPreviousEffect(false);
+        setNextEffect(true);
+        setTimeout (() => setNextEffect (false), 2000);
         setIsPlaying(true);
     }
 
@@ -60,7 +67,7 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
 
     return (
         <>
-            <div className="conteneur-vertical player-principal"
+            <div className={`conteneur-vertical player-principal ${nextEffect===true ? "animate__animated animate__fadeInRight" : ""} ${previousEffect===true ? "animate__animated animate__fadeInLeft" : ""}`}
                  style={{
                      backgroundImage: `linear-gradient(rgba(150, 150, 150, 0.6), rgba(150, 150, 150, 0.8)), url(${track?.album?.cover_medium})`,
                  }}>
