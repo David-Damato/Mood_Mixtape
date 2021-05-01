@@ -4,17 +4,26 @@ import "./MoodPlayer.css";
 
 export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
     const [audioPlayerAffiche, setAudioPlayerAffiche] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(true);
+    let audioPlayer;
+
     useEffect(() => {
         setAudioPlayerAffiche(false);
         setTimeout(() => setAudioPlayerAffiche(true), 500);
     }, [track.preview]);
 
+    useEffect(() => {
+        if (audioPlayerAffiche === true) {
+            audioPlayer = document.querySelector("#audio-player")
+        }
+    }, [audioPlayerAffiche, isPlaying]);
+
     return (
         <>
             <div className="conteneur-vertical player-principal"
-                style={{
-                    backgroundImage: `linear-gradient(rgba(150, 150, 150, 0.6), rgba(150, 150, 150, 0.8)), url(${track?.album?.cover_medium})`,
-                }}>
+                 style={{
+                     backgroundImage: `linear-gradient(rgba(150, 150, 150, 0.6), rgba(150, 150, 150, 0.8)), url(${track?.album?.cover_medium})`,
+                 }}>
                 <div className="blur">
                     <div className="conteneur-horizontal cover-random">
                         <div className="player-principal-side"></div>
@@ -23,7 +32,8 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
                         </div>
                         <div className="conteneur-horizontal player-principal-side random">
                             <img src={`/images/moods/${mood}.png`} className="mood-in-player" alt={mood}/>
-                            <i onClick={() => setIndex(Math.floor(Math.random() * (19 - 1)) + 1)} className="fa fa-random" aria-hidden="true"/>
+                            <i onClick={() => setIndex(Math.floor(Math.random() * (19 - 1)) + 1)}
+                               className="fa fa-random" aria-hidden="true"/>
                         </div>
                     </div>
                     <div className="conteneur-horizontal track-info">
@@ -42,19 +52,36 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
                     <div className="conteneur-horizontal player-control">
                         <div className="player-principal-side player-control-time"></div>
                         <div className="conteneur-horizontal player-control-buttons">
-                        <span
-                            onClick={() => index > 0 && setIndex(index - 1)}
-                            className="material-icons-round previous-track">
-                            skip_previous
-                        </span>
-                            <span className="material-icons-round play-button">
-                            play_arrow
-                        </span>
                             <span
-                                onClick={() => index < 14 && setIndex(index + 1)}
-                                className="material-icons-round next-track">
-                            skip_next
-                        </span>
+                                onClick={() => {
+                                    if (index > 0) {
+                                        setIndex(index - 1);
+                                        setIsPlaying(true);
+                                    }
+                                }}
+                                className="material-icons-round previous-track">
+                                skip_previous
+                            </span>
+                            <span onClick={() =>{
+                                if (isPlaying === true) {
+                                    audioPlayer?.pause();
+                                } else {
+                                    audioPlayer?.play();
+                                }
+                                setIsPlaying(!isPlaying);
+                            }} className="material-icons-round play-button">
+                                {isPlaying===true ? "pause" : "play_arrow"}
+                            </span>
+                                <span
+                                    onClick={() => {
+                                        if (index < 14) {
+                                            setIndex(index + 1);
+                                            setIsPlaying(true);
+                                        }
+                                    }}
+                                    className="material-icons-round next-track">
+                                skip_next
+                            </span>
                         </div>
                         <div className="conteneur-vertical player-principal-side">
                             <div className="players-controls-volume-and-time">
@@ -67,7 +94,7 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
                     </div>
                 </div>
             </div>
-            {audioPlayerAffiche && <audio autoPlay className="lecteur-playlist">
+            {audioPlayerAffiche && <audio id="audio-player" autoPlay>
                 <source src={track.preview}/>
             </audio>}
         </>
