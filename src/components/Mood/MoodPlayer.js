@@ -18,7 +18,7 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
         if (audioPlayerAffiche === true) {
             audioPlayer = document.querySelector("#audio-player")
         }
-    }, [audioPlayerAffiche, isPlaying, isMuted]);
+    }, [audioPlayerAffiche, isPlaying, isMuted, index]);
 
     return (
         <>
@@ -104,7 +104,11 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
                     </div>
                 </div>
             </div>
-            {audioPlayerAffiche && <audio id="audio-player" autoPlay>
+            {audioPlayerAffiche && <audio
+                id="audio-player"
+                autoPlay
+                onEnded={() => setIndex(index + 1)}
+            >
                 <source src={track.preview}/>
             </audio>}
         </>
