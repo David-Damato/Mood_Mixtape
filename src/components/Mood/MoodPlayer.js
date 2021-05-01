@@ -5,7 +5,9 @@ import "./MoodPlayer.css";
 export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
     const [audioPlayerAffiche, setAudioPlayerAffiche] = useState(false);
     const [isPlaying, setIsPlaying] = useState(true);
+    const [isMuted, setIsMuted] = useState(false);
     let audioPlayer;
+
 
     useEffect(() => {
         setAudioPlayerAffiche(false);
@@ -16,7 +18,7 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
         if (audioPlayerAffiche === true) {
             audioPlayer = document.querySelector("#audio-player")
         }
-    }, [audioPlayerAffiche, isPlaying]);
+    }, [audioPlayerAffiche, isPlaying, isMuted]);
 
     return (
         <>
@@ -62,7 +64,7 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
                                 className="material-icons-round previous-track">
                                 skip_previous
                             </span>
-                            <span onClick={() =>{
+                            <span onClick={() => {
                                 if (isPlaying === true) {
                                     audioPlayer?.pause();
                                 } else {
@@ -70,23 +72,31 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
                                 }
                                 setIsPlaying(!isPlaying);
                             }} className="material-icons-round play-button">
-                                {isPlaying===true ? "pause" : "play_arrow"}
+                                {isPlaying === true ? "pause" : "play_arrow"}
                             </span>
-                                <span
-                                    onClick={() => {
-                                        if (index < 14) {
-                                            setIndex(index + 1);
-                                            setIsPlaying(true);
-                                        }
-                                    }}
-                                    className="material-icons-round next-track">
+                            <span
+                                onClick={() => {
+                                    if (index < 14) {
+                                        setIndex(index + 1);
+                                        setIsPlaying(true);
+                                    }
+                                }}
+                                className="material-icons-round next-track">
                                 skip_next
                             </span>
                         </div>
                         <div className="conteneur-vertical player-principal-side">
                             <div className="players-controls-volume-and-time">
-                            <span className="material-icons-round volume">
-                                volume_up
+                            <span onClick={() => {
+                                if (isMuted === true) {
+                                    audioPlayer.muted = false;
+                                } else {
+                                    audioPlayer.muted = true;
+                                }
+                                setIsMuted(!isMuted);
+
+                            }} className="material-icons-round volume">
+                                {isMuted === true ? "volume_off" : "volume_up"}
                             </span>
                             </div>
 
