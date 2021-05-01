@@ -20,6 +20,44 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
         }
     }, [audioPlayerAffiche, isPlaying, isMuted, index]);
 
+    const skipToPreviousTrack = () => {
+        if (index > 0) {
+            setIndex(index - 1);
+        } else {
+            setIndex(14);
+        }
+        setIsPlaying(true);
+    }
+
+    const playPause = () => {
+        if (isPlaying === true) {
+            audioPlayer?.pause();
+        } else {
+            audioPlayer?.play();
+        }
+        setIsPlaying(!isPlaying);
+    }
+
+    const skipToNextTrack = () => {
+        if (index < 14) {
+            setIndex(index + 1);
+        } else {
+            setIndex(0);
+        }
+        setIsPlaying(true);
+    }
+
+    const muteUnmute = () => {
+        if (isMuted === true) {
+            audioPlayer.muted = false;
+        } else {
+            audioPlayer.muted = true;
+        }
+        setIsMuted(!isMuted);
+
+    }
+
+
     return (
         <>
             <div className="conteneur-vertical player-principal"
@@ -55,47 +93,22 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
                         <div className="player-principal-side player-control-time"></div>
                         <div className="conteneur-horizontal player-control-buttons">
                             <span
-                                onClick={() => {
-                                    if (index > 0) {
-                                        setIndex(index - 1);
-                                        setIsPlaying(true);
-                                    }
-                                }}
+                                onClick={skipToPreviousTrack}
                                 className="material-icons-round previous-track">
                                 skip_previous
                             </span>
-                            <span onClick={() => {
-                                if (isPlaying === true) {
-                                    audioPlayer?.pause();
-                                } else {
-                                    audioPlayer?.play();
-                                }
-                                setIsPlaying(!isPlaying);
-                            }} className="material-icons-round play-button">
+                            <span onClick={playPause} className="material-icons-round play-button">
                                 {isPlaying === true ? "pause" : "play_arrow"}
                             </span>
                             <span
-                                onClick={() => {
-                                    if (index < 14) {
-                                        setIndex(index + 1);
-                                        setIsPlaying(true);
-                                    }
-                                }}
+                                onClick={skipToNextTrack}
                                 className="material-icons-round next-track">
                                 skip_next
                             </span>
                         </div>
                         <div className="conteneur-vertical player-principal-side">
                             <div className="players-controls-volume-and-time">
-                            <span onClick={() => {
-                                if (isMuted === true) {
-                                    audioPlayer.muted = false;
-                                } else {
-                                    audioPlayer.muted = true;
-                                }
-                                setIsMuted(!isMuted);
-
-                            }} className="material-icons-round volume">
+                            <span onClick={muteUnmute} className="material-icons-round volume">
                                 {isMuted === true ? "volume_off" : "volume_up"}
                             </span>
                             </div>
@@ -107,7 +120,7 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
             {audioPlayerAffiche && <audio
                 id="audio-player"
                 autoPlay
-                onEnded={() => setIndex(index + 1)}
+                onEnded={skipToNextTrack}
             >
                 <source src={track.preview}/>
             </audio>}
