@@ -1,14 +1,135 @@
 .player-principal {
+    font-family: 'Spartan', sans-serif;
     background-color: #808297;
     width: 700px;
     height: 465px;
+    margin-bottom: 40px;
+    box-shadow:
+            0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+            0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+            0 12.5px 10px rgba(0, 0, 0, 0.06),
+            0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+            0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+            0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
 .cover-random {
    justify-content: center;
-
 }
 
 .album-picture-cover {
     margin-top: -45px;
+}
+
+.album-picture-cover img {
+    width: 225px;
+    height: 225px;
+    box-shadow:
+            0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+            0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+            0 12.5px 10px rgba(0, 0, 0, 0.06),
+            0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+            0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+            0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.cover-random .random {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-top: 50px;
+    padding-right: 38px;
+    color: #6f7188;
+    font-size: 1.8rem;
+}
+
+.cover-random .random i {
+    cursor: pointer;
+}
+
+.player-principal-side {
+    width: 237px;
+}
+
+.track-info {
+    height: 165px;
+    justify-content: center;
+    align-items: center;
+}
+
+.track-info-container {
+    min-width: 60%;
+}
+
+.track-title {
+    color: white;
+    font-size: 1.6rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-shadow: 1px 1px 3px #555555;
+    white-space: nowrap;
+}
+
+.track-artist {
+    color: #9e9fbb;
+    text-shadow: 1px 1px 3px #555555;
+    padding-bottom: 8px;
+}
+
+.track-album {
+    color: white;
+    text-shadow: 1px 1px 3px #555555;
+    padding-top: 8px;
+}
+
+.player-control {
+    height: 120px;
+    border-top: 1px solid #727489;
+    border-bottom: 4px solid #707287;
+}
+
+.player-control-buttons {
+    width: 225px;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-control-buttons span.play-button {
+    background-color: #f2bfc1;
+    color: white;
+    border-radius: 50%;
+    font-size: 72px;
+    cursor: pointer;
+}
+
+.player-control-buttons span.previous-track {
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+.player-control-buttons span.next-track {
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    margin-left: 16px;
+}
+
+.player-principal-side {
+    justify-content: center;
+}
+
+.players-controls-volume-and-time span.volume {
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.mood-in-player {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 16px;
+    border: 1px solid white;
 }
