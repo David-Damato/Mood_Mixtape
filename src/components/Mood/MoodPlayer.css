@@ -89,6 +89,8 @@
 
 .track-info-container {
     min-width: 60%;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .track-title {
@@ -97,7 +99,6 @@
     padding-top: 8px;
     padding-bottom: 8px;
     text-shadow: 1px 1px 3px #555555;
-    white-space: nowrap;
 }
 
 .track-artist {
