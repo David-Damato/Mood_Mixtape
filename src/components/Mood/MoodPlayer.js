@@ -67,7 +67,7 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
 
     return (
         <>
-            <div className={`conteneur-vertical player-principal ${nextEffect===true ? "animate__animated animate__fadeInRight" : ""} ${previousEffect===true ? "animate__animated animate__fadeInLeft" : ""}`}
+            <div className={`conteneur-vertical player-principal ${nextEffect===true ? "animate__animated animate__backInRight" : ""} ${previousEffect===true ? "animate__animated animate__backInLeft" : ""}`}
                  style={{
                      backgroundImage: `linear-gradient(rgba(150, 150, 150, 0.6), rgba(150, 150, 150, 0.8)), url(${track?.album?.cover_medium})`,
                  }}>
