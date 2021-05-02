@@ -16,7 +16,7 @@ export default function MoodInLove() {
             .then((res) => res.json())
             .then((result) => {
                 setIsLoaded(true);
-                setPlaylistInLove(result.tracks.data[index]);
+                setPlaylistInLove(result.tracks.data);
             },
                 (error) => {
                     setIsLoaded(true);
@@ -38,12 +38,13 @@ export default function MoodInLove() {
                     type={"InLove"}
                 />
 
-                <MoodPlayer
+                {playlistInLove.length > 0 && <MoodPlayer
                     index={index}
                     setIndex={setIndex}
-                    playlist={playlistInLove}
+                    track={playlistInLove[index]}
                     mood="InLove"
-                />
+                    numberOfTracks={playlistInLove.length}
+                />}
 
             </main>
         )

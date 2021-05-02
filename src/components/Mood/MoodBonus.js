@@ -14,7 +14,7 @@ export default function MoodBonus() {
             .then((res) => res.json())
             .then((result) => {
                 setIsLoaded(true);
-                setPlaylistBonus(result.tracks.data[index]);
+                setPlaylistBonus(result.tracks.data);
             },
                 (error) => {
                     setIsLoaded(true);
@@ -36,12 +36,13 @@ export default function MoodBonus() {
                     type={"Bonus"}
                 />
 
-                <MoodPlayer
+                {playlistBonus.length > 0 && <MoodPlayer
                     index={index}
                     setIndex={setIndex}
-                    playlist={playlistBonus}
+                    track={playlistBonus[index]}
                     mood="Bonus"
-                />
+                    numberOfTracks={playlistBonus.length}
+                />}
 
             </main>
         )

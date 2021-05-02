@@ -16,7 +16,7 @@ export default function MoodSad() {
             .then((res) => res.json())
             .then((result) => {
                 setIsLoaded(true);
-                setPlaylistSad(result.tracks.data[index]);
+                setPlaylistSad(result.tracks.data);
             },
                 (error) => {
                     setIsLoaded(true);
@@ -40,12 +40,13 @@ export default function MoodSad() {
                     type={"Sad"} />
 
 
-                <MoodPlayer
+                {playlistSad.length > 0 && <MoodPlayer
                     index={index}
                     setIndex={setIndex}
-                    playlist={playlistSad}
+                    track={playlistSad[index]}
                     mood="Sad"
-                />
+                    numberOfTracks={playlistSad.length}
+                />}
 
             </main>
 

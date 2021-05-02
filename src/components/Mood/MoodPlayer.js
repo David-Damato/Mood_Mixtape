@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import "./Mood.css";
 import "./MoodPlayer.css";
 
-export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
+export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks}) {
     const [audioPlayerAffiche, setAudioPlayerAffiche] = useState(false);
     const [isPlaying, setIsPlaying] = useState(true);
     const [isMuted, setIsMuted] = useState(false);
@@ -25,7 +25,7 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
         if (index > 0) {
             setIndex(index - 1);
         } else {
-            setIndex(14);
+            setIndex(numberOfTracks - 1);
         }
         setPreviousEffect(true);
         setTimeout (() => setPreviousEffect (false), 2000);
@@ -43,7 +43,7 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
     }
 
     const skipToNextTrack = () => {
-        if (index < 14) {
+        if (index < numberOfTracks - 1) {
             setIndex(index + 1);
         } else {
             setIndex(0);
