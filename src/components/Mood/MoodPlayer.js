@@ -10,6 +10,7 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
     const [previousEffect, setPreviousEffect] = useState(false);
     const [nextEffect, setNextEffect] = useState(false);
     const [currentTime, setCurrentTime] = useState('0:00');
+    const [progressionInPercent, setProgressionInPercent] = useState(0);
     let audioPlayer;
 
     useEffect(() => {
@@ -26,7 +27,7 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
                 setIsMuted(false);
             }
         }
-    }, [audioPlayerAffiche, isPlaying, isMuted, index, previousEffect, nextEffect, currentTime]);
+    }, [audioPlayerAffiche, isPlaying, isMuted, index, previousEffect, nextEffect, currentTime, progressionInPercent]);
 
     const skipToPreviousTrack = () => {
         if (index > 0) {
@@ -141,6 +142,9 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
 
                         </div>
                     </div>
+                    <div className={`progress-bar ${mood}`} style={{
+                        width : progressionInPercent + '%'
+                    }}></div>
                 </div>
             </div>
             {audioPlayerAffiche && <audio
@@ -150,6 +154,8 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
                 onTimeUpdate={() => {
                     if (audioPlayer) {
                         setCurrentTime(calculateTime(audioPlayer.currentTime));
+                        const trackProgression = (audioPlayer.currentTime*100)/30;
+                        setProgressionInPercent(trackProgression>100 ? 100 : trackProgression)
                     }
                 }}
                 onPlay={() => setIsPlaying(true)}

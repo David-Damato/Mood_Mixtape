@@ -294,3 +294,28 @@
     font-weight: 500;
     text-shadow: 1px 1px 3px #555555;
 }
+
+.progress-bar {
+    height: 4px;
+    margin-top: -4px;
+}
+
+.progress-bar.Happy {
+    background-color: #ea731b;
+}
+
+.progress-bar.Angry {
+    background-color: #f7bf0e;
+}
+
+.progress-bar.Sad {
+    background-color: #57bfe9;
+}
+
+.progress-bar.InLove {
+    background-color: #f2bfc1;
+}
+
+.progress-bar.Bonus {
+    background-color: #72e6cf;
+}
