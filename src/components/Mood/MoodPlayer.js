@@ -8,6 +8,7 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
     const [isMuted, setIsMuted] = useState(false);
     const [previousEffect, setPreviousEffect] = useState(false);
     const [nextEffect, setNextEffect] = useState(false);
+    const [currentTime, setCurrentTime] = useState('0:00');
     let audioPlayer;
 
     useEffect(() => {
@@ -19,7 +20,7 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
         if (audioPlayerAffiche === true) {
             audioPlayer = document.querySelector("#audio-player")
         }
-    }, [audioPlayerAffiche, isPlaying, isMuted, index, previousEffect, nextEffect]);
+    }, [audioPlayerAffiche, isPlaying, isMuted, index, previousEffect, nextEffect, currentTime]);
 
     const skipToPreviousTrack = () => {
         if (index > 0) {
@@ -63,6 +64,13 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
         setIsMuted(!isMuted);
     }
 
+    const calculateTime = (secs) => {
+        const minutes = Math.floor(secs / 60);
+        const seconds = Math.floor(secs % 60);
+        const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
+        return `${minutes}:${returnedSeconds}`;
+    }
+
     return (
         <>
             <div className={`conteneur-vertical player-principal ${nextEffect===true ? "animate__animated animate__backInRight" : ""} ${previousEffect===true ? "animate__animated animate__backInLeft" : ""}`}
@@ -95,7 +103,7 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
                         </div>
                     </div>
                     <div className="conteneur-horizontal player-control">
-                        <div className="player-principal-side player-control-time"></div>
+                        <div className="player-principal-side player-control-time">{currentTime}</div>
                         <div className="conteneur-horizontal player-control-buttons">
                             <span
                                 onClick={skipToPreviousTrack}
@@ -126,6 +134,11 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
                 id="audio-player"
                 autoPlay
                 onEnded={skipToNextTrack}
+                onTimeUpdate={() => {
+                    if (audioPlayer) {
+                        setCurrentTime(calculateTime(audioPlayer.currentTime));
+                    }
+                }}
             >
                 <source src={track.preview}/>
             </audio>}
