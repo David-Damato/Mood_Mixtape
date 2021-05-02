@@ -48,28 +48,28 @@
     font-size: 1.8rem;
 }
 
-.cover-random .random.Angry:hover,
-.cover-random .random.Angry:focus {
+.cover-random .random i.Angry:hover,
+.cover-random .random i.Angry:focus {
     color: #f7bf0e;
 }
 
-.cover-random .random.InLove:hover,
-.cover-random .random.InLove:focus {
+.cover-random .random i.InLove:hover,
+.cover-random .random i.InLove:focus {
     color: #f2bfc1;
 }
 
-.cover-random .random.Happy:hover,
-.cover-random .random.Happy:focus {
+.cover-random .random i.Happy:hover,
+.cover-random .random i.Happy:focus {
     color: #ea731b;
 }
 
-.cover-random .random.Sad:hover,
-.cover-random .random.Sad:focus {
+.cover-random .random i.Sad:hover,
+.cover-random .random i.Sad:focus {
     color: #57bfe9;
 }
 
-.cover-random .random.Bonus:hover,
-.cover-random .random.Bonus:focus {
+.cover-random .random i.Bonus:hover,
+.cover-random .random i.Bonus:focus {
     color: #72e6cf;
 }
 
@@ -256,4 +256,12 @@
     height: 1.8rem;
     margin-right: 16px;
     border: 1px solid white;
+}
+
+.player-control-time {
+    padding-left: 50px;
+    margin-top: 50px;
+    color: white;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px #555555;
 }

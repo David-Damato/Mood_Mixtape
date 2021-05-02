@@ -61,9 +61,7 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
             audioPlayer.muted = true;
         }
         setIsMuted(!isMuted);
-
     }
-
 
     return (
         <>
@@ -77,10 +75,10 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
                         <div className="album-picture-cover">
                             {track.album && <img src={track.album.cover_medium} alt='Image_Album'/>}
                         </div>
-                        <div className={`conteneur-horizontal player-principal-side random ${mood}`}>
+                        <div className="conteneur-horizontal player-principal-side random">
                             <img src={`/images/moods/${mood}.png`} className="mood-in-player" alt={mood}/>
                             <i onClick={() => setIndex(Math.floor(Math.random() * (19 - 1)) + 1)}
-                               className="fa fa-random" aria-hidden="true"/>
+                               className={`fa fa-random ${mood}`} aria-hidden="true"/>
                         </div>
                     </div>
                     <div className="conteneur-horizontal track-info">
