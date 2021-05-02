@@ -139,6 +139,8 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
                         setCurrentTime(calculateTime(audioPlayer.currentTime));
                     }
                 }}
+                onPlay={() => setIsPlaying(true)}
+                onPause={() => setIsPlaying(false)}
             >
                 <source src={track.preview}/>
             </audio>}
