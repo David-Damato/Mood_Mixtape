@@ -48,6 +48,31 @@
     font-size: 1.8rem;
 }
 
+.cover-random .random.Angry:hover,
+.cover-random .random.Angry:focus {
+    color: #f7bf0e;
+}
+
+.cover-random .random.InLove:hover,
+.cover-random .random.InLove:focus {
+    color: #f2bfc1;
+}
+
+.cover-random .random.Happy:hover,
+.cover-random .random.Happy:focus {
+    color: #ea731b;
+}
+
+.cover-random .random.Sad:hover,
+.cover-random .random.Sad:focus {
+    color: #57bfe9;
+}
+
+.cover-random .random.Bonus:hover,
+.cover-random .random.Bonus:focus {
+    color: #72e6cf;
+}
+
 .cover-random .random i {
     cursor: pointer;
 }
@@ -100,11 +125,30 @@
 }
 
 .player-control-buttons span.play-button {
-    background-color: #f2bfc1;
     color: white;
     border-radius: 50%;
     font-size: 72px;
     cursor: pointer;
+}
+
+.player-control-buttons span.play-button.InLove {
+    background-color: #f2bfc1;
+}
+
+.player-control-buttons span.play-button.Angry {
+    background-color: #f7bf0e;
+}
+
+.player-control-buttons span.play-button.Happy {
+    background-color: #ea731b;
+}
+
+.player-control-buttons span.play-button.Sad {
+    background-color: #57bfe9;
+}
+
+.player-control-buttons span.play-button.Bonus {
+    background-color: #72e6cf;
 }
 
 .player-control-buttons span.previous-track {
@@ -114,11 +158,62 @@
     margin-right: 16px;
 }
 
+.player-control-buttons span.previous-track.Angry:hover,
+.player-control-buttons span.previous-track.Angry:focus {
+    color: #f7bf0e;
+}
+
+.player-control-buttons span.previous-track.InLove:hover,
+.player-control-buttons span.previous-track.InLove:focus {
+    color: #f2bfc1;
+}
+
+.player-control-buttons span.previous-track.Happy:hover,
+.player-control-buttons span.previous-track.Happy:focus {
+    color: #ea731b;
+}
+
+.player-control-buttons span.previous-track.Sad:hover,
+.player-control-buttons span.previous-track.Sad:focus {
+    color: #57bfe9;
+}
+
+.player-control-buttons span.previous-track.Bonus:hover,
+.player-control-buttons span.previous-track.Bonus:focus {
+    color: #72e6cf;
+}
+
+
 .player-control-buttons span.next-track {
     color: white;
     font-size: 40px;
     cursor: pointer;
     margin-left: 16px;
+}
+
+.player-control-buttons span.next-track.Angry:hover,
+.player-control-buttons span.next-track.Angry:focus {
+    color: #f7bf0e;
+}
+
+.player-control-buttons span.next-track.InLove:hover,
+.player-control-buttons span.next-track.InLove:focus {
+    color: #f2bfc1;
+}
+
+.player-control-buttons span.next-track.Happy:hover,
+.player-control-buttons span.next-track.Happy:focus {
+    color: #ea731b;
+}
+
+.player-control-buttons span.next-track.Sad:hover,
+.player-control-buttons span.next-track.Sad:focus {
+    color: #57bfe9;
+}
+
+.player-control-buttons span.next-track.Bonus:hover,
+.player-control-buttons span.next-track.Bonus:focus {
+    color:#72e6cf;
 }
 
 .player-principal-side {
@@ -129,6 +224,31 @@
     color: white;
     font-size: 40px;
     cursor: pointer;
+}
+
+.players-controls-volume-and-time span.volume.Angry:hover,
+.players-controls-volume-and-time span.volume.Angry:focus {
+    color: #f7bf0e;
+}
+
+.players-controls-volume-and-time span.volume.InLove:hover,
+.players-controls-volume-and-time span.volume.InLove:focus {
+    color: #f2bfc1;
+}
+
+.players-controls-volume-and-time span.volume.Happy:hover,
+.players-controls-volume-and-time span.volume.Happy:focus {
+    color: #ea731b;
+}
+
+.players-controls-volume-and-time span.volume.Sad:hover,
+.players-controls-volume-and-time span.volume.Sad:focus {
+    color: #57bfe9;
+}
+
+.players-controls-volume-and-time span.volume.Bonus:hover,
+.players-controls-volume-and-time span.volume.Bonus:focus {
+    color: #72e6cf;
 }
 
 .mood-in-player {

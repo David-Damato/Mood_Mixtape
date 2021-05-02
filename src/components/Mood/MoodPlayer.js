@@ -77,7 +77,7 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
                         <div className="album-picture-cover">
                             {track.album && <img src={track.album.cover_medium} alt='Image_Album'/>}
                         </div>
-                        <div className="conteneur-horizontal player-principal-side random">
+                        <div className={`conteneur-horizontal player-principal-side random ${mood}`}>
                             <img src={`/images/moods/${mood}.png`} className="mood-in-player" alt={mood}/>
                             <i onClick={() => setIndex(Math.floor(Math.random() * (19 - 1)) + 1)}
                                className="fa fa-random" aria-hidden="true"/>
@@ -101,21 +101,21 @@ export default function MoodPlayer({playlist: track, index, setIndex, mood}) {
                         <div className="conteneur-horizontal player-control-buttons">
                             <span
                                 onClick={skipToPreviousTrack}
-                                className="material-icons-round previous-track">
+                                className={`material-icons-round previous-track ${mood}`}>
                                 skip_previous
                             </span>
-                            <span onClick={playPause} className="material-icons-round play-button">
+                            <span onClick={playPause} className={`material-icons-round play-button ${mood}`}>
                                 {isPlaying === true ? "pause" : "play_arrow"}
                             </span>
                             <span
                                 onClick={skipToNextTrack}
-                                className="material-icons-round next-track">
+                                className={`material-icons-round next-track ${mood}`}>
                                 skip_next
                             </span>
                         </div>
                         <div className="conteneur-vertical player-principal-side">
                             <div className="players-controls-volume-and-time">
-                            <span onClick={muteUnmute} className="material-icons-round volume">
+                            <span onClick={muteUnmute} className={`material-icons-round volume ${mood}`}>
                                 {isMuted === true ? "volume_off" : "volume_up"}
                             </span>
                             </div>
