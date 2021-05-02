@@ -18,6 +18,34 @@
     -webkit-backdrop-filter: grayscale(100%) blur(20px);
 }
 
+.back-button span {
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    padding-left: 38px;
+    padding-top: 50px;
+}
+
+.back-button.Happy span:hover {
+    color: #ea731b !important;
+}
+
+.back-button.Angry span:hover {
+    color: #f7bf0e !important;
+}
+
+.back-button.Sad span:hover {
+    color: #57bfe9 !important;
+}
+
+.back-button.InLove span:hover {
+    color: #f2bfc1 !important;
+}
+
+.back-button.Bonus span:hover {
+    color: #72e6cf !important;
+}
+
 .cover-random {
     justify-content: center;
 }

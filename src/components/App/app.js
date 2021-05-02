@@ -16,11 +16,6 @@ import MoodBonus from '../Mood/MoodBonus';
 
 class App extends Component {
     render() {
-
-
-
-
-
         return (
             <Router>
                 <div className="pure-container" data-effect="pure-effect-slide">

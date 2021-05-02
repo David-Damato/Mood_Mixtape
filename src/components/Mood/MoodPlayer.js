@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import "./Mood.css";
 import "./MoodPlayer.css";
+import {Link} from "react-router-dom";
 
 export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks}) {
     const [audioPlayerAffiche, setAudioPlayerAffiche] = useState(false);
@@ -18,7 +19,12 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
 
     useEffect(() => {
         if (audioPlayerAffiche === true) {
-            audioPlayer = document.querySelector("#audio-player")
+            audioPlayer = document.querySelector("#audio-player");
+            if (audioPlayer.muted === true) {
+                setIsMuted(true);
+            } else {
+                setIsMuted(false);
+            }
         }
     }, [audioPlayerAffiche, isPlaying, isMuted, index, previousEffect, nextEffect, currentTime]);
 
@@ -29,7 +35,7 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
             setIndex(numberOfTracks - 1);
         }
         setPreviousEffect(true);
-        setTimeout (() => setPreviousEffect (false), 2000);
+        setTimeout(() => setPreviousEffect(false), 2000);
         setNextEffect(false);
         setIsPlaying(true);
     }
@@ -51,7 +57,7 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
         }
         setPreviousEffect(false);
         setNextEffect(true);
-        setTimeout (() => setNextEffect (false), 2000);
+        setTimeout(() => setNextEffect(false), 2000);
         setIsPlaying(true);
     }
 
@@ -73,13 +79,20 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
 
     return (
         <>
-            <div className={`conteneur-vertical player-principal ${nextEffect===true ? "animate__animated animate__backInRight" : ""} ${previousEffect===true ? "animate__animated animate__backInLeft" : ""}`}
-                 style={{
-                     backgroundImage: `linear-gradient(rgba(150, 150, 150, 0.6), rgba(150, 150, 150, 0.8)), url(${track?.album?.cover_medium})`,
-                 }}>
+            <div
+                className={`conteneur-vertical player-principal ${nextEffect === true ? "animate__animated animate__backInRight" : ""} ${previousEffect === true ? "animate__animated animate__backInLeft" : ""}`}
+                style={{
+                    backgroundImage: `linear-gradient(rgba(150, 150, 150, 0.6), rgba(150, 150, 150, 0.8)), url(${track?.album?.cover_medium})`,
+                }}>
                 <div className="blur">
                     <div className="conteneur-horizontal cover-random">
-                        <div className="player-principal-side"></div>
+                        <div className={`player-principal-side back-button ${mood}`}>
+                            <Link to="/">
+                                <span className="material-icons-round">
+                                    arrow_back
+                                </span>
+                            </Link>
+                        </div>
                         <div className="album-picture-cover">
                             {track.album && <img src={track.album.cover_medium} alt='Image_Album'/>}
                         </div>
