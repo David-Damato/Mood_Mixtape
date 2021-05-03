@@ -3,9 +3,9 @@ import {useEffect, useState} from "react";
 import {Player} from "./Player";
 
 export const DetailPlaylist = ({type, playlist, className}) => {
-    const [chanson, setChanson] = useState(null);
+    const [song, setSong] = useState(null);
     useEffect(() => {
-        setChanson(playlist[0]);
+        setSong(playlist[0]);
     }, [playlist]);
 
     return (
@@ -13,22 +13,22 @@ export const DetailPlaylist = ({type, playlist, className}) => {
             <div className="conteneur-vertical playlist-player">
                 <div className="titre-playlist">Playlist {type}</div>
                 <img className="moodPicture" src={`/images/moods/${type}.png`} alt={`mood${type}`}/>
-                {chanson && <Player
-                    track={chanson}
+                {song && <Player
+                    track={song}
                     type={type}/>}
             </div>
-            <div className="liste-chansons">
+            <div className="liste-songs">
                 <table>
                     <tbody className="tbodyPlaylist">
                     <tr>
                         <th><h3>Titre</h3></th>
-                        <th className="th-artiste"><h3>Artiste</h3></th>
+                        <th className="th-artist"><h3>Artiste</h3></th>
                         <th className="th-album"><h3>Album</h3></th>
                         <th className="th-detail"><h3>Détails</h3></th>
                     </tr>
 
                     {playlist.map((track, index) =>
-                        <tr key={`track-${index}`} className="trPlaylist" onClick={() => setChanson(track)}>
+                        <tr key={`track-${index}`} className="trPlaylist" onClick={() => setSong(track)}>
                             <td className={`tdPlaylist td-titre td${type}`}>
                                 {track.title}
                             </td>
@@ -40,7 +40,7 @@ export const DetailPlaylist = ({type, playlist, className}) => {
                             </td>
                             <td className="td-button">
                                 <button className={`buttonDetail  button${type}`} key={track}
-                                        onClick={() => setChanson(track)}>Afficher
+                                        onClick={() => setSong(track)}>Afficher
                                 </button>
                             </td>
                         </tr>

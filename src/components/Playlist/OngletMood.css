@@ -15,7 +15,7 @@
     cursor: pointer;
 }
 
-.moodDivNonSelectionnee {
+.moodDivNonSelected {
     transform: scale(0.9);
 }
 

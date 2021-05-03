@@ -8,26 +8,13 @@
     padding-left: 30px;
     padding-right: 30px;
 }
-@media screen and (max-width: 800px){
+
+
+@media screen and (min-width: 320px) and (max-width: 800px){
+
     .humeur_play {
         display: none;
     }
 }
-
-@media screen and (min-width: 415px) and (max-width: 560px){
-    .humeur_play {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 320px) and (max-width: 414px){
-    .humeur_play {
-        display: none;
-    }
-}
-
-
-
-
 
 
