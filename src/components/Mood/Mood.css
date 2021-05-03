@@ -7,9 +7,9 @@
     margin-bottom: 10%;
 }
 
-/* CSS composant MoodEnTete */
+/* CSS composant MoodHead */
 
-.moodEnTete {
+.moodHead {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
