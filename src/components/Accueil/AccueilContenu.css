@@ -1,4 +1,14 @@
 /* CSS composant Questions */
+.framed{
+    background-color:#264653;
+    padding: 1%;
+    margin: 1%; 
+    width: 550px;
+    border-radius: 10px;
+    color:white;
+    animation: bounceInLeft 2s;
+}
+
 
 .questionsFramed {
     font-family: 'Montserrat', sans-serif;
@@ -8,14 +18,9 @@
 }
 
 .question {
-    background-color:#264653;
-    padding: 1%;
-    margin: 1%; 
+   
     margin-left: 5%;
-    width: 550px;
-    border-radius: 10px;
-    color:white;
-    animation: bounceInLeft 2s;
+
 }
 
 .question:hover {
@@ -28,14 +33,9 @@
 }
 
 .reply-appears {
-    background-color: #264653;
-    padding: 1%;
-    margin: 1%;
+  
     margin-left: 53%;
-    width: 550px;
-    border-radius: 10px;
-    color: white;
-    animation: bounceInLeft 2s;
+  
 }
 
 .moodMixtape {
@@ -116,6 +116,7 @@
 
 
 @media screen and (max-width: 690px) {
+  
     
     .questionsFramed {
         display: flex;
@@ -125,21 +126,21 @@
 
     .question {
         margin-left: 0%;
-        width: 300px;
+        width: 80%;
         font-size: 13px;
         padding: 3%;
     }
 
     .reply-appears {
         margin-left: 0%;
-        width: 300px;
+        width: 80%;
         font-size: 13px;
         padding: 3%;
     }
 
     .reply-hidden {
         margin-left: 0%;
-        width: 300px;
+        width: 80%;
         padding: 3%;
     }
 
@@ -155,7 +156,7 @@
     } 
     
     .moodChoice {
-        margin-bottom: 200px;
+        margin-bottom: 25%;
     } 
 
     .moodPicture {
@@ -166,14 +167,14 @@
 @media screen and (min-width:691px) and (max-width: 1023px) {
     
     .question {
-        width: 350px;
+        width: 50%;
         font-size: 14px;
         margin-left: 5%;
         margin-top: 2%;
     }
 
     .reply-appears {
-        width: 350px;
+        width: 50%;
         font-size: 14px;
         margin-top: 2%;
         margin-left: 45%;
@@ -196,15 +197,9 @@
 }
 
 @media screen and (min-width:1024px) and (max-width: 1400px) {
-    
-    .question {
-        width: 400px;
-        font-size: 16px;
+    .questionReply{
+        width:400px;
+        font-size:16px;
     }
-
-    .reply-appears {
-        width: 400px;
-        font-size: 16px;
-    }
-
+ 
 } 
