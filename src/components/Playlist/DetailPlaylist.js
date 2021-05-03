@@ -1,11 +1,12 @@
 import "./DetailPlaylist.css";
-import {useEffect, useState} from "react";
-import {Player} from "./Player";
+import React, {useEffect, useState} from "react";
+import MoodPlayer from "../Mood/MoodPlayer";
 
 export const DetailPlaylist = ({type, playlist, className}) => {
-    const [chanson, setChanson] = useState(null);
+    const [index, setIndex] = useState(0);
+
     useEffect(() => {
-        setChanson(playlist[0]);
+        setIndex(0);
     }, [playlist]);
 
     return (
@@ -13,9 +14,13 @@ export const DetailPlaylist = ({type, playlist, className}) => {
             <div className="conteneur-vertical playlist-player">
                 <div className="titre-playlist">Playlist {type}</div>
                 <img className="moodPicture" src={`/images/moods/${type}.png`} alt={`mood${type}`}/>
-                {chanson && <Player
-                    track={chanson}
-                    type={type}/>}
+                {playlist.length > 0 && <MoodPlayer
+                    index={index}
+                    setIndex={setIndex}
+                    track={playlist[index]}
+                    mood={type}
+                    numberOfTracks={playlist.length}
+                />}
             </div>
             <div className="liste-chansons">
                 <table>
@@ -28,7 +33,7 @@ export const DetailPlaylist = ({type, playlist, className}) => {
                     </tr>
 
                     {playlist.map((track, index) =>
-                        <tr key={`track-${index}`} className="trPlaylist" onClick={() => setChanson(track)}>
+                        <tr key={`track-${index}`} className="trPlaylist" onClick={() => setIndex(index)}>
                             <td className={`tdPlaylist td-titre td${type}`}>
                                 {track.title}
                             </td>
@@ -40,7 +45,7 @@ export const DetailPlaylist = ({type, playlist, className}) => {
                             </td>
                             <td className="td-button">
                                 <button className={`buttonDetail  button${type}`} key={track}
-                                        onClick={() => setChanson(track)}>Afficher
+                                        onClick={() => setIndex(index)}>Afficher
                                 </button>
                             </td>
                         </tr>

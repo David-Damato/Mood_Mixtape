@@ -306,6 +306,8 @@
     font-weight: bold;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-bottom: 50px;
+    font-family: Spartan, sans-serif;
 }
 
 .playlist-player {
