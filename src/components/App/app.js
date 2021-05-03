@@ -14,8 +14,8 @@ import MoodHappy from '../Mood/MoodHappy';
 import MoodBonus from '../Mood/MoodBonus';
 
 
-class App extends Component {
-    render() {
+
+      export default function App() {
         return (
             <Router>
                 <div className="pure-container" data-effect="pure-effect-slide">
@@ -41,6 +41,6 @@ class App extends Component {
             </Router>
         );
     }
-}
 
-export default App;
+
+
