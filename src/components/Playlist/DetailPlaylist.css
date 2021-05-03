@@ -51,6 +51,7 @@
     text-align: center;
     animation: fadeInRight 0.5s;
     height:100%;
+    font-family: Spartan, sans-serif;
 }
 
 .playlist-detail div table {
