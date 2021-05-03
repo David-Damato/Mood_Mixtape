@@ -23,14 +23,13 @@
     padding: 5%; 
     font-family: 'Spartan', sans-serif;
     font-weight: 500;
-    margin-bottom: 50px;
-    white-space: nowrap;
+
 }
 
 /* CSS composant MoodPlayer love */
 
 .moodPlayer {
-    width: 55%;
+    width: 55%;              
     padding: 5%;
     background-color: rgb(255, 227, 232);
     border-radius: 10px;
@@ -67,6 +66,63 @@
 }
 
 .buttons {
+    background-color:#e55d68;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    border-radius: 10px;
+    padding: 1%;
+    margin: 2%;
+    width: 100px;
+    border: none;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.buttons:hover {
+    transform: scale(1.1);              
+} 
+
+em {
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 800px)  {
+    .moodPlayer{
+        padding: 5%;
+        background-color: rgb(255, 227, 232);
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .moodPlayer{
+        width: 80%;
+        padding: 5%;
+        background-color: rgb(255, 227, 232);
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* CSS composant MoodPlayer Sad */
+
+.moodPlayerSad {
+    width: 55%;
+    padding: 5%;
+    background-image : linear-gradient(to bottom, #00baeb, #0182DD, #0D4A76);
+    border-radius: 10px;
+}
+
+.moodButtonsSad {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonsSad {
+    background-color: #170e51;
     font-family: 'Montserrat', sans-serif;
     color: white;
     border-radius: 10px;
@@ -79,83 +135,6 @@
     cursor: pointer;
 }
 
-
-.buttons:hover {
-    transform: scale(1.1);
-} 
-
-em {
-    font-weight: 600;
-    font-style: normal;
-}
-
-/* responsive */
-
-@media only screen and (max-width: 800px)  {
-
-    .moodPlayer {
-        width: 70%;
-        padding: 5%;
-        background-color: rgb(255, 227, 232);
-        border-radius: 10px;
-        margin-bottom: 10px;
-    }
-}
-
-
-@media only screen and (max-width: 400px)  {
-
-    .moodPlayer{
-        width: 80%;
-        padding: 5%;
-        background-color: rgb(255, 227, 232);
-        border-radius: 10px;
-        margin-bottom: 10px;
-    }
-}
-
-
-/* CSS composant Sad */
-
-.moodPlayerSad {
-    background-image : linear-gradient(to bottom, #00baeb, #0182DD, #0D4A76);
-}
-
-.buttonsSad {
-    background-color: #170e51;
-}
-
-/* CSS composant InLove */
-
-.buttonsInLove {
-    background-color:#e45c69;
-}
-
-.moodPlayerInLove {
-    background-image: linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%);
-}
-
-
-
-/* CSS composant Angry */
-
-.buttonsAngry {
-    background-color: #ff9900;
-}
-
-.moodPlayerAngry {
-    background-image : linear-gradient(to top, #ff9900, #FFD900);
-}
-
-/* CSS composant Happy */
-
-.buttonsHappy {
-    background-color: #ff3c00;
-}
-
-.moodPlayerHappy {
-    background-image : linear-gradient(to bottom, #FF8F27, #fa5c34);
-}
 
 /* responsive */
 

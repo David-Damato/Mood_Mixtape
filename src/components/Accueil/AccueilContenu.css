@@ -1,11 +1,10 @@
 /* CSS composant Questions */
 
-.questionsEncadre {
+.questionsFramed {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;  
-    margin-top: 3%;  
-    margin-right: 5%;
-    margin-left: 5%;
+    margin:3% 5% 0 5%;
+  
 }
 
 .question {
@@ -24,11 +23,11 @@
 } 
 
 
-.reponse-hidden {
+.reply-hidden {
     display: none;
 }
 
-.reponse-appears {
+.reply-appears {
     background-color: #264653;
     padding: 1%;
     margin: 1%;
@@ -48,10 +47,8 @@
 
 .moodChoice {
     padding: 3%;
-    margin: 5%; 
+    margin:0 5% 0 5%; 
     background-color: #e9c46a;
-    margin-right: 5%;
-    margin-left: 5%;
 }
 
 .moodChoice h1 {
@@ -92,7 +89,7 @@
     justify-content: center;
 }
 
-.buttonBonusAccueil {
+.buttonBonusHome {
     display: block;
     font-family: 'Montserrat', sans-serif;
     color: #e9c46a;
@@ -108,19 +105,19 @@
     position: relative;
 }
 
-.buttonBonusAccueil:hover {
+.buttonBonusHome:hover {
     background-color: black;
     color: white;
     animation: tada 0.7s;
 
 }
 
-/* CSS responsive page accueil */
+/* CSS responsive homepage */
 
 
 @media screen and (max-width: 690px) {
     
-    .questionsEncadre {
+    .questionsFramed {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -133,14 +130,14 @@
         padding: 3%;
     }
 
-    .reponse-appears {
+    .reply-appears {
         margin-left: 0%;
         width: 300px;
         font-size: 13px;
         padding: 3%;
     }
 
-    .reponse-hidden {
+    .reply-hidden {
         margin-left: 0%;
         width: 300px;
         padding: 3%;
@@ -175,7 +172,7 @@
         margin-top: 2%;
     }
 
-    .reponse-appears {
+    .reply-appears {
         width: 350px;
         font-size: 14px;
         margin-top: 2%;
@@ -205,7 +202,7 @@
         font-size: 16px;
     }
 
-    .reponse-appears {
+    .reply-appears {
         width: 400px;
         font-size: 16px;
     }
