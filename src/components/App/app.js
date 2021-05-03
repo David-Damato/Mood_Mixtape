@@ -11,14 +11,11 @@ import MoodInLove from '../Mood/MoodInLove';
 import MoodSad from '../Mood/MoodSad';
 import MoodAngry from '../Mood/MoodAngry';
 import MoodHappy from '../Mood/MoodHappy';
+import MoodBonus from '../Mood/MoodBonus';
+
 
 class App extends Component {
     render() {
-
-
-
-
-
         return (
             <Router>
                 <div className="pure-container" data-effect="pure-effect-slide">
@@ -32,6 +29,7 @@ class App extends Component {
                                 <Route path='/MoodAngry' component={MoodAngry} />
                                 <Route path='/MoodInLove' component={MoodInLove} />
                                 <Route path='/MoodSad' component={MoodSad} />
+                                <Route path='/MoodBonus' component={MoodBonus} />
                                 <Route path='/playlist' component={Playlist} />
                                 <Route path='/contact' component={PageContacts} />
                             </Switch>

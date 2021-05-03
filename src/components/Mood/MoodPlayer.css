@@ -1,0 +1,321 @@
+.player-principal {
+    font-family: 'Spartan', sans-serif;
+    width: 700px;
+    height: 465px;
+    margin-bottom: 40px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+    background-position: center;
+    background-size: cover;
+}
+
+.player-principal .blur {
+    backdrop-filter: grayscale(100%) blur(20px);
+    -webkit-backdrop-filter: grayscale(100%) blur(20px);
+}
+
+.back-button span {
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    padding-left: 38px;
+    padding-top: 50px;
+}
+
+.back-button.Happy span:hover {
+    color: #ea731b !important;
+}
+
+.back-button.Angry span:hover {
+    color: #f7bf0e !important;
+}
+
+.back-button.Sad span:hover {
+    color: #57bfe9 !important;
+}
+
+.back-button.InLove span:hover {
+    color: #f2bfc1 !important;
+}
+
+.back-button.Bonus span:hover {
+    color: #72e6cf !important;
+}
+
+.cover-random {
+    justify-content: center;
+}
+
+.album-picture-cover {
+    margin-top: -45px;
+}
+
+.album-picture-cover img {
+    width: 225px;
+    height: 225px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.cover-random .random {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-top: 50px;
+    padding-right: 38px;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.cover-random .random i.Angry:hover,
+.cover-random .random i.Angry:focus {
+    color: #f7bf0e;
+}
+
+.cover-random .random i.InLove:hover,
+.cover-random .random i.InLove:focus {
+    color: #f2bfc1;
+}
+
+.cover-random .random i.Happy:hover,
+.cover-random .random i.Happy:focus {
+    color: #ea731b;
+}
+
+.cover-random .random i.Sad:hover,
+.cover-random .random i.Sad:focus {
+    color: #57bfe9;
+}
+
+.cover-random .random i.Bonus:hover,
+.cover-random .random i.Bonus:focus {
+    color: #72e6cf;
+}
+
+.cover-random .random i {
+    cursor: pointer;
+}
+
+.player-principal-side {
+    width: 237px;
+}
+
+.track-info {
+    height: 165px;
+    justify-content: center;
+    align-items: center;
+}
+
+.track-info-container {
+    min-width: 60%;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.track-title {
+    color: white;
+    font-size: 1.6rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-shadow: 1px 1px 3px #555555;
+}
+
+.track-artist {
+    color: #c3c3c3;
+    text-shadow: 1px 1px 3px #555555;
+    padding-bottom: 8px;
+}
+
+.track-album {
+    color: white;
+    text-shadow: 1px 1px 3px #555555;
+    padding-top: 8px;
+}
+
+.player-control {
+    height: 115px;
+    border-top: 1px solid #7c7c7c;
+    border-bottom: 4px solid #7c7c7c;
+}
+
+.player-control-buttons {
+    width: 225px;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-control-buttons span.play-button {
+    color: white;
+    border-radius: 50%;
+    font-size: 72px;
+    cursor: pointer;
+}
+
+.player-control-buttons span.play-button.InLove {
+    background-color: #f2bfc1;
+}
+
+.player-control-buttons span.play-button.Angry {
+    background-color: #f7bf0e;
+}
+
+.player-control-buttons span.play-button.Happy {
+    background-color: #ea731b;
+}
+
+.player-control-buttons span.play-button.Sad {
+    background-color: #57bfe9;
+}
+
+.player-control-buttons span.play-button.Bonus {
+    background-color: #72e6cf;
+}
+
+.player-control-buttons span.previous-track {
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+.player-control-buttons span.previous-track.Angry:hover,
+.player-control-buttons span.previous-track.Angry:focus {
+    color: #f7bf0e;
+}
+
+.player-control-buttons span.previous-track.InLove:hover,
+.player-control-buttons span.previous-track.InLove:focus {
+    color: #f2bfc1;
+}
+
+.player-control-buttons span.previous-track.Happy:hover,
+.player-control-buttons span.previous-track.Happy:focus {
+    color: #ea731b;
+}
+
+.player-control-buttons span.previous-track.Sad:hover,
+.player-control-buttons span.previous-track.Sad:focus {
+    color: #57bfe9;
+}
+
+.player-control-buttons span.previous-track.Bonus:hover,
+.player-control-buttons span.previous-track.Bonus:focus {
+    color: #72e6cf;
+}
+
+
+.player-control-buttons span.next-track {
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    margin-left: 16px;
+}
+
+.player-control-buttons span.next-track.Angry:hover,
+.player-control-buttons span.next-track.Angry:focus {
+    color: #f7bf0e;
+}
+
+.player-control-buttons span.next-track.InLove:hover,
+.player-control-buttons span.next-track.InLove:focus {
+    color: #f2bfc1;
+}
+
+.player-control-buttons span.next-track.Happy:hover,
+.player-control-buttons span.next-track.Happy:focus {
+    color: #ea731b;
+}
+
+.player-control-buttons span.next-track.Sad:hover,
+.player-control-buttons span.next-track.Sad:focus {
+    color: #57bfe9;
+}
+
+.player-control-buttons span.next-track.Bonus:hover,
+.player-control-buttons span.next-track.Bonus:focus {
+    color:#72e6cf;
+}
+
+.player-principal-side {
+    justify-content: center;
+}
+
+.players-controls-volume-and-time span.volume {
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.players-controls-volume-and-time span.volume.Angry:hover,
+.players-controls-volume-and-time span.volume.Angry:focus {
+    color: #f7bf0e;
+}
+
+.players-controls-volume-and-time span.volume.InLove:hover,
+.players-controls-volume-and-time span.volume.InLove:focus {
+    color: #f2bfc1;
+}
+
+.players-controls-volume-and-time span.volume.Happy:hover,
+.players-controls-volume-and-time span.volume.Happy:focus {
+    color: #ea731b;
+}
+
+.players-controls-volume-and-time span.volume.Sad:hover,
+.players-controls-volume-and-time span.volume.Sad:focus {
+    color: #57bfe9;
+}
+
+.players-controls-volume-and-time span.volume.Bonus:hover,
+.players-controls-volume-and-time span.volume.Bonus:focus {
+    color: #72e6cf;
+}
+
+.mood-in-player {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 16px;
+    border: 1px solid white;
+}
+
+.player-control-time {
+    padding-left: 50px;
+    margin-top: 50px;
+    color: white;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px #555555;
+}
+
+.progress-bar {
+    height: 4px;
+    margin-top: -4px;
+}
+
+.progress-bar.Happy {
+    background-color: #ea731b;
+}
+
+.progress-bar.Angry {
+    background-color: #f7bf0e;
+}
+
+.progress-bar.Sad {
+    background-color: #57bfe9;
+}
+
+.progress-bar.InLove {
+    background-color: #f2bfc1;
+}
+
+.progress-bar.Bonus {
+    background-color: #72e6cf;
+}

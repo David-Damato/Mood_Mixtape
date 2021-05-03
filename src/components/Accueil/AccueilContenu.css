@@ -87,6 +87,34 @@
     animation:heartBeat 0.7s;
 }
 
+.buttonBonusContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonBonusAccueil {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    color: #e9c46a;
+    border-radius: 10px;
+    padding: 2%;
+    margin: 2%;
+    width: 110%;
+    border: none;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #e9c46a;
+    position: relative;
+}
+
+.buttonBonusAccueil:hover {
+    background-color: black;
+    color: white;
+    animation: tada 0.7s;
+
+}
+
 /* CSS responsive page accueil */
 
 

@@ -3,7 +3,7 @@ import fetchJsonp from "fetch-jsonp";
 import MoodEnTete from "./MoodEnTete";
 import MoodPlayer from "./MoodPlayer";
 
-export default function MoodHappy () {
+export default function MoodHappy() {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [playlistHappy, setPlaylistHappy] = useState([]);
@@ -14,7 +14,7 @@ export default function MoodHappy () {
             .then((res) => res.json())
             .then((result) => {
                     setIsLoaded(true);
-                    setPlaylistHappy(result.tracks.data[index]);
+                    setPlaylistHappy(result.tracks.data);
                 },
                 (error) => {
                     setIsLoaded(true);
@@ -30,19 +30,21 @@ export default function MoodHappy () {
         return <div>Chargement...</div>;
     } else {
         return (
-        <main className="container">
-        
-        <MoodEnTete
-        type={"Happy"}
-        />
-        
-        <MoodPlayer
-        index={index}
-        setIndex={setIndex}
-        playlist={playlistHappy}
-        mood="Happy"
-        />
-        
-        </main>
-    )
-}}
+            <main className="container">
+
+                <MoodEnTete
+                    type={"Happy"}
+                />
+
+                {playlistHappy.length > 0 && <MoodPlayer
+                    index={index}
+                    setIndex={setIndex}
+                    track={playlistHappy[index]}
+                    mood="Happy"
+                    numberOfTracks={playlistHappy.length}
+                />}
+
+            </main>
+        )
+    }
+}

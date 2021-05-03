@@ -3,18 +3,18 @@ import fetchJsonp from "fetch-jsonp";
 import MoodEnTete from "./MoodEnTete";
 import MoodPlayer from "./MoodPlayer";
 
-export default function MoodInLove() {
+export default function MoodBonus() {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
-    const [playlistAngry, setPlaylistAngry] = useState([]);
+    const [playlistBonus, setPlaylistBonus] = useState([]);
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
-        fetchJsonp("https://api.deezer.com/playlist/8951314702?output=jsonp")
+        fetchJsonp("https://api.deezer.com/playlist/8986040282?output=jsonp")
             .then((res) => res.json())
             .then((result) => {
                 setIsLoaded(true);
-                setPlaylistAngry(result.tracks.data);
+                setPlaylistBonus(result.tracks.data);
             },
                 (error) => {
                     setIsLoaded(true);
@@ -33,15 +33,15 @@ export default function MoodInLove() {
             <main className="container">
 
                 <MoodEnTete
-                    type={"Angry"}
+                    type={"Bonus"}
                 />
 
-                {playlistAngry.length > 0 && <MoodPlayer
+                {playlistBonus.length > 0 && <MoodPlayer
                     index={index}
                     setIndex={setIndex}
-                    track={playlistAngry[index]}
-                    mood="Angry"
-                    numberOfTracks={playlistAngry.length}
+                    track={playlistBonus[index]}
+                    mood="Bonus"
+                    numberOfTracks={playlistBonus.length}
                 />}
 
             </main>
