@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import fetchJsonp from "fetch-jsonp";
-import MoodEnTete from "./MoodEnTete";
+import MoodHead from "./MoodHead";
 import MoodPlayer from "./MoodPlayer";
+
 
 export default function MoodInLove() {
     const [error, setError] = useState(null);
@@ -32,7 +33,7 @@ export default function MoodInLove() {
         return (
             <main className="container">
 
-                <MoodEnTete
+                <MoodHead
                     type={"Angry"}
                 />
 

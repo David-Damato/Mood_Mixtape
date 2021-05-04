@@ -6,7 +6,9 @@
     padding: 20px;
 }
 
-@media screen and (min-width: 1440px){
+
+@media screen and (min-width: 560px) and (max-width: 1440px){
+
     .informations-titre-chanson {
         min-width: 200px;
     }
@@ -16,32 +18,10 @@
         flex-direction: row;
     }
 
-}
-
-
-@media screen and (min-width: 1025px) and (max-width: 1440px){
-    .informations-titre-chanson {
-        min-width: 200px;
-    }
-
-    .detail-chanson-conteneur {
-        display: flex;
-        flex-direction: row;
-    }
 
 }
 
-@media screen and (min-width: 560px) and (max-width: 1024px) {
-    .informations-titre-chanson {
-        min-width: 200px;
-    }
 
-    .detail-chanson-conteneur {
-        display: flex;
-        flex-direction: row;
-    }
-
-}
 
 @media screen and (min-width: 441px) and (max-width: 560px){
     .lecteur-playlist {

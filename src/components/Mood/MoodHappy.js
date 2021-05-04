@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import fetchJsonp from "fetch-jsonp";
-import MoodEnTete from "./MoodEnTete";
+import MoodHead from "./MoodHead";
 import MoodPlayer from "./MoodPlayer";
 
 export default function MoodHappy() {
@@ -32,7 +32,7 @@ export default function MoodHappy() {
         return (
             <main className="container">
 
-                <MoodEnTete
+                <MoodHead
                     type={"Happy"}
                 />
 

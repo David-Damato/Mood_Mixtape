@@ -24,7 +24,7 @@ export default function MoodChoice() {
             </div>
             <div className="buttonBonusContainer">
             <Link to="/MoodBonus">
-                <button className="buttonBonusAccueil">Il y a une surprise par ici ! (っ▀¯▀)つ
+                <button className="buttonBonusHome">Il y a une surprise par ici ! (っ▀¯▀)つ
                 <Sparkle
                 color={'#e9c46a'}
                 // The number of sparkles to render. A large number could slow

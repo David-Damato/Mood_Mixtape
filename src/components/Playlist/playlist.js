@@ -13,7 +13,7 @@ export default function Playlist() {
     const [playlistInLove, setplaylistInLove] = useState([]);
     const [playlistBonus, setPlaylistBonus] = useState([]);
 
-    const [playlistSelectionnee, setPlaylistSelectionnee] = useState("Happy");
+    const [playlistSelected, setPlaylistSelected] = useState("Happy");
 
     useEffect(() => {
         fetchJsonp("https://api.deezer.com/playlist/8951248402?output=jsonp")
@@ -109,59 +109,59 @@ export default function Playlist() {
 
                     <OngletMood
                         type={"Happy"}
-                        playlistSelectionnee={playlistSelectionnee}
-                        setPlaylistSelectionnee={setPlaylistSelectionnee}
+                        playlistSelected={playlistSelected}
+                        setPlaylistSelected={setPlaylistSelected}
                     />
                     <OngletMood
                         type={"Angry"}
-                        playlistSelectionnee={playlistSelectionnee}
-                        setPlaylistSelectionnee={setPlaylistSelectionnee}
+                        playlistSelected={playlistSelected}
+                        setPlaylistSelected={setPlaylistSelected}
                     />
 
                     <OngletMood
                         type={"Sad"}
-                        playlistSelectionnee={playlistSelectionnee}
-                        setPlaylistSelectionnee={setPlaylistSelectionnee}
+                        playlistSelected={playlistSelected}
+                        setPlaylistSelected={setPlaylistSelected}
                     />
 
                     <OngletMood
                         type={"InLove"}
-                        playlistSelectionnee={playlistSelectionnee}
-                        setPlaylistSelectionnee={setPlaylistSelectionnee}
+                        playlistSelected={playlistSelected}
+                        setPlaylistSelected={setPlaylistSelected}
                     />
 
                     <OngletMood
                         type={"Bonus"}
-                        playlistSelectionnee={playlistSelectionnee}
-                        setPlaylistSelectionnee={setPlaylistSelectionnee}
+                        playlistSelected={playlistSelected}
+                        setPlaylistSelected={setPlaylistSelected}
                     />
 
                 </div>
 
-                {playlistSelectionnee==="Happy" && <DetailPlaylist
+                {playlistSelected==="Happy" && <DetailPlaylist
                 type={"Happy"}
-                className={playlistSelectionnee === "Happy" ? "playlist-active" : "playlist-inactive"}
+                className={playlistSelected === "Happy" ? "playlist-active" : "playlist-inactive"}
                     playlist={playlistHappy}/>}
 
           
-                {playlistSelectionnee==="Angry" && <DetailPlaylist    
+                {playlistSelected==="Angry" && <DetailPlaylist    
                     type={"Angry"}
-                    className={playlistSelectionnee === "Angry" ? "playlist-active" : "playlist-inactive"}
+                    className={playlistSelected === "Angry" ? "playlist-active" : "playlist-inactive"}
                     playlist={playlistAngry}/>}
 
-                {playlistSelectionnee==="Sad" && <DetailPlaylist
+                {playlistSelected==="Sad" && <DetailPlaylist
                 type={"Sad"}
-                className={playlistSelectionnee === "Sad" ? "playlist-active" : "playlist-inactive"}
+                className={playlistSelected === "Sad" ? "playlist-active" : "playlist-inactive"}
                     playlist={playlistSad}/>}
           
-                 {playlistSelectionnee==="InLove" && <DetailPlaylist
+                 {playlistSelected==="InLove" && <DetailPlaylist
                     type={"InLove"}
-                    className={playlistSelectionnee === "InLove" ? "playlist-active" : "playlist-inactive"}
+                    className={playlistSelected === "InLove" ? "playlist-active" : "playlist-inactive"}
                     playlist={playlistInLove}/>}
  
-                {playlistSelectionnee==="Bonus" && <DetailPlaylist
+                {playlistSelected==="Bonus" && <DetailPlaylist
                     type={"Bonus"}
-                    className={playlistSelectionnee === "Bonus" ? "playlist-active" : "playlist-inactive"}
+                    className={playlistSelected === "Bonus" ? "playlist-active" : "playlist-inactive"}
                     playlist={playlistBonus}/>}
 
             </main>

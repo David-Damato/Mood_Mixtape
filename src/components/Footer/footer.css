@@ -47,7 +47,7 @@
 
 /*regles pour tablettes ***************/
 
-@media screen and (min-width: 415px) and (max-width: 1000px){
+@media screen and (min-width: 768px) and (max-width: 1024px){
    
     
         .footer-container{
@@ -98,7 +98,7 @@
 
 /*règles footer smartphone*****************/
 
-@media screen and (min-width: 200px) and (max-width: 414px){
+@media screen and (min-width: 200px) and (max-width: 767px){
 .desappear{
     display:none;
     }

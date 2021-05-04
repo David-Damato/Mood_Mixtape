@@ -2,9 +2,9 @@ import React from "react";
 import "./Mood.css";
 
 
-export default function MoodEnTete ({type}) {
+export default function MoodHead ({type}) {
              return(    
-             <div className="moodEnTete">  
+             <div className="moodHead">  
                 <h1 className="moodName">
                        {`Playlist ${type}`}
                 </h1> 
