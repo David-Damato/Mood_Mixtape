@@ -57,7 +57,7 @@
     width: 100%;
 }
 
-.liste-chansons {
+.list-songs {
     width: 65%;
     display: flex;
     justify-content: center;
@@ -334,13 +334,13 @@
         justify-content: center;
         flex-wrap: wrap;
     }
-    .liste-chansons {
+    .list-songs {
         width: 90%;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .liste-chansons {
+    .list-songs{
         padding-left: 30px;
         padding-bottom: 30px;
 
@@ -369,7 +369,7 @@
         margin-top: -10px;
     }
 
-    .th-album, .th-artiste, .td-album, .td-artiste, .th-detail, .td-button  {
+    .th-album, .th-artist, .td-album, .td-artiste, .th-detail, .td-button  {
         display: none;
     }
 
@@ -407,7 +407,7 @@
         margin-top: -10px;
     }
 
-    .th-album, .th-artiste, .td-album, .td-artiste, .th-detail, .td-button  {
+    .th-album, .th-artist, .td-album, .td-artiste, .th-detail, .td-button  {
         display: none;
     }
 
@@ -450,7 +450,7 @@
         margin-top: -10px;
     }
 
-    .th-album, .th-artiste, .td-album, .td-artiste, .th-detail, .td-button  {
+    .th-album, .th-artist, .td-album, .td-artiste, .th-detail, .td-button  {
         display: none;
     }
 

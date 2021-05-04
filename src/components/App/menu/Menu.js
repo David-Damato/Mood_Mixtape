@@ -4,17 +4,17 @@ import {useState} from "react";
 
 
 export const Menu = () => {
-    const [estOuvert, setEstOuvert] = useState(false)
-    const fermerMenu = () =>{
-        setEstOuvert(false);
+    const [isOpen, setIsOpen] = useState(false)
+    const closeMenu = () =>{
+        setIsOpen(false);
     }
     return (
         <>
             <input
                 onChange={()=> {
-                    setEstOuvert(estOuvert=== true ? false : true);
+                    setIsOpen(isOpen=== true ? false : true);
                 }}
-                checked={estOuvert}
+                checked={isOpen}
                 type="checkbox"
                 id="pure-toggle-left"
                 className="pure-toggle"
@@ -28,20 +28,20 @@ export const Menu = () => {
                     <div className="large-12 column">
                         <ul className="nav-primary">
                             <MenuItem
-                                lien={'/'}
-                                texte={"Accueil"}
-                                icone={"home"}
-                                fermerMenu={fermerMenu}/>
+                                link={'/'}
+                                text={"Accueil"}
+                                icon={"home"}
+                                closeMenu={closeMenu}/>
                             <MenuItem
-                                lien={'/playlist'}
-                                texte={"Playlists"}
-                                icone={"music"}
-                                fermerMenu={fermerMenu}/>
+                                link={'/playlist'}
+                                text={"Playlists"}
+                                icon={"music"}
+                                closeMenu={closeMenu}/>
                             <MenuItem
-                                lien={'/contact'}
-                                texte={"Contact"}
-                                icone={"user-circle-o"}
-                                fermerMenu={fermerMenu}/>
+                                link={'/contact'}
+                                text={"Contact"}
+                                icon={"user-circle-o"}
+                                closeMenu={closeMenu}/>
                         </ul>
                     </div>
                 </div>

@@ -25,12 +25,12 @@ export const DetailPlaylist = ({type, playlist, className}) => {
                     autoPlay={false}
                 />}
             </div>
-            <div className="liste-chansons">
+            <div className="liste-songs">
                 <table>
                     <tbody className="tbodyPlaylist">
                     <tr>
                         <th><h3>Titre</h3></th>
-                        <th className="th-artiste"><h3>Artiste</h3></th>
+                        <th className="th-artist"><h3>Artiste</h3></th>
                         <th className="th-album"><h3>Album</h3></th>
                         <th className="th-detail"><h3>Détails</h3></th>
                     </tr>
