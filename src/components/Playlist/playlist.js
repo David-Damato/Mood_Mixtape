@@ -138,31 +138,31 @@ export default function Playlist() {
 
                 </div>
 
-                {playlistSelected==="Happy" && <DetailPlaylist
-                type={"Happy"}
-                className={playlistSelected === "Happy" ? "playlist-active" : "playlist-inactive"}
-                    playlist={playlistHappy}/>}
+                <DetailPlaylist
+                    type={"Happy"}
+                    className={playlistSelected === "Happy" ? "playlist-active" : "playlist-inactive"}
+                    playlist={playlistHappy}/>
 
           
-                {playlistSelected==="Angry" && <DetailPlaylist    
+                <DetailPlaylist
                     type={"Angry"}
                     className={playlistSelected === "Angry" ? "playlist-active" : "playlist-inactive"}
-                    playlist={playlistAngry}/>}
+                    playlist={playlistAngry}/>
 
-                {playlistSelected==="Sad" && <DetailPlaylist
-                type={"Sad"}
-                className={playlistSelected === "Sad" ? "playlist-active" : "playlist-inactive"}
-                    playlist={playlistSad}/>}
+                <DetailPlaylist
+                    type={"Sad"}
+                    className={playlistSelected === "Sad" ? "playlist-active" : "playlist-inactive"}
+                    playlist={playlistSad}/>
           
-                 {playlistSelected==="InLove" && <DetailPlaylist
+                 <DetailPlaylist
                     type={"InLove"}
                     className={playlistSelected === "InLove" ? "playlist-active" : "playlist-inactive"}
-                    playlist={playlistInLove}/>}
+                    playlist={playlistInLove}/>
  
-                {playlistSelected==="Bonus" && <DetailPlaylist
+                <DetailPlaylist
                     type={"Bonus"}
                     className={playlistSelected === "Bonus" ? "playlist-active" : "playlist-inactive"}
-                    playlist={playlistBonus}/>}
+                    playlist={playlistBonus}/>
 
             </main>
 

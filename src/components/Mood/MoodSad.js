@@ -25,7 +25,7 @@ export default function MoodSad() {
 
             )
 
-    }, [index])
+    }, [])
 
 
     if (error) {
@@ -46,6 +46,7 @@ export default function MoodSad() {
                     track={playlistSad[index]}
                     mood="Sad"
                     numberOfTracks={playlistSad.length}
+                    autoPlay={true}
                 />}
 
             </main>

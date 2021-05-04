@@ -48,9 +48,9 @@
     margin-right: 30px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    text-align: center;
     animation: fadeInRight 0.5s;
     height:100%;
+    font-family: Spartan, sans-serif;
 }
 
 .playlist-detail div table {
@@ -306,6 +306,9 @@
     font-weight: bold;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-bottom: 50px;
+    font-family: Spartan, sans-serif;
+    text-align: center;
 }
 
 .playlist-player {
@@ -340,6 +343,7 @@
     .list-songs{
         padding-left: 30px;
         padding-bottom: 30px;
+
     }
 }
 
@@ -361,7 +365,7 @@
         display: block !important;
         height: 80px;
         width: 80px;
-        margin-bottom: 10px;
+        margin-bottom: 60px;
         margin-top: -10px;
     }
 
@@ -399,7 +403,7 @@
         display: block !important;
         height: 70px;
         width: 70px;
-        margin-bottom: 10px;
+        margin-bottom: 60px;
         margin-top: -10px;
     }
 
@@ -442,7 +446,7 @@
         display: block !important;
         height: 50px;
         width: 50px;
-        margin-bottom: 10px;
+        margin-bottom: 60px;
         margin-top: -10px;
     }
 

@@ -1,21 +1,29 @@
 import "./DetailPlaylist.css";
-import {useEffect, useState} from "react";
-import {Player} from "./Player";
+import React, {useEffect, useState} from "react";
+import MoodPlayer from "../Mood/MoodPlayer";
 
 export const DetailPlaylist = ({type, playlist, className}) => {
-    const [song, setSong] = useState(null);
+    const [index, setIndex] = useState(0);
+
     useEffect(() => {
-        setSong(playlist[0]);
-    }, [playlist]);
+        // on force un render au changement d'onglet en changeant la chanson dans la playlist
+        setIndex(1000);
+        setTimeout(() => setIndex(0), 200);
+    }, [playlist, className]);
 
     return (
         <div className={`conteneur-horizontal ${className} playlist-detail playlist-${type.toLowerCase()}`}>
             <div className="conteneur-vertical playlist-player">
                 <div className="titre-playlist">Playlist {type}</div>
                 <img className="moodPicture" src={`/images/moods/${type}.png`} alt={`mood${type}`}/>
-                {song && <Player
-                    track={song}
-                    type={type}/>}
+                {playlist.length > 0 && <MoodPlayer
+                    index={index}
+                    setIndex={setIndex}
+                    track={playlist[index]}
+                    mood={type}
+                    numberOfTracks={playlist.length}
+                    autoPlay={false}
+                />}
             </div>
             <div className="liste-songs">
                 <table>
@@ -28,7 +36,7 @@ export const DetailPlaylist = ({type, playlist, className}) => {
                     </tr>
 
                     {playlist.map((track, index) =>
-                        <tr key={`track-${index}`} className="trPlaylist" onClick={() => setSong(track)}>
+                        <tr key={`track-${index}`} className="trPlaylist" onClick={() => setIndex(index)}>
                             <td className={`tdPlaylist td-titre td${type}`}>
                                 {track.title}
                             </td>
@@ -40,7 +48,7 @@ export const DetailPlaylist = ({type, playlist, className}) => {
                             </td>
                             <td className="td-button">
                                 <button className={`buttonDetail  button${type}`} key={track}
-                                        onClick={() => setSong(track)}>Afficher
+                                        onClick={() => setIndex(index)}>Afficher
                                 </button>
                             </td>
                         </tr>

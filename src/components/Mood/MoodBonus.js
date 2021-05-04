@@ -22,7 +22,7 @@ export default function MoodBonus() {
                     setError(error);
                 }
             )
-    }, [index])
+    }, [])
 
 
     if (error) {
@@ -43,6 +43,7 @@ export default function MoodBonus() {
                     track={playlistBonus[index]}
                     mood="Bonus"
                     numberOfTracks={playlistBonus.length}
+                    autoPlay={true}
                 />}
 
             </main>
