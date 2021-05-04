@@ -319,3 +319,66 @@
 .progress-bar.Bonus {
     background-color: #72e6cf;
 }
+
+/* CSS responsive player */
+
+@media screen and (max-width: 690px) {
+  
+    .player-principal {
+        width: 300px;
+        height: 400px;
+        margin-bottom: 20%;
+    }
+
+    .album-picture-cover img {
+        width: 150px;
+        height: 150px;
+        margin-left: 17px;
+    }
+
+    .back-button span {
+        font-size: 25px;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+
+    .mood-in-player {
+        display: none;
+    }
+
+    .cover-random .random {
+        padding-top: 20px;
+        padding-right: 20px;
+        font-size: 25px;
+    }
+
+    .track-info {
+        height: 200px;
+    }
+    
+    .track-title {
+        font-size: 1rem;
+    }
+        
+    .players-controls-volume-and-time span.volume {
+        font-size: 30px;
+        margin: 5px 0 0 15px;
+    }
+    
+    .player-control-buttons span.play-button {
+        font-size: 60px;
+    } 
+    
+    .player-control-time {
+        font-size: 15px;
+        padding-left: 15px;
+        margin-top: 50px;
+    }
+    
+    .progress-bar {
+        height: 4px;
+    }
+
+} 
+
+
