@@ -3,9 +3,9 @@ import "./Mood.css";
 import "./MoodPlayer.css";
 import {Link} from "react-router-dom";
 
-export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks}) {
+export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks, autoPlay}) {
     const [audioPlayerAffiche, setAudioPlayerAffiche] = useState(false);
-    const [isPlaying, setIsPlaying] = useState(true);
+    const [isPlaying, setIsPlaying] = useState(autoPlay === true);
     const [isMuted, setIsMuted] = useState(false);
     const [previousEffect, setPreviousEffect] = useState(false);
     const [nextEffect, setNextEffect] = useState(false);
@@ -14,20 +14,23 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
     let audioPlayer;
 
     useEffect(() => {
+        setIsPlaying(autoPlay === true);
+        setCurrentTime('0:00');
+        setProgressionInPercent(0);
         setAudioPlayerAffiche(false);
         setTimeout(() => setAudioPlayerAffiche(true), 500);
-    }, [track.preview]);
+    }, [track?.preview]);
 
     useEffect(() => {
         if (audioPlayerAffiche === true) {
-            audioPlayer = document.querySelector("#audio-player");
+            audioPlayer = document.querySelector(`#audio-player-${mood}`);
             if (audioPlayer.muted === true) {
                 setIsMuted(true);
             } else {
                 setIsMuted(false);
             }
         }
-    }, [audioPlayerAffiche, isPlaying, isMuted, index, previousEffect, nextEffect, currentTime, progressionInPercent]);
+    }, [audioPlayerAffiche, isPlaying, isMuted, index, previousEffect, nextEffect, currentTime, progressionInPercent, autoPlay]);
 
     const skipToPreviousTrack = () => {
         if (index > 0) {
@@ -95,7 +98,7 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
                             </Link>
                         </div>
                         <div className="album-picture-cover">
-                            {track.album && <img src={track.album.cover_medium} alt='Image_Album'/>}
+                            {track?.album && <img src={track.album.cover_medium} alt='Image_Album'/>}
                         </div>
                         <div className="conteneur-horizontal player-principal-side random">
                             <img src={`/images/moods/${mood}.png`} className="mood-in-player" alt={mood}/>
@@ -148,8 +151,8 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
                 </div>
             </div>
             {audioPlayerAffiche && <audio
-                id="audio-player"
-                autoPlay
+                id={`audio-player-${mood}`}
+                autoPlay={autoPlay}
                 onEnded={skipToNextTrack}
                 onTimeUpdate={() => {
                     if (audioPlayer) {
@@ -161,7 +164,7 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
             >
-                <source src={track.preview}/>
+                <source src={track?.preview}/>
             </audio>}
         </>
     )

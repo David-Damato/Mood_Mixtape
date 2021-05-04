@@ -21,7 +21,7 @@ export default function MoodInLove() {
                     setError(error);
                 }
             )
-    }, [index])
+    }, [])
 
 
     if (error) {
@@ -42,6 +42,7 @@ export default function MoodInLove() {
                     track={playlistAngry[index]}
                     mood="Angry"
                     numberOfTracks={playlistAngry.length}
+                    autoPlay={true}
                 />}
 
             </main>

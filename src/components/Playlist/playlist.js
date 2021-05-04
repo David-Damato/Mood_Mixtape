@@ -138,31 +138,31 @@ export default function Playlist() {
 
                 </div>
 
-                {playlistSelectionnee==="Happy" && <DetailPlaylist
-                type={"Happy"}
-                className={playlistSelectionnee === "Happy" ? "playlist-active" : "playlist-inactive"}
-                    playlist={playlistHappy}/>}
+                <DetailPlaylist
+                    type={"Happy"}
+                    className={playlistSelectionnee === "Happy" ? "playlist-active" : "playlist-inactive"}
+                    playlist={playlistHappy}/>
 
           
-                {playlistSelectionnee==="Angry" && <DetailPlaylist    
+                <DetailPlaylist
                     type={"Angry"}
                     className={playlistSelectionnee === "Angry" ? "playlist-active" : "playlist-inactive"}
-                    playlist={playlistAngry}/>}
+                    playlist={playlistAngry}/>
 
-                {playlistSelectionnee==="Sad" && <DetailPlaylist
-                type={"Sad"}
-                className={playlistSelectionnee === "Sad" ? "playlist-active" : "playlist-inactive"}
-                    playlist={playlistSad}/>}
+                <DetailPlaylist
+                    type={"Sad"}
+                    className={playlistSelectionnee === "Sad" ? "playlist-active" : "playlist-inactive"}
+                    playlist={playlistSad}/>
           
-                 {playlistSelectionnee==="InLove" && <DetailPlaylist
+                 <DetailPlaylist
                     type={"InLove"}
                     className={playlistSelectionnee === "InLove" ? "playlist-active" : "playlist-inactive"}
-                    playlist={playlistInLove}/>}
+                    playlist={playlistInLove}/>
  
-                {playlistSelectionnee==="Bonus" && <DetailPlaylist
+                <DetailPlaylist
                     type={"Bonus"}
                     className={playlistSelectionnee === "Bonus" ? "playlist-active" : "playlist-inactive"}
-                    playlist={playlistBonus}/>}
+                    playlist={playlistBonus}/>
 
             </main>
 

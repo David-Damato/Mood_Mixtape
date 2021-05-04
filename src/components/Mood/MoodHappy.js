@@ -21,7 +21,7 @@ export default function MoodHappy() {
                     setError(error);
                 }
             )
-    }, [index])
+    }, [])
 
 
     if (error) {
@@ -42,6 +42,7 @@ export default function MoodHappy() {
                     track={playlistHappy[index]}
                     mood="Happy"
                     numberOfTracks={playlistHappy.length}
+                    autoPlay={true}
                 />}
 
             </main>

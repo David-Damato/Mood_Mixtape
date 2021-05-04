@@ -6,8 +6,10 @@ export const DetailPlaylist = ({type, playlist, className}) => {
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
-        setIndex(0);
-    }, [playlist]);
+        // on force un render au changement d'onglet en changeant la chanson dans la playlist
+        setIndex(1000);
+        setTimeout(() => setIndex(0), 200);
+    }, [playlist, className]);
 
     return (
         <div className={`conteneur-horizontal ${className} playlist-detail playlist-${type.toLowerCase()}`}>
@@ -20,6 +22,7 @@ export const DetailPlaylist = ({type, playlist, className}) => {
                     track={playlist[index]}
                     mood={type}
                     numberOfTracks={playlist.length}
+                    autoPlay={false}
                 />}
             </div>
             <div className="liste-chansons">
