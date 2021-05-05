@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Accueil from '../Accueil/accueil';
 import Playlist from '../Playlist/playlist';
 import { PageContacts } from '../Contact/PageContacts';
-
 import { Menu } from "./menu/Menu";
 import { Logo } from "./logo/Logo";
 import Footer from "../Footer/footer";
@@ -12,11 +11,15 @@ import MoodSad from '../Mood/MoodSad';
 import MoodAngry from '../Mood/MoodAngry';
 import MoodHappy from '../Mood/MoodHappy';
 import MoodBonus from '../Mood/MoodBonus';
+import Trianglify from 'react-trianglify';
+import "./App.css";
 
 
+export default function App() {
 
-      export default function App() {
-        return (
+    return (
+        <>
+            <Trianglify width={2000} height={2000} variance={0.75} xColors={'RdYlBu'} />
             <Router>
                 <div className="pure-container" data-effect="pure-effect-slide">
                     <Menu />
@@ -39,8 +42,10 @@ import MoodBonus from '../Mood/MoodBonus';
                     <label className="pure-overlay" htmlFor="pure-toggle-left" data-overlay="left"></label>
                 </div>
             </Router>
-        );
-    }
+
+        </>
+    );
+}
 
 
 
