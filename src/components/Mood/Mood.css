@@ -4,27 +4,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 10%;
+    margin-top: 5%;
 }
 
-/* CSS composant MoodHead */
-
-.moodHead {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+@media screen and (max-width: 690px) {
+    
+.container {
+    margin: 20% 0 20% 0;
+}
 }
 
-.moodImg {
-    height: 150px;
-}
-
-.moodName {
-    padding: 5%; 
-    font-family: 'Spartan', sans-serif;
-    font-weight: 500;
-    margin-bottom:50px;
-    white-space:nowrap;
-    text-align: center;
-
-}
