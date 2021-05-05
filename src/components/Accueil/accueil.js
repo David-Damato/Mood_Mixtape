@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import MoodChoice from "./AccueilMoods";
 import Questions from "./AccueilQuestions";
 import "./AccueilContenu.css"
