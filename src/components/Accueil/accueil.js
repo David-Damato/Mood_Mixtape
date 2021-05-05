@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import MoodChoice from "./AccueilMoods";
 import Questions from "./AccueilQuestions";
 import "./AccueilContenu.css"
 
-class Accueil extends Component {
-    render() {
+export default function Accueil () {
         return (
             <main className="welcomePage">
                 <Questions />
@@ -12,7 +11,6 @@ class Accueil extends Component {
             </main>
         );
     }
-}
 
-export default Accueil;
+
 

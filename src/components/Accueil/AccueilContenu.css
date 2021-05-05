@@ -1,32 +1,41 @@
 /* CSS composant Questions */
+.framed{
+    background-color:#264653;
+    padding: 1%;
+    margin: 1%; 
+    width:40%;
+    border-radius: 10px;
+    color:white;
+    animation: bounceInLeft 2s;
+}
 
-.questionsEncadre {
+
+.questionsFramed {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;  
-    padding: 20px;
-    margin: 20px;
-    margin-right: 100px;
-    margin-left: 100px;
+    margin:3% 5% 3% 5%;
+  
 }
 
 .question {
-    background-color:#264653;
-    padding: 20px;
-    margin: 10px;
-    margin-left: 80px;
-    width: 550px;
-    border-radius: 10px;
-    color:white;
+   
+    margin-left: 5%;
+
 }
 
-.reponse {
-    background-color: #264653;
-    padding: 20px;
-    margin: 10px;
-    margin-left: 740px;
-    width: 550px;
-    border-radius: 10px;
-    color: white;
+.question:hover {
+    transform: scale(1.1);
+} 
+
+
+.reply-hidden {
+    display: none;
+}
+
+.reply-appears {
+  
+    margin-left: 53%;
+  
 }
 
 .moodMixtape {
@@ -37,11 +46,10 @@
 
 
 .moodChoice {
-    padding: 20px;
-    margin: 20px;
-    background-color: #e9c46a;
-    margin-right: 100px;
-    margin-left: 100px;
+    padding: 3%;
+    margin:0 5% 5% 5%; 
+    border-radius: 10px;
+    border: 2px solid;
 }
 
 .moodChoice h1 {
@@ -54,10 +62,146 @@
 .moodLinks {
     display: flex;
     justify-content: space-around;
-    padding: 50px;
+    padding: 3%;
 } 
 
 .moodPicture {
     height: 150px;
+    border-radius: 10px;
 }
 
+.happy:hover {
+ animation: bounce 0.7s;
+}
+
+.angry:hover {
+    animation: headShake 0.7s;
+}
+
+.sad:hover {
+    animation: jello 0.7s;
+}
+
+.inlove:hover {
+    animation:heartBeat 0.7s;
+}
+
+.buttonBonusContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonBonusHome {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    color: transparent;
+    border-radius: 10px;
+    padding: 2%;
+    margin: 2%;
+    width: 110%;
+    border: none;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+}
+
+.buttonBonusHome:hover {
+    background-color: black;
+    color: white;
+    animation: tada 0.7s;
+
+}
+
+/* CSS responsive homepage */
+
+
+@media screen and (max-width: 690px) {
+  
+    
+    .questionsFramed {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .question {
+        margin-left: 0%;
+        width: 80%;
+        font-size: 13px;
+        padding: 3%;
+    }
+
+    .reply-appears {
+        margin-left: 0%;
+        width: 80%;
+        font-size: 13px;
+        padding: 3%;
+    }
+
+    .reply-hidden {
+        margin-left: 0%;
+        width: 80%;
+        padding: 3%;
+    }
+
+    .moodLinks {
+        display: flex;
+        flex-wrap: wrap;
+    } 
+
+    .moodChoice h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 13px;
+    } 
+    
+    .moodChoice {
+        margin-bottom: 25%;
+    } 
+
+    .moodPicture {
+        margin-top: 5%;
+    }
+}
+
+@media screen and (min-width:691px) and (max-width: 1023px) {
+    
+    .question {
+        width: 50%;
+        font-size: 14px;
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+
+    .reply-appears {
+        width: 50%;
+        font-size: 14px;
+        margin-top: 2%;
+        margin-left: 45%;
+    }
+
+    .moodLinks {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 5%;
+    } 
+
+    .moodChoice {
+        margin-bottom: 160px;
+    }
+
+    .moodPicture {
+        margin-top: 5%;
+    }
+
+}
+
+@media screen and (min-width:1024px) and (max-width: 1400px) {
+    .questionReply{
+        width:400px;
+        font-size:16px;
+    }
+ 
+} 

@@ -9,6 +9,7 @@
 .conteneur-horizontal {
     display: flex;
     flex-direction: row;
+
 }
 
 .conteneur-vertical {
@@ -26,6 +27,7 @@
     align-items: flex-end;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 50px;
 }
 
 .titre-contact {
