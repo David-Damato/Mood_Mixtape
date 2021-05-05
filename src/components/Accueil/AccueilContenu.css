@@ -203,5 +203,7 @@
         width:400px;
         font-size:16px;
     }
- 
+    .welcomePage {
+        margin-bottom: 18vh;
+    }
 } 
