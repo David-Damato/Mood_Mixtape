@@ -9,6 +9,7 @@
 .conteneur-horizontal {
     display: flex;
     flex-direction: row;
+    padding-bottom: 50px;
 }
 
 .conteneur-vertical {
