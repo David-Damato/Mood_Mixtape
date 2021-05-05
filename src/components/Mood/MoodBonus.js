@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import fetchJsonp from "fetch-jsonp";
-import MoodHead from "./MoodHead";
 import MoodPlayer from "./MoodPlayer";
 
 
@@ -33,10 +32,6 @@ export default function MoodBonus() {
 
         return (
             <main className="container">
-
-                <MoodHead
-                    type={"Bonus"}
-                />
 
                 {playlistBonus.length > 0 && <MoodPlayer
                     index={index}

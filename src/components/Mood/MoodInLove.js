@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import fetchJsonp from "fetch-jsonp";
-import MoodHead from "./MoodHead";
 import MoodPlayer from "./MoodPlayer";
 
 
@@ -33,11 +32,7 @@ export default function MoodInLove() {
     } else {
         return (
             <main className="container">
-
-                <MoodHead
-                    type={"InLove"}
-                />
-
+                
                 {playlistInLove.length > 0 && <MoodPlayer
                     index={index}
                     setIndex={setIndex}
