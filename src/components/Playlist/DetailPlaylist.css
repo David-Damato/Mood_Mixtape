@@ -51,6 +51,8 @@
     animation: fadeInRight 0.5s;
     height:100%;
     font-family: Spartan, sans-serif;
+    padding-bottom: 20px;
+    padding-right: 20px;
 }
 
 .playlist-detail div table {
@@ -66,7 +68,7 @@
 
 /* PLaylist Happy */
 .playlist-detail.playlist-happy {
-    background-image: linear-gradient(to bottom, #FF8F27, #FB3301);
+    background-color:#ead0b873;
 }
 
 .playlistHappy-hidden {
@@ -114,7 +116,7 @@
 /* Playlist Sad */ 
 
 .playlist-detail.playlist-sad{
-     background-image: linear-gradient(to bottom, #0099ff, #2473d2, #284ea4, #232c78, #170c4e);
+    background-color:#ead0b873;
 }
 
 .tdSad{
@@ -161,7 +163,7 @@
 /* PLaylist Angry */
 .playlist-detail.playlist-angry {
     
-    background-image:linear-gradient(to top, #ff9900, #FFD900);
+    background-color:#ead0b873;
 }
 
 .playlistAngry-hidden {
@@ -206,8 +208,7 @@
 /*playlist InLove*/
 
 .playlist-detail.playlist-inlove {
-   /* background-image: linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%); */
-    background: linear-gradient(to bottom,  rgb(255, 227, 232), #ffc3a0, #ffa6a0, #ffafbd);
+    background-color:#ead0b873;
 
 }
 
@@ -254,7 +255,7 @@
 /*playlist Bonus*/
 
 .playlist-detail.playlist-bonus {
-    background: linear-gradient(to bottom,  #C6FF92, #1de47d, #16A280, #247be8 );
+    background-color:#ead0b873;
 
 }
 
