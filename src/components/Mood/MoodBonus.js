@@ -30,6 +30,7 @@ export default function MoodBonus() {
     } else if (!isLoaded) {
         return <div>Chargement...</div>;
     } else {
+
         return (
             <main className="container">
 
