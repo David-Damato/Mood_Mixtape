@@ -13,14 +13,12 @@
 .questionsFramed {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;  
-    margin:3% 5% 3% 5%;
-  
+    margin:3% 5% 3% 5%;  
 }
 
 .question {
-   
     margin-left: 5%;
-
+    cursor: pointer;
 }
 
 .question:hover {
@@ -33,9 +31,7 @@
 }
 
 .reply-appears {
-  
     margin-left: 53%;
-  
 }
 
 .moodMixtape {
