@@ -8,7 +8,7 @@ export const OngletMood = ({type, playlistSelected, setPlaylistSelected}) => {
             className={`moodDiv mood${type} ${type !== playlistSelected ? "moodDivNonSelected" : ""}`}>
 
             <img className="moodPicture" src={`/images/moods/${type}.png`} alt={`mood${type}`}/>
-            <span className="material-icons expand">expand_more</span>
+
         </div>
     )
 }

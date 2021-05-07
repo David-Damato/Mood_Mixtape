@@ -15,13 +15,13 @@
     padding:0;
     justify-content: center;
     flex-wrap: wrap;
+    height:48px;
 }
 
 .ul-footer li{
     padding:10px 5px 10px 10px;
     color:#ffffff;
     font-size:1em;
-
 }
 
 
@@ -31,13 +31,15 @@
 }
 
 .ul-footer li a:hover{
-  
+
     color:rgb(7, 7, 7);
     transition: 0.5s;
+    
 }
 
 .emo:hover{
-    font-size:1.2em
+    font-size:1.3em
+   
 }
 
 
@@ -81,6 +83,7 @@
            
             color:rgb(7, 7, 7);
             transition: 0.5s;
+     
         }
         
        .emo:hover{
@@ -90,15 +93,9 @@
     }
 
 
-
-
-
-
-
-
 /*règles footer smartphone*****************/
 
-@media screen and (min-width: 200px) and (max-width: 767px){
+@media screen and (min-width: 381px) and (max-width: 767px){
 .desappear{
     display:none;
     }
@@ -121,6 +118,7 @@
         flex-wrap: wrap;
         justify-content:left;
         background-color:#264653;
+       
     }
 
     .ul-footer li{
@@ -130,15 +128,66 @@
         text-align: center;
     
     }
+ 
     
     .ul-footer li a:hover{
        
-        color:rgb(7, 7, 7);
-        transition: 0.5s;
+            color:rgb(7, 7, 7);
+            transition: 0.5s;
+           
+        
     }
     
    .emo:hover{
        font-size:1.2em
    }
 
+}
+
+@media screen and (min-width: 200px) and (max-width: 380px){
+
+    .desappear{
+        display:none;
+        }
+    
+        .footer-container{
+            background-color: #26465300;
+            position:fixed;
+            bottom:0;
+            width:100%;
+        }
+    
+    
+    
+    
+        .ul-footer{
+            display:flex;
+            list-style-type: none;
+            margin:10px 0 0 0;
+            padding:0;
+            flex-wrap: wrap;
+            justify-content:left;
+            background-color:#264653;
+           
+        }
+    
+        .ul-footer li{
+            padding:10px 0px 5px 10px;
+            color:#ffffff;
+            font-size:0.8em;
+            text-align: center;
+        
+        }
+     
+        
+        .ul-footer li a:hover{
+           
+            color:rgb(7, 7, 7);
+            transition: 0.5s;
+            
+        }
+        
+       .emo:hover{
+           font-size:1.2em
+       }
 }

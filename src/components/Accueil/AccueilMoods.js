@@ -26,7 +26,7 @@ export default function MoodChoice() {
             <Link to="/MoodBonus">
                 <button className="buttonBonusHome">Il y a une surprise par ici ! (っ▀¯▀)つ
                 <Sparkle
-                color={'#e9c46a'}
+                color={'yellow'}
                 // The number of sparkles to render. A large number could slow
                 // down the page.
                 count={7}
