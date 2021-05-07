@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./Mood.css";
 import "./MoodPlayer.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks, autoPlay}) {
+export default function MoodPlayer({ track, index, setIndex, mood, numberOfTracks, autoPlay, id }) {
     const [audioPlayerAffiche, setAudioPlayerAffiche] = useState(false);
     const [isPlaying, setIsPlaying] = useState(autoPlay === true);
     const [isMuted, setIsMuted] = useState(false);
@@ -84,6 +84,7 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
     return (
         <>
             <div
+                id={id}
                 className={`conteneur-vertical player-principal ${nextEffect === true ? "animate__animated animate__backInRight" : ""} ${previousEffect === true ? "animate__animated animate__backInLeft" : ""}`}
                 style={{
                     backgroundImage: `linear-gradient(rgba(150, 150, 150, 0.6), rgba(150, 150, 150, 0.8)), url(${track?.album?.cover_medium})`,
@@ -98,12 +99,12 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
                             </Link>
                         </div>
                         <div className="album-picture-cover">
-                            {track?.album && <img src={track.album.cover_medium} alt='Image_Album'/>}
+                            {track?.album && <img src={track.album.cover_medium} alt='Image_Album' />}
                         </div>
                         <div className="conteneur-horizontal player-principal-side random">
-                            <img src={`/images/moods/${mood}.png`} className="mood-in-player" alt={mood}/>
+                            <img src={`/images/moods/${mood}.png`} className="mood-in-player" alt={mood} />
                             <i onClick={() => setIndex(Math.floor(Math.random() * (19 - 1)) + 1)}
-                               className={`fa fa-random ${mood}`} aria-hidden="true"/>
+                                className={`fa fa-random ${mood}`} aria-hidden="true" />
                         </div>
                     </div>
                     <div className="conteneur-horizontal track-info">
@@ -138,15 +139,15 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
                         </div>
                         <div className="conteneur-vertical player-principal-side">
                             <div className="players-controls-volume-and-time">
-                            <span onClick={muteUnmute} className={`material-icons-round volume ${mood}`}>
-                                {isMuted === true ? "volume_off" : "volume_up"}
-                            </span>
+                                <span onClick={muteUnmute} className={`material-icons-round volume ${mood}`}>
+                                    {isMuted === true ? "volume_off" : "volume_up"}
+                                </span>
                             </div>
 
                         </div>
                     </div>
                     <div className={`progress-bar ${mood}`} style={{
-                        width : progressionInPercent + '%'
+                        width: progressionInPercent + '%'
                     }}></div>
                 </div>
             </div>
@@ -157,14 +158,14 @@ export default function MoodPlayer({track, index, setIndex, mood, numberOfTracks
                 onTimeUpdate={() => {
                     if (audioPlayer) {
                         setCurrentTime(calculateTime(audioPlayer.currentTime));
-                        const trackProgression = (audioPlayer.currentTime*100)/30;
-                        setProgressionInPercent(trackProgression>100 ? 100 : trackProgression)
+                        const trackProgression = (audioPlayer.currentTime * 100) / 30;
+                        setProgressionInPercent(trackProgression > 100 ? 100 : trackProgression)
                     }
                 }}
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
             >
-                <source src={track?.preview}/>
+                <source src={track?.preview} />
             </audio>}
         </>
     )
